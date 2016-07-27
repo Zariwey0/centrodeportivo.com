@@ -30,14 +30,18 @@
 		<link rel="stylesheet" href="{{ URL::asset('css/color/color.css') }}" />
 		<link rel="stylesheet" href="{{ URL::asset('css/animate.css') }}" />
 		<!-- Nuevos links de la misma versión. FALTA PASAR A LARAVEL Y PONER EN LOCAL. -->
+		<link rel="stylesheet" href="{{ URL::asset('css/bootstrap-table.css') }}" />
+		<link rel="stylesheet" href="{{ URL::asset('css/address.css') }}" />
+		<!--<link rel="stylesheet" href="bootstrap-table.css">-->
 		<!--
 		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 		-->
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="//rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/css/bootstrap-editable.css">
+		
 		<!--
 		<style>
 		a.accordion-toggle {
@@ -394,6 +398,9 @@
 
 				<!-- FIN DE LO NUEVO -->
 		</div>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 		<!-- include jQuery library -->
 		<script type="text/javascript" src="{{ URL::asset('js/jquery-1.11.3.min.js') }}"></script>
 		<!-- include custom JavaScript -->
@@ -402,5 +409,17 @@
 		<script type="text/javascript" src="{{ URL::asset('js/plugins.js') }}"></script>
 		<!-- include Bootstrap tabs JavaScript -->
 		<script type="text/javascript" src="{{ URL::asset('js/responsive-tabs.js') }}"></script>
+		<!-- include Bootstrap table JavaScript -->
+		<script type="text/javascript" src="{{ URL::asset('js/bootstrap-table.js') }}"></script>
+		<!-- put your locale files after bootstrap-table.js -->
+		<script type="text/javascript" src="{{ URL::asset('js/bootstrap-table-es-ES.js') }}"></script>
+		<!-- include Bootstrap table editable JavaScript -->
+		<script type="text/javascript" src="{{ URL::asset('js/bootstrap-editable.js') }}"></script>
+		<!-- include Bootstrap table editable address type JavaScript -->
+		<script type="text/javascript" src="{{ URL::asset('js/address.js') }}"></script>
+
+		<script type="text/javascript">
+	        @yield ('scripts')
+	    </script>
 	</body>
 </html>

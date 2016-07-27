@@ -1,0 +1,32 @@
+[
+    {
+        "id": 10,
+        "lunes": "New Item 0",
+        "martes": "New Item 0",
+        "miercoles": "New Item 0",
+        "jueves": "New Item 0",
+        "viernes": "New Item 0",
+        "sabado": "New Item 0",
+        "domingo": "$10"
+    },
+    {
+        "id": 11,
+        "lunes": "New Item 1",
+        "martes": "New Item 1",
+        "miercoles": "New Item 1",
+        "jueves": "New Item 1",
+        "viernes": "New Item 1",
+        "sabado": "New Item 1",
+        "domingo": "$11"
+    },
+    {
+        "id": 12,
+        "lunes": "New Item 2",
+        "martes": "New Item 2",
+        "miercoles": "New Item 2",
+        "jueves": "New Item 2",
+        "viernes": "New Item 2",
+        "sabado": "New Item 2",
+        "domingo": "$12"
+    }
+]
