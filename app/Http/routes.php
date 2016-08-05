@@ -104,7 +104,10 @@ Route::group(['middleware' => ['web']], function () {
 	Route::match(['get', 'post'], 'admin/createactivity', 'AdminController@createActivity');
 	Route::match(['get', 'post'], 'admin/createadmin', 'AdminController@createAdmin');
 	Route::match(['get', 'post'], 'admin/createmonitor', 'AdminController@createMonitor');
-	
+	/////////////////////////////
+	Route::post('getactivities', 'AdminController@getActivities');
+	/////////////////////////////
+	Route::get('schedule', 'AdminController@configSchedule');
 	Route::get('admin', 'AdminController@admin');
 	Route::get('user/{id}', 'UserController@public_profile')->where(['id' => '[0-9]+']);
     //

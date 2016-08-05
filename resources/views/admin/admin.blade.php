@@ -179,6 +179,7 @@
     					<li><a href="{{url('admin/createmonitor')}}"><i class="fa fa-caret-right"></i>Crear nuevo monitor</a></li>
     					<li><a href="{{url('admin/createactivitytype')}}"><i class="fa fa-caret-right"></i>Crear nuevo tipo de actividad</a></li>
     					<li><a href="{{url('admin/createactivity')}}"><i class="fa fa-caret-right"></i>Crear nueva actividad</a></li>
+    					<li><a href="{{url('schedule')}}"><i class="fa fa-caret-right"></i>Configurar horario</a></li>
 					</ul>
 				</section>
 				<!-- widget -->

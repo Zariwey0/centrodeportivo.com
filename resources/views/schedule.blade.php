@@ -1,18 +1,487 @@
 @extends('layouts.private')
+
+<?php
+
+//use App\Activity;
+//$activities = Activity::all();
+//$activities = DB::table('activities')->pluck('id', 'name');
+
+	    //return Response::json(array('activities' => $activities));
+	    //$data = $request->all(); // This will get all the request data.
+//dd(Response::json(array('activities' => $activities)));
+//dd($activities); // This will dump and die
+
+?>
+
 @section('content')
 
 <div class="container padding-bottom-100 padding-top-100">
 <h1> Configurar horario </h1>
 <div class="container">
+	<!--
 	<div id="toolbar">
         <button id="remove" class="btn btn-danger" disabled>
             <i class="glyphicon glyphicon-remove"></i> Delete
         </button>
     </div>
-<!--
-	<table id="table"
+-->
+    <table data-toggle="table"
+    	id="table3"
 		data-toolbar="#toolbar"
 		data-search="true"
+		data-editable-emptytext="Vacío"
+		data-show-refresh="false"
+		data-show-toggle="true"
+		data-show-columns="true"
+		data-show-export="true"
+		data-detail-view="true"
+		
+		data-detail-formatter="detailFormatter"
+		data-id-field="id"
+		data-show-footer="false">
+	    <thead>
+	        <tr>
+	            <th>Hora</th>
+	            <th>Sala</th>
+	            <th>Lunes</th>
+	            <th>Martes</th>
+	            <th>Miércoles</th>
+	            <th>Jueves</th>
+	            <th>Viernes</th>
+	            <th>Sábado</th>
+	            <th>Domingo</th>
+	        </tr>
+	    </thead>
+	    <!-------------------------->
+	    <!-- ID'S DE LOS ADDRESS: -->
+	    <!-- PRIMER VALOR: HORA   -->
+	    <!-- SEGUNDO VALOR: SALA  -->
+	    <!-- TERCER VALOR: DÍA    -->
+	    <!-------------------------->
+	    <tbody>
+	    	<!-- 9:00 -->
+	        <tr>
+	            <td rowspan="3">9:00</td>
+	            <td>Sala 1</td>
+	            <td><a href="#" class="schedule" id="address111" data-type="address" data-pk="1"></a></td>
+            	<td><a href="#" class="schedule" id="address112" data-type="address" data-pk="1"></a></td>
+            	<td><a href="#" class="schedule" id="address113" data-type="address" data-pk="1"></a></td>
+            	<td><a href="#" class="schedule" id="address114" data-type="address" data-pk="1"></a></td>
+            	<td><a href="#" class="schedule" id="address115" data-type="address" data-pk="1"></a></td>
+            	<td><a href="#" class="schedule" id="address116" data-type="address" data-pk="1"></a></td>
+            	<td><a href="#" class="schedule" id="address117" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 2</td>
+	            <td><a href="#" class="schedule" id="address121" data-type="address" data-pk="1"></a></td>
+            	<td><a href="#" class="schedule" id="address122" data-type="address" data-pk="1"></a></td>
+            	<td><a href="#" class="schedule" id="address123" data-type="address" data-pk="1"></a></td>
+            	<td><a href="#" class="schedule" id="address124" data-type="address" data-pk="1"></a></td>
+            	<td><a href="#" class="schedule" id="address125" data-type="address" data-pk="1"></a></td>
+            	<td><a href="#" class="schedule" id="address126" data-type="address" data-pk="1"></a></td>
+            	<td><a href="#" class="schedule" id="address127" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 3</td>
+	            <td><a href="#" class="schedule" id="address131" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address132" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address133" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address134" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address135" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address136" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address137" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <!-- 10:00 -->
+	        <tr>
+	            <td rowspan="3">10:00</td>
+	            <td>Sala 1</td>
+	            <td><a href="#" class="schedule" id="address211" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address212" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address213" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address214" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address215" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address216" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address217" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 2</td>
+	            <td><a href="#" class="schedule" id="address221" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address222" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address223" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address224" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address225" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address226" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address227" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 3</td>
+	            <td><a href="#" class="schedule" id="address231" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address232" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address233" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address234" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address235" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address236" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address237" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <!-- 11:00 -->
+	        <tr>
+	            <td rowspan="3">11:00</td>
+	            <td>Sala 1</td>
+	            <td><a href="#" class="schedule" id="address311" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address312" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address313" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address314" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address315" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address316" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address317" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 2</td>
+	            <td><a href="#" class="schedule" id="address321" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address322" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address323" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address324" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address325" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address326" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address327" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 3</td>
+	            <td><a href="#" class="schedule" id="address331" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address332" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address333" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address334" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address335" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address336" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address337" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <!-- 12:00 -->
+	        <tr>
+	            <td rowspan="3">12:00</td>
+	            <td>Sala 1</td>
+	            <td><a href="#" class="schedule" id="address411" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address412" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address413" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address414" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address415" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address416" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address417" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 2</td>
+	            <td><a href="#" class="schedule" id="address421" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address422" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address423" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address424" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address425" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address426" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address427" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 3</td>
+	            <td><a href="#" class="schedule" id="address431" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address432" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address433" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address434" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address435" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address436" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address437" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <!-- 13:00 -->
+	        <tr>
+	            <td rowspan="3">13:00</td>
+	            <td>Sala 1</td>
+	            <td><a href="#" class="schedule" id="address511" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address512" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address513" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address514" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address515" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address516" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address517" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 2</td>
+	            <td><a href="#" class="schedule" id="address521" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address522" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address523" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address524" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address525" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address526" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address527" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 3</td>
+	            <td><a href="#" class="schedule" id="address531" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address532" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address533" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address534" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address535" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address536" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address537" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <!-- 14:00 -->
+	        <tr>
+	            <td rowspan="3">14:00</td>
+	            <td>Sala 1</td>
+	            <td><a href="#" class="schedule" id="address611" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address612" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address613" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address614" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address615" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address616" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address617" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 2</td>
+	            <td><a href="#" class="schedule" id="address621" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address622" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address623" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address624" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address625" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address626" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address627" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 3</td>
+	            <td><a href="#" class="schedule" id="address631" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address632" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address633" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address634" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address635" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address636" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address637" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <!-- 15:00 -->
+	        <tr>
+	            <td rowspan="3">15:00</td>
+	            <td>Sala 1</td>
+	            <td><a href="#" class="schedule" id="address711" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address712" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address713" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address714" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address715" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address716" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address717" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 2</td>
+	            <td><a href="#" class="schedule" id="address721" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address722" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address723" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address724" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address725" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address726" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address727" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 3</td>
+	            <td><a href="#" class="schedule" id="address731" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address732" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address733" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address734" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address735" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address736" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address737" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <!-- 16:00 -->
+	        <tr>
+	            <td rowspan="3">16:00</td>
+	            <td>Sala 1</td>
+	            <td><a href="#" class="schedule" id="address811" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address812" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address813" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address814" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address815" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address816" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address817" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 2</td>
+	            <td><a href="#" class="schedule" id="address821" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address822" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address823" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address824" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address825" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address826" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address827" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 3</td>
+	            <td><a href="#" class="schedule" id="address831" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address832" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address833" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address834" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address835" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address836" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address837" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <!-- 17:00 -->
+	        <tr>
+	            <td rowspan="3">17:00</td>
+	            <td>Sala 1</td>
+	            <td><a href="#" class="schedule" id="address911" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address912" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address913" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address914" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address915" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address916" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address917" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 2</td>
+	            <td><a href="#" class="schedule" id="address921" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address922" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address923" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address924" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address925" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address926" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address927" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 3</td>
+	            <td><a href="#" class="schedule" id="address931" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address932" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address933" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address934" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address935" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address936" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address937" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <!-- 18:00 -->
+	        <tr>
+	            <td rowspan="3">18:00</td>
+	            <td>Sala 1</td>
+	            <td><a href="#" class="schedule" id="address1011" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1012" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1013" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1014" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1015" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1016" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1017" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 2</td>
+	            <td><a href="#" class="schedule" id="address1021" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1022" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1023" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1024" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1025" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1026" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1027" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 3</td>
+	            <td><a href="#" class="schedule" id="address1031" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1032" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1033" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1034" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1035" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1036" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1037" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <!-- 19:00 -->
+	        <tr>
+	            <td rowspan="3">19:00</td>
+	            <td>Sala 1</td>
+	            <td><a href="#" class="schedule" id="address1111" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1112" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1113" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1114" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1115" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1116" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1117" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 2</td>
+	            <td><a href="#" class="schedule" id="address1121" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1122" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1123" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1124" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1125" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1126" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1127" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 3</td>
+	            <td><a href="#" class="schedule" id="address1131" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1132" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1133" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1134" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1135" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1136" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1137" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <!-- 20:00 -->
+	        <tr>
+	            <td rowspan="3">20:00</td>
+	            <td>Sala 1</td>
+	            <td><a href="#" class="schedule" id="address1211" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1212" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1213" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1214" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1215" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1216" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1217" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 2</td>
+	            <td><a href="#" class="schedule" id="address1221" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1222" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1223" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1224" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1225" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1226" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1227" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 3</td>
+	            <td><a href="#" class="schedule" id="address1231" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1232" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1233" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1234" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1235" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1236" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1237" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <!-- 21:00 -->
+	        <tr>
+	            <td rowspan="3">21:00</td>
+	            <td>Sala 1</td>
+	            <td><a href="#" class="schedule" id="address1311" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1312" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1313" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1314" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1315" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1316" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1317" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 2</td>
+	            <td><a href="#" class="schedule" id="address1321" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1322" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1323" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1324" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1325" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1326" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1327" data-type="address" data-pk="1"></a></td>
+	        </tr>
+	        <tr>
+	        	<td>Sala 3</td>
+	            <td><a href="#" class="schedule" id="address1331" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1332" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1333" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1334" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1335" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1336" data-type="address" data-pk="1"></a></td>
+	            <td><a href="#" class="schedule" id="address1337" data-type="address" data-pk="1"></a></td>
+	        </tr>	        
+	    </tbody>
+	</table>
+<!--
+	<table id="table2"
+		data-toolbar="#toolbar"
+		data-search="true"
+		data-editable-emptytext="Vacío"
 		data-show-refresh="true"
 		data-show-toggle="true"
 		data-show-columns="true"
@@ -23,7 +492,7 @@
 		data-id-field="id"
 		data-show-footer="false">
 	</table>
--->
+
 	<table id="table"
            data-toolbar="#toolbar"
            data-search="true"
@@ -38,9 +507,10 @@
            data-id-field="id"
            data-show-footer="false">
     </table>
-    
-    <a href="#" id="address" data-type="address" data-pk="1">awesome</a>  
-	
+-->
+    <!--
+    <a href="#" id="address" data-type="address" data-pk="1"></a>  
+	-->
 </div>
 </div>
 
@@ -52,61 +522,185 @@
 @section('scripts')
 
 
-$(function(){
-    $('#address').editable({
-        url: '/post',
-        title: 'Enter city, street and building #',
-        value: {
-            city: "Moscow", 
-            street: "Lenina", 
-            building: "15"
-        }
-    });
+
+$.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  }
 });
 
+$(function(){
+
+	
+	var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+
+	//var actividades;
+	var unvalue;
+	var unkey;
+
+	//var text1 = '<div class="editable-address"><label><span>Actividad: </span><select name="activity" id="activity" class="input-small"><option value="Volvo">Volvo</option><option value="Fiat">Fiat</option><option value="Saab">Saab</option><option value="Mercedes">Mercedes</option><option value="Mercedes Benz">Mercedes Benz</option><option value="Audi">Audi</option><option value="';
+
+	//var text2 = '">';
+
+	//var text3 = '</option></select></label></div>';
+
+	var text1 = '<div class="editable-address"><label><span>Actividad: </span><select name="activity" id="activity" class="input-small">';
+
+ 	var text2 = '';
+
+	var text3 = '</select></label></div>';
 
 
-/*
-	$('#table').bootstrapTable({
-	    url: 'bootstrap-table-examples/json/schedule.json',
-	    columns: [{
-	        field: 'id',
-	        title: 'Item ID'
-	    }, {
-	        field: 'lunes',
-	        title: 'Lunes'
-	    }, {
-	        field: 'martes',
-	        title: 'Martes'
-	    }, {
-	        field: 'miercoles',
-	        title: 'Miércoles'
-	    }, {
-	        field: 'jueves',
-	        title: 'Jueves'
-	    }, {
-	        field: 'viernes',
-	        title: 'Viernes'
-	    }, {
+	var text4 = '<div class="editable-address"><label><span>Monitor: </span><select name="monitor" id="monitor" class="input-mini"><option value="Volvo">Volvo</option><option value="Fiat">Fiat</option><option value="Saab">Saab</option><option value="Mercedes">Mercedes</option><option value="Audi">Audi</option></select></label></div>';
 
-	        field: 'sabado',
-	        title: 'Sábado'
-	    }, {
-	        field: 'domingo',
-	        title: 'Domingo'
-	    }, ]
+	get_activities();
+
+	function get_activities(){
+	    $.ajax({
+			url: './getactivities', // This is the url we gave in the route
+			type: 'POST',
+		    data: {_token: CSRF_TOKEN},
+		    dataType: 'JSON',
+		    success: function(data){ // What to do if we succeed
+			    $.each(data, function(name,act) {
+				  //alert(name);
+				  $.each(act, function(key,value){
+				  	//alert(key + ' ' + value);
+				  	text2 += '<option value="' + key + '">' + key + '</option>';
+				  	//unvalue = value;
+				  	//unkey = key;
+				  })
+				  //alert(unvalue + ' 1');
+				  //alert(unkey + ' 1');
+				}); 
+		        //actividades = data;
+		        //console.log(actividades);
+		        set_selects();
+		    }
+		});
+		
+	}
+
+	//$(document).ajaxStop(function () {
+	function set_selects() {
+    	$('.schedule').editable({
+	        //url: '/post',
+	        url: 'scripts/post.php',
+	        title: 'Seleccione una actividad y un monitor:',
+	        tpl: /*'<div class="editable-address"><label><span>Actividad: </span><select name="activity" id="activity" class="input-small"><option value="Volvo">Volvo</option><option value="Fiat">Fiat</option><option value="Saab">Saab</option><option value="Mercedes">Mercedes</option><option value="Mercedes Benz">Mercedes Benz</option><option value="Audi">Audi</option><option value="'+{unvalue}+'">'+{unkey}+'</option></select></label></div>'+
+	             '<div class="editable-address"><label><span>Monitor: </span><select name="monitor" id="monitor" class="input-mini"><option value="Volvo">Volvo</option><option value="Fiat">Fiat</option><option value="Saab">Saab</option><option value="Mercedes">Mercedes</option><option value="Audi">Audi</option></select></label></div>',*/
+	             //text1 + unkey + text2 + unkey + text3 + text4,
+	             text1 + text2 + text3 + text4,
+	        success: function(response, newValue) {
+		        if(response.status == 'error') return response.msg; //msg will be shown in editable form
+		    }      
+	    });
+	    set_values();
+  	//})
+  	}		
+    
+  	function set_values(){
+	    //set value from ajax
+		$.ajax({
+			url: 'bootstrap-table-examples/json/prueba.php',
+			dataType: 'json',
+			success: function(resultado){
+				$('#address111').editable('setValue', resultado);
+				$('#address212').editable('setValue', resultado);
+				$('#address313').editable('setValue', resultado);
+				$('#address414').editable('setValue', resultado);
+				$('#address515').editable('setValue', resultado);
+				$('#address616').editable('setValue', resultado);
+				$('#address717').editable('setValue', resultado);
+			},
+			error: function(error){
+				console.log(error);
+			}
+		});
+	}
+
+	/*
+	$('.schedule').editable({
+	    success: function(response, newValue) {
+	        if(response.status == 'error') return response.msg; //msg will be shown in editable form
+	    }
 	});
 	*/
-	
-	
+	/*
+	$('.schedule').editable({
+	    success: function(response, newValue) {
+	        userModel.set('schedule', newValue); //update backbone model
+	    }
+	});
+	*/
 
+});
+/*
+
+	$('#table2').bootstrapTable({
+	    url: 'bootstrap-table-examples/json/schedule.json',
+	    columns: [
+		    [	
+		    	{
+		        	field: 'hora',
+		        	title: 'Hora',
+		        	rowspan: 2
+		    	}, {
+		        	field: 'sala',
+		        	title: 'Sala',
+		        	rowspan: 2
+		    	}, {
+		        	field: 'lunes',
+		        	title: 'Lunes',
+		        	rowspan: 2
+		    	}, {
+			        field: 'martes',
+			        title: 'Martes',
+		        	rowspan: 2
+			    }, {
+			        field: 'miercoles',
+			        title: 'Miércoles',
+		        	rowspan: 2
+			    }, {
+			        field: 'jueves',
+			        title: 'Jueves',
+		        	rowspan: 2
+			    }, {
+			        field: 'viernes',
+			        title: 'Viernes',
+		        	rowspan: 2
+			    }, {
+			        field: 'sabado',
+			        title: 'Sábado',
+		        	rowspan: 2
+			    }, {
+			        field: 'domingo',
+			        title: 'Domingo',
+			        colspan: 3
+		    	}
+		    ],
+		    [
+		    	{
+			    	field: 'yeah',
+			    	title: 'Yeah'
+			    }, {
+			    	field: 'yeah2',
+			    	title: 'Yeah2'
+			    }
+		    ]
+		]
+	});
+	
+	*/
+	
+/*
 	var $table = $('#table'),
         $remove = $('#remove'),
         selections = [];
     function initTable() {
     	$table.bootstrapTable({
-        	url: 'bootstrap-table-examples/json/409.json',
-        	//url: 'bootstrap-table-examples/json/multifield.json',
+        	//url: 'bootstrap-table-examples/json/409.json',
+        	url: 'bootstrap-table-examples/json/multifield.json',
             //height: getHeight(),
             columns: [
                 [
@@ -132,34 +726,17 @@ $(function(){
                 ],
                 [
                     {
-                    	/*$('#address').editable({ url: '/post', title: 'Enter city, street and building #', value: { city: "Moscow", street: "Lenina", building: "15" } });
-                    	*/
+                   	
                     	
-                    	/*
-
-
-
                     	field: 'address',
                         title: 'Enter city, street and building #',
                         editable: {
-                        	type: 'address',
+                        	
                         	url: '/post',
 					        title: 'Enter city, street and building #'
                         }
                         //footerFormatter: totalNameFormatter,
                         //align: 'center'
-                        
-
-                        */
-
-
-                        
-                        field: 'name',
-                        title: 'Item Name',
-                        sortable: true,
-                        editable: true,
-                        footerFormatter: totalNameFormatter,
-                        align: 'center'
                         
                     }, {
                         field: 'price',
@@ -194,6 +771,7 @@ $(function(){
                 ]
             ]
         });
+
         // sometimes footer render error.
         setTimeout(function () {
             $table.bootstrapTable('resetView');
@@ -205,15 +783,7 @@ $(function(){
             selections = getIdSelections();
             // push or splice the selections if you want to save all data selections
         });
-        /*
-        $table.on('expand-row.bs.table', function (e, index, row, $detail) {
-            if (index % 2 == 1) {
-                $detail.html('Loading from ajax request...');
-                $.get('LICENSE', function (res) {
-                    $detail.html(res.replace(/\n/g, '<br>'));
-                });
-            }
-        });*/
+
         $table.on('all.bs.table', function (e, name, args) {
             console.log(name, args);
         });
@@ -231,6 +801,7 @@ $(function(){
             });
         });
     }
+
     function getIdSelections() {
         return $.map($table.bootstrapTable('getSelections'), function (row) {
             return row.id
@@ -344,6 +915,6 @@ $(function(){
     }
 
 
-
+*/
 
 @stop

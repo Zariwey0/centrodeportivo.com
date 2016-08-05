@@ -38,7 +38,8 @@ $(function(){
         @method render() 
         **/        
         render: function() {
-           this.$input = this.$tpl.find('input');
+           //this.$input = this.$tpl.find('input');
+           this.$input = this.$tpl.find('select');
         },
         
         /**
@@ -51,7 +52,11 @@ $(function(){
                 $(element).empty();
                 return; 
             }
-            var html = $('<div>').text(value.city).html() + ', ' + $('<div>').text(value.street).html() + ' st., bld. ' + $('<div>').text(value.building).html();
+            //alert(value);
+            //var act = this.$input.filter('[name="activity"]').children("option").filter(":selected").text();
+            //alert(act);
+            //var html = $('<div>').text(value.city).html() + ', ' + $('<div>').text(value.street).html() + ' st., bld. ' + $('<div>').text(value.building).html();
+            var html = $('<div>').text(value.activity).html() + ', impartida por ' + $('<div>').text(value.monitor).html();
             $(element).html(html); 
         },
         
@@ -116,9 +121,13 @@ $(function(){
            if(!value) {
              return;
            }
+           /*
            this.$input.filter('[name="city"]').val(value.city);
            this.$input.filter('[name="street"]').val(value.street);
            this.$input.filter('[name="building"]').val(value.building);
+           */
+           this.$input.filter('[name="activity"]').val(value.activity);
+           this.$input.filter('[name="monitor"]').val(value.monitor);
        },       
        
        /**
@@ -128,9 +137,13 @@ $(function(){
        **/          
        input2value: function() { 
            return {
+              /*
               city: this.$input.filter('[name="city"]').val(), 
               street: this.$input.filter('[name="street"]').val(), 
               building: this.$input.filter('[name="building"]').val()
+              */
+              activity: this.$input.filter('[name="activity"]').val(), 
+              monitor: this.$input.filter('[name="monitor"]').val()
            };
        },        
        
@@ -140,7 +153,8 @@ $(function(){
         @method activate() 
        **/        
        activate: function() {
-            this.$input.filter('[name="city"]').focus();
+            //this.$input.filter('[name="city"]').focus();
+            this.$input.filter('[name="activity"]').focus();
        },  
        
        /**
@@ -158,9 +172,20 @@ $(function(){
     });
 
     Address.defaults = $.extend({}, $.fn.editabletypes.abstractinput.defaults, {
-        tpl: '<div class="editable-address"><label><span>City: </span><input type="text" name="city" class="input-small"></label></div>'+
+        tpl: /*
+              '<div class="editable-address"><label><span>City: </span><input type="text" name="city" class="input-small"></label></div>'+
              '<div class="editable-address"><label><span>Street: </span><input type="text" name="street" class="input-small"></label></div>'+
              '<div class="editable-address"><label><span>Building: </span><input type="text" name="building" class="input-mini"></label></div>',
+             */
+             /*
+             '<div class="editable-address"><label><span>Actividad: </span><input type="select" name="activity" id="activity" class="input-small"></label></div>'+
+             '<div class="editable-address"><label><span>Monitor: </span><input type="select" name="monitor" id="monitor" class="input-mini"></label></div>',
+             */
+             /*
+             '<div class="editable-address"><label><span>Actividad: </span><select name="activity" id="activity" class="input-small"><option value="Volvo">Volvo</option><option value="Saab">Saab</option><option value="Mercedes">Mercedes</option><option value="Audi">Audi</option></select></label></div>'+
+             '<div class="editable-address"><label><span>Monitor: </span><select name="monitor" id="monitor" class="input-mini"><option value="Volvo">Volvo</option><option value="Saab">Saab</option><option value="Mercedes">Mercedes</option><option value="Audi">Audi</option></select></label></div>',
+             */
+             '',
              
         inputclass: ''
     });

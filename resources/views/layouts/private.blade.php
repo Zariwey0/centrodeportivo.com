@@ -9,6 +9,12 @@
 		<title>@yield('title')</title>
 		<meta name="description" content="@yield('description')" />
 		<meta name="keywords" content="@yield('keywords')" />
+
+
+		<!-- CSRF_TOKEN() -->
+		<meta name="csrf-token" content="{{ csrf_token() }}" />
+
+
 		<!-- ========= Favicon Icons ========= -->
 		<link rel="shortcut icon" href="{{ asset('images/favicon/favicon.ico') }}">
 		<!-- Standard iPhone Touch Icon-->

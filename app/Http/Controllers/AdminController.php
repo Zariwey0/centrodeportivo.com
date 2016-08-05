@@ -30,6 +30,25 @@ class AdminController extends Controller
 	    }
 	}
 
+	public function getActivities(){
+	    $activities = Activity::all()->pluck('id','name');
+	    //$activities = \DB::table('activities')->pluck('id', 'name');
+	    //return \Response::json(array('activities' => $activities));
+	    return response()->json(array('activities' => $activities));
+	    //dd(\Response::json(array('activities' => $activities)));
+	    //$data = $request->all(); // This will get all the request data.
+
+        //dd($activities); // This will dump and die
+	}
+
+	public function schedule(){
+	    if ($this->isAdmin()){
+	        return View('schedule');
+	    }else{
+	        return redirect()->back();
+	    }
+	}
+
 	
     public function createAdmin(Request $request){
   
