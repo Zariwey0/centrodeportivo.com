@@ -7,3 +7,72 @@
     width: 70px;  
     display: inline-block;
 }
+
+:disabled{
+	font-weight: bold;
+}
+
+.disabled1 {
+	color: #cc7a00;
+	
+	background: #dddddd;
+}
+
+.type1 { /* TONIFICACIÓN */
+	color: #cc7a00;
+}
+
+.disabled2 {
+	color: #0066ff;
+	
+	background: #dddddd;
+}
+
+.type2 { /* ACTIVIDADES ACUÁTICAS */
+	color: #0066ff;
+}
+
+.disabled3 {
+	color: #b30000;
+	
+	background: #dddddd;
+}
+
+.type3 { /* ALTA INTENSIDAD */
+	color: #b30000;
+}
+
+.disabled4 {
+	color: #29a329;
+	
+	background: #dddddd;
+}
+
+.type4 { /* CUERPO Y MENTE */
+	color: #29a329;
+}
+
+.disabled5 {
+	color: #e6005c;
+	
+	background: #dddddd;
+}
+
+.type5 { /* AERÓBICO */
+	color: #e6005c;
+}
+
+th {
+    background-color: #f04b2d;
+    color: white;
+}
+
+td {
+    border-bottom: 1px solid black !important;
+    vertical-align: middle !important;
+    text-align: center;
+}
+
+.lastrow {
+	border-bottom: 2px solid black !important;
+}

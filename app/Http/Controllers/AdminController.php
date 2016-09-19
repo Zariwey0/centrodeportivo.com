@@ -31,10 +31,35 @@ class AdminController extends Controller
 	}
 
 	public function getActivities(){
-	    $activities = Activity::all()->pluck('id','name');
+		/*DB::table('users')
+            ->join('contacts', 'users.id', '=', 'contacts.user_id')
+            ->join('orders', 'users.id', '=', 'orders.user_id')
+            ->select('users.id', 'contacts.phone', 'orders.price')
+            ->get();*/
+
+        /*$activities = DB::table('activities')
+        	->join('activities_type', 'activities.id_type', '=', 'activities_type.id')
+        	->orderBy('activities_type.name')
+        	->pluck('activities.id_type', 'activities.name', 'activities_type.name');
+		*/
+	    //return json_encode($activities);
+	    $activities = Activity::all()->pluck('id_type','name');
+	    return response()->json(array('activities' => $activities));
+	    ////////
+		/*
+	   	$types = ActivitiesType::all()->pluck('id','name');
+	    $arr = array();
+	    $arr[0] = $activities;
+	    $arr[1] = $types;
+	    return response()->json('arr' => $arr);
+	    */
+	}
+
+	public function getMonitors(){
+	    $monitors = User::all()->where('user', '2')->pluck('id','name');
 	    //$activities = \DB::table('activities')->pluck('id', 'name');
 	    //return \Response::json(array('activities' => $activities));
-	    return response()->json(array('activities' => $activities));
+	    return response()->json(array('monitors' => $monitors));
 	    //dd(\Response::json(array('activities' => $activities)));
 	    //$data = $request->all(); // This will get all the request data.
 
@@ -167,7 +192,7 @@ class AdminController extends Controller
 		   	//Roles de validación
 		   	$rules = [
 		    	'name' => 'required|min:3|max:25|unique:activities_type,name|regex:/^[a-záéíóúàèìòùäëïöüñ\s]+$/i',
-		    	'description' => 'required|min:6|max:400',//|unique:users,email',
+		    	'description' => 'required|min:6|max:500',//|unique:users,email',
 		    	//'password' => 'required|min:6|max:18|confirmed',
 		   	];
 		   
@@ -181,7 +206,7 @@ class AdminController extends Controller
 		    	//'email.email' => 'El formato de email es incorrecto',
 		    	'description.required' => 'El campo es requerido',
 		    	'description.min' => 'El mínimo de caracteres permitidos son 6',
-		    	'description.max' => 'El máximo de caracteres permitidos son 400',
+		    	'description.max' => 'El máximo de caracteres permitidos son 500',
 		    	//'email.unique' => 'El email ya existe',
 		    	/*'password.required' => 'El campo es requerido',
 		    	'password.min' => 'El mínimo de caracteres permitidos son 6',

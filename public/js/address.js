@@ -56,7 +56,7 @@ $(function(){
             //var act = this.$input.filter('[name="activity"]').children("option").filter(":selected").text();
             //alert(act);
             //var html = $('<div>').text(value.city).html() + ', ' + $('<div>').text(value.street).html() + ' st., bld. ' + $('<div>').text(value.building).html();
-            var html = $('<div>').text(value.activity).html() + ', impartida por ' + $('<div>').text(value.monitor).html();
+            var html = '<b class="type' + value.activity_class + '">' + $('<div>').text(value.activity).html() + '</b>' + ', impartida por ' + '<i>' + $('<div>').text(value.monitor).html() + '</i>';
             $(element).html(html); 
         },
         
@@ -143,7 +143,8 @@ $(function(){
               building: this.$input.filter('[name="building"]').val()
               */
               activity: this.$input.filter('[name="activity"]').val(), 
-              monitor: this.$input.filter('[name="monitor"]').val()
+              monitor: this.$input.filter('[name="monitor"]').val(),
+              activity_class: this.$input.filter('[name="activity"]').find('option:selected').attr("class")
            };
        },        
        

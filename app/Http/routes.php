@@ -106,6 +106,7 @@ Route::group(['middleware' => ['web']], function () {
 	Route::match(['get', 'post'], 'admin/createmonitor', 'AdminController@createMonitor');
 	/////////////////////////////
 	Route::post('getactivities', 'AdminController@getActivities');
+	Route::post('getmonitors', 'AdminController@getMonitors');
 	/////////////////////////////
 	Route::get('schedule', 'AdminController@configSchedule');
 	Route::get('admin', 'AdminController@admin');
