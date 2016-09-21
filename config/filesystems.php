@@ -47,6 +47,11 @@ return [
             'driver' => 'local',
             'root'   => storage_path('app'),
         ],
+        
+        'ficheros' => [
+            'driver' => 'local',
+            'root'   => public_path('bootstrap-table-examples/json'),
+        ],
 
         'ftp' => [
             'driver'   => 'ftp',

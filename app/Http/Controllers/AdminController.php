@@ -10,6 +10,8 @@ use App\ActivitiesType;
 use App\Activity;
 use Validator;
 use Auth;
+use App\Schedule;
+use Storage;
 
 class AdminController extends Controller
 {
@@ -31,6 +33,19 @@ class AdminController extends Controller
 	}
 
 	public function getActivities(){
+		/**********************************************/
+		//$data = json_encode(['Example 1','Example 2','Example 3',]);
+		//$data = Schedule::all()->pluck('activity_type','activity','monitor');
+		$data = Schedule::all();
+		//$data = DB::table('schedule')->select('activity_type', 'activity', 'monitor')->get();
+		//$data = 'Oh yeah, madafaka.';
+	  	//$fileName = time() . '_datafile.json';
+	  	$fileName = "datos_basedatos.json";
+	  	Storage::disk('ficheros')->put($fileName,$data);
+	  	//Storage::disk('local')->put('file.txt', 'Contenido');
+		/**********************************************/
+
+
 		/*DB::table('users')
             ->join('contacts', 'users.id', '=', 'contacts.user_id')
             ->join('orders', 'users.id', '=', 'orders.user_id')
