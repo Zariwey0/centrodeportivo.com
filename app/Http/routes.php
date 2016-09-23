@@ -107,6 +107,7 @@ Route::group(['middleware' => ['web']], function () {
 	/////////////////////////////
 	Route::post('getactivities', 'AdminController@getActivities');
 	Route::post('getmonitors', 'AdminController@getMonitors');
+	Route::post('updateschedule', 'AdminController@updateSchedule');
 	/////////////////////////////
 	Route::get('schedule', 'AdminController@configSchedule');
 	Route::get('admin', 'AdminController@admin');

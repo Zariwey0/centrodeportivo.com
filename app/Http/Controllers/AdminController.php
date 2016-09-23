@@ -89,6 +89,13 @@ class AdminController extends Controller
 	    }
 	}
 
+	public function updateSchedule(Request $request){
+		//Cogemos solo números
+		preg_match_all('!\d+!', $request->id, $id);
+		\DB::table('schedule')->where('id', '=', $id)
+            ->update(array('activity' => $request->activity, 'activity_type' => $request->activity_type, 'monitor' => $request->monitor));
+	}
+
 	
     public function createAdmin(Request $request){
   
