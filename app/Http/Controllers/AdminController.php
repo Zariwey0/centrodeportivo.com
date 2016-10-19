@@ -13,6 +13,11 @@ use Auth;
 use App\Schedule;
 use Storage;
 
+
+use App\Http\Controllers\Controller;
+use Hash;
+use App\Comments;
+
 class AdminController extends Controller
 {
 	public function __construct(){
@@ -273,6 +278,7 @@ class AdminController extends Controller
 		    	'name' => 'required|min:3|max:25|unique:activities_type,name|regex:/^[a-záéíóúàèìòùäëïöüñ\s]+$/i',
 		    	'description' => 'required|min:6|max:700',//|unique:users,email',
 		    	'activitytype' => 'required|integer',
+		    	'image' => 'required|image|max:1024*1024*1',
 		    	//'password' => 'required|min:6|max:18|confirmed',
 		   	];
 		   
@@ -289,6 +295,10 @@ class AdminController extends Controller
 		    	'description.max' => 'El máximo de caracteres permitidos son 700',
 		    	'activitytype.required' => 'El campo es requerido',
 		    	'activitytype.integer' => 'El campo es requerido',
+
+		    	'image.required' => 'Es obligatorio añadir una imagen',
+            	'image.image' => 'Formato no permitido',
+            	'image.max' => 'El tamaño máximo permitido es de 1 MB',
 		    	//'email.unique' => 'El email ya existe',
 		    	/*'password.required' => 'El campo es requerido',
 		    	'password.min' => 'El mínimo de caracteres permitidos son 6',
@@ -302,19 +312,16 @@ class AdminController extends Controller
 		   	if ($validator->fails()){
 		    	return redirect()->back()->withErrors($validator);
 		   	}
-		   	else{ // De los contrario guardar al usuario
+		   	else{ // De los contrario guardar la actividad
 		    	$activity = new Activity;
 		    	$activity->name = $request->name;
 		    	$activity->description = $request->description;
 		    	$activity->id_type = $request->activitytype;
-		    	/*$user->password = bcrypt($request->password);
-		    	$user->remember_token = str_random(100);
-		    	$user->confirm_token = str_random(100);
-		    	//Activar al administrador sin necesidad de enviar correo electrónico
-		    	$user->active = 1;
-		    	//El valor 2 en la columna determina que el usuario es monitor
-		    	$user->user = 2;
-			    */
+
+		    	$imagename = str_random(30).'-'.$request->file('image')->getClientOriginalName();
+            	$request->file('image')->move('activitiesimages', $imagename);
+		    	$activity->image = 'activitiesimages/'.$imagename;
+
 			    if ($activity->save()){
 		    		return redirect('admin')->with('message', 'Enhorabuena nueva actividad creada correctamente');
 		    	}else{

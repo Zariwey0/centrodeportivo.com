@@ -1,5 +1,5 @@
 @extends('layouts.home')
-@section('title', 'Centro Deportivo del Carajo - Home')
+@section('title', 'Centro Deportivo Lisleta - Home')
 @section('description', 'pruebita buena jodio')
 @section('keywords', 'palabras clave y tal')
 
@@ -21,8 +21,8 @@
 								<div class="row">
 									<div class="col-xs-12 shop-content add">
 										<header class="shop-heading">
-											<h1><span class="add-text">OPTIMIZE</span> YOUR FITNESS & HEALTH</h1>
-											<p>Welcome to WordPress. This is your first post. Edit or delete it, then start bloggin Molestias excepturi sint occaecati cupiditate non provident similique sunt expedita distinction.</p>
+											<h1><span class="add-text">OPTIMIZE</span> YOUR FITNESS</h1>
+											<p>Welcome to WordPress. This is your first post. Edit or delete it, then start bloggin Molestias excepturi sint occaecati cupiditate non provident.</p>
 											<div class="button-slider">
 												<a href="http://fekra.csshunter.com" class="btn btn-f-default">START TODAY</a>
 											</div>
@@ -65,12 +65,13 @@
 						<div class="col-sm-4 col-xs-12" data-animate="fadeInUp" data-delay="300">
 							<!-- collection-col -->
 							<div class="collection-col">
-								<img src="http://placehold.it/375x493" alt="image description">
+								<!--<img src="http://placehold.it/375x493" alt="image description">-->
+								<img src="images/trainers_portada3.jpg" alt="image description">
 								<div class="collection-over add2">
 									<div class="frame">
 										<div class="box">
-											<h2><span class="txt">Train with</span>  Prof Coaches</h2>
-											<a href="team-single.html" class="btn-shop add">VIEW OUR COACHES <i class="fa fa-angle-right"></i></a>
+											<h2><span class="txt">ENTRENA CON</span>  PROFESIONALES CUALIFICADOS</h2>
+											<a href="team-single.html" class="btn-shop add">CONÓCELOS <i class="fa fa-angle-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -81,12 +82,13 @@
 								<div class="col-sm-6 col-xs-12" data-animate="fadeInUp" data-delay="300">
 									<!-- collection-col -->
 									<div class="collection-col women">
-										<img src="http://placehold.it/370x231" alt="image description">
+										<!--<img src="http://placehold.it/370x231" alt="image description">-->
+										<img src="images/join_now.jpg" alt="image description">
 										<div class="collection-over add">
 											<div class="frame">
 												<div class="box">
-													<h2><span class="txt">JOIN FOR <br> 12 CLASSES</span> &amp; GET 30% OFF</h2>
-													<a href="team-single.html" class="btn-shop add">JOIN  NOW <i class="fa fa-angle-right"></i></a>
+													<h2><span class="txt">DATE AHORA <br>DE ALTA Y</span> APROVECHA <br>NUESTRAS OFERTAS</h2>
+													<a href="team-single.html" class="btn-shop add">SUSCRÍBETE <i class="fa fa-angle-right"></i></a>
 												</div>
 											</div>
 										</div>
@@ -95,12 +97,13 @@
 								<div class="col-sm-6 col-xs-12" data-animate="fadeInUp" data-delay="300">
 									<!-- collection-col -->
 									<div class="collection-col women">
-										<img src="http://placehold.it/370x231" alt="image description">
+										<!--<img src="http://placehold.it/370x231" alt="image description">-->
+										<img src="images/heavy_weight.jpg" alt="image description">
 										<div class="collection-over add">
 											<div class="frame">
 												<div class="box">
-													<h2><span class="txt">HEAVY WEIGHT</span> CLASSES</h2>
-													<a href="team-single.html" class="btn-shop add">LEARN MORE  <i class="fa fa-angle-right"></i></a>
+													<h2>CLASES <span class="txt">PARA TODOS <br> LOS GUSTOS</span></h2>
+													<a href="{{url('activities')}}" class="btn-shop add">INFORMÁTE  <i class="fa fa-angle-right"></i></a>
 												</div>
 											</div>
 										</div>
@@ -109,12 +112,13 @@
 							</div>
 							<!-- collection-col -->
 							<div class="collection-col" data-animate="fadeInUp" data-delay="300">
-								<img src="http://placehold.it/770x230" alt="image description">
+								<!--<img src="http://placehold.it/770x230" alt="image description">-->
+								<img src="images/get_shape.jpg" alt="image description">
 								<div class="collection-over">
 									<div class="frame">
 										<div class="box">
-											<h2><span class="txt">TIME TO</span> GET IN SHAPE</h2>
-											<a href="team-single.html" class="btn-shop add">GET CONSULATITIONS  <i class="fa fa-angle-right"></i></a>
+											<h2><span class="txt">TENEMOS TODO LO NECESARIO</span> PARA MANTENERTE EN FORMA</h2>
+											<a href="team-single.html" class="btn-shop add">NUESTRAS INSTALACIONES <i class="fa fa-angle-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -181,7 +185,8 @@
 														</div>
 													</div>
 												</div>
-												<img src="http://placehold.it/291x270" alt="image description">
+												<!--<img src="http://placehold.it/291x270" alt="image description">-->
+												<img src="images/body_building.jpg" alt="image description">
 											</div>
 											<div class="box">
 												<div class="over">
@@ -272,8 +277,8 @@
 				<div class="container">
                     <!-- page heading -->
                     <header class="page-heading margin-bottom-60">
-                        <h2 class="lime text-capitalize font-medium margin-bottom-10">OUR FITNESS COACHES</h2>
-                        <p class="heading7 title text-uppercase">BEST MEMBERS OF COACHES</p>
+                        <h2 class="lime text-capitalize font-medium margin-bottom-10">NUESTROS MONITORES</h2>
+                        <p class="heading7 title text-uppercase">CONÓCELOS</p>
                     </header>
 					<div class="row">
 						<div class="col-xs-12 col-sm-6">
@@ -370,8 +375,8 @@
                 <div class="container">
                     <!-- page heading -->
                     <header class="page-heading margin-bottom-90 padding-bottom-30">
-                        <h2 class="white text-capitalize font-medium margin-bottom-10">OUR PACKAGES</h2>
-                        <p class="heading7 title text-uppercase">IMPROVE YOUR PERFORMANCE</p>
+                        <h2 class="white text-capitalize font-medium margin-bottom-10">SUSCRIPCIONES</h2>
+                        <p class="heading7 title text-uppercase">Elige la que más se adecúe a tus intereses</p>
                     </header>
 					<div class="row">
 						<div class="col-xs-12 col-sm-6 col-md-3">

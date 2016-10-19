@@ -22,6 +22,10 @@ class Front extends Controller {
         return view('about-us', array('page' => 'about-us'));
     }
 
+    /*public function activities(){
+        return View('activities');
+    }*/
+
 /*
     public function authenticate() {
         if (Auth::attempt(['email' => Request::get('email'), 'password' => Request::get('password')])) {

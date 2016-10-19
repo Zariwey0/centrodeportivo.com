@@ -707,6 +707,49 @@
 	color: #f04b2d;
 }
 
+/* NUEVOS COLORES PARA LOS TIPOS DE ACTIVIDADES */
+
+.isotop-controls li.active a.tonificacion {
+	background: #cc7a00;
+}
+
+.isotop-controls a.tonificacion:hover {
+	background: #cc7a00;
+}
+
+.isotop-controls li.active a.actividades-acuaticas {
+	background: #0066ff;
+}
+
+.isotop-controls a.actividades-acuaticas:hover {
+	background: #0066ff;
+}
+
+.isotop-controls li.active a.alta-intensidad {
+	background: #b30000;
+}
+
+.isotop-controls a.alta-intensidad:hover {
+	background: #b30000;
+}
+
+.isotop-controls li.active a.cuerpo-y-mente {
+	background: #29a329;
+}
+
+.isotop-controls a.cuerpo-y-mente:hover {
+	background: #29a329;
+}
+
+.isotop-controls li.active a.aerobico {
+	background: #e6005c;
+}
+
+.isotop-controls a.aerobico:hover {
+	background: #e6005c;
+}
+/************************************************/
+
 .isotop-controls li.active a {
 	background: #f04b2d;
 }
@@ -1797,6 +1840,35 @@
 #header.fixed-position.style28 .social-list a:hover,
 #footer.style15 .f-contact-info2 .mail-box .fa {
 	color: #f04b2d;
+}
+
+.shop-heading {
+	/*text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;*/
+	/*text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;*/
+	
+   
+   
+   background: rgb(0, 0, 0); 
+   background: rgba(0, 0, 0, 0.7);
+   padding: 20px;
+   
+}
+
+.shop-heading p {
+	/*font-size: medium;*/
+}
+
+.stretch img{
+
+	/*
+    -webkit-filter: blur(3px); 
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px); 
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+    */
+
+/*    opacity:0.9;*/
 }
 
 .page-heading .heading7:after,

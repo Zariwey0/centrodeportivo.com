@@ -27,6 +27,10 @@ class UserController extends Controller{
 		return View('schedule');
 	}
 
+	public function activities(){
+		return View('activities');
+	}
+
 	public function updateProfile(Request $request){
         $rules = ['image' => 'required|image|max:1024*1024*1',];
         $messages = [

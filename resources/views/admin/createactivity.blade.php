@@ -51,8 +51,8 @@
 -->
 
 
-<form method="POST" action="{{url('admin/createactivity')}}">
-    {!! csrf_field() !!}
+<form method="POST" enctype="multipart/form-data" action="{{url('admin/createactivity')}}">
+    {{ csrf_field() }}
 
 
     <div class='form-group'>
@@ -118,11 +118,17 @@
     </div>
     -->
 
+    <div class="form-group">
+        <label for="image">Imagen:</label>
+        <input type="file" name="image" />
+        <div class="text-danger">{{$errors->first('image')}}</div>
+    </div>
+
     <div>
         <button type="submit" class="btn btn-primary">Crear actividad</button>
     </div>
 </form>
 
 </div>
-
+<div class="padding-bottom-50"></div>
 @stop

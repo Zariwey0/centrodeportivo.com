@@ -47,6 +47,7 @@ array:8 [▼
 Route::get('/agency','Front@agency');
 Route::get('/about','Front@about');
 
+//Route::get('activities', 'Front@activities');
 /*
 Route::get('/', function () {
     return view('welcome');
@@ -114,4 +115,5 @@ Route::group(['middleware' => ['web']], function () {
 	Route::get('user/{id}', 'UserController@public_profile')->where(['id' => '[0-9]+']);
     //
     Route::get('schedule', 'UserController@schedule');
+    Route::get('activities', 'UserController@activities');
 });
