@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Validator;
 use App\User;
+use App\Activity;
 use Auth;
 use Hash;
 use App\Comments;
@@ -25,6 +26,10 @@ class UserController extends Controller{
 
 	public function schedule(){
 		return View('schedule');
+	}
+
+	public function seeSchedule(){
+		return View('seeschedule');
 	}
 
 	public function activities(){
@@ -160,5 +165,17 @@ class UserController extends Controller{
 	    else{
 	        return View('user')->with('user', $user);
 	    }
+	}
+
+	public function activity($id){
+		$activity = Activity::select()
+					//->where('id', '=', $id)
+					->where('name', '=', $id)
+					->first();
+		if (count($activity) == 0){
+			return redirect()->back();
+		}else{
+			return View('activity')->with('activity', $activity);
+		}
 	}
 }

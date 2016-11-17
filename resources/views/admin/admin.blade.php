@@ -180,6 +180,7 @@
     					<li><a href="{{url('admin/createactivitytype')}}"><i class="fa fa-caret-right"></i>Crear nuevo tipo de actividad</a></li>
     					<li><a href="{{url('admin/createactivity')}}"><i class="fa fa-caret-right"></i>Crear nueva actividad</a></li>
     					<li><a href="{{url('schedule')}}"><i class="fa fa-caret-right"></i>Configurar horario</a></li>
+    					<li><a href="{{url('seeschedule')}}"><i class="fa fa-caret-right"></i>Ver horario</a></li>
 					</ul>
 				</section>
 				<!-- widget -->

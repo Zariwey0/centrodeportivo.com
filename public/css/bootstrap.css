@@ -2082,6 +2082,10 @@ th {
 .table-hover > tbody > tr:hover {
   background-color: #f5f5f5; }
 
+/*.schedule tr:hover {
+  background-color: #f04b2d;
+}*/
+
 table col[class*="col-"] {
   position: static;
   float: none;

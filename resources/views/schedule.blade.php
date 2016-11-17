@@ -657,10 +657,8 @@ $.ajaxSetup({
 });
 
 
-
 $(function(){
 
-	
 	var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
 
 	var unvalue;
@@ -715,18 +713,10 @@ $(function(){
 		    dataType: 'JSON',
 		    success: function(data){ // What to do if we succeed
 			    $.each(data, function(name,act) {
-				  //alert(name);
 				  $.each(act, function(key,value){
-				  	//alert(key + ' ' + value);
 				  	text5 += '<option value="' + key + '">' + key + '</option>';
-				  	//unvalue = value;
-				  	//unkey = key;
 				  })
-				  //alert(unvalue + ' 1');
-				  //alert(unkey + ' 1');
 				}); 
-		        //actividades = data;
-		        //console.log(actividades);
 		        set_selects();
 		    }
 		});
@@ -739,11 +729,7 @@ $(function(){
 	        //url: '/post',
 	        url: 'scripts/post.php',
 	        title: 'Selecciona una actividad y un monitor:',
-	        tpl: /*'<div class="editable-address"><label><span>Actividad: </span><select name="activity" id="activity" class="input-small"><option value="Volvo">Volvo</option><option value="Fiat">Fiat</option><option value="Saab">Saab</option><option value="Mercedes">Mercedes</option><option value="Mercedes Benz">Mercedes Benz</option><option value="Audi">Audi</option><option value="'+{unvalue}+'">'+{unkey}+'</option></select></label></div>'+
-	             '<div class="editable-address"><label><span>Monitor: </span><select name="monitor" id="monitor" class="input-mini"><option value="Volvo">Volvo</option><option value="Fiat">Fiat</option><option value="Saab">Saab</option><option value="Mercedes">Mercedes</option><option value="Audi">Audi</option></select></label></div>',*/
-	             //text1 + unkey + text2 + unkey + text3 + text4,
-	             //text1 + text2 + text3 + text4,
-	             text1 + text2 + text3 + text4 + text5 + text6,
+	        tpl: text1 + text2 + text3 + text4 + text5 + text6,
 	        success: function(response, newValue) {
 		        if(response.status == 'error') return response.msg; //msg will be shown in editable form
 		    }      
@@ -761,67 +747,17 @@ $(function(){
 			url: 'bootstrap-table-examples/json/prueba.php',
 			dataType: 'json',
 			success: function(resultado){
-				//$("[id^=address1]").editable('setValue',
-				//resultado[0]['address']).children(":first-child").addClass( resultado[0]['id'] );
-				/*
-				//FOR PARA HORAS
-				for (var j = 1; j < 14; j++) {
-					//FOR PARA SALAS
-					for (var k = 1; k < 5; k++) {
-						//FOR PARA DÍAS
-						for (var i = 1; i < 8; i++) {
-							temp_id = iddd + j + k + i;
-							$(temp_id).editable('setValue',
-				resultado[index]['address']).children(":first-child").addClass( resultado[index]['id'] );
-						index++;
-						}
-					}
-				}*/
-
 				for (var i = 1; i < 365; i++){
 					temp_id = iddd + i;
 					$(temp_id).editable('setValue',
 				resultado[i-1]['address']).children(":first-child").addClass( resultado[i-1]['id'] );
-					//index++;
 				}
-
-
-				/*
-				$(iddd).editable('setValue',
-				resultado[0]['address']).children(":first-child").addClass( resultado[0]['id'] );
-				$('#address212').editable('setValue', resultado[1]['address']).children(":first-child").addClass( resultado[1]['id'] );
-				$('#address313').editable('setValue', resultado[2]['address']).children(":first-child").addClass( resultado[2]['id'] );
-				$('#address414').editable('setValue', resultado[3]['address']).children(":first-child").addClass( resultado[3]['id'] );
-				$('#address515').editable('setValue', resultado[4]['address']).children(":first-child").addClass( resultado[4]['id'] );
-				$('#address616').editable('setValue', resultado[5]['address']).children(":first-child").addClass( resultado[5]['id'] );
-				$('#address717').editable('setValue', resultado[6]['address']).children(":first-child").addClass( resultado[6]['id'] );
-				*/
 			},
 			error: function(error){
 				console.log(error);
 			}
 		});
 	}
-
-
-	/*
-	$('.schedule').editable({
-	    success: function(response, newValue) {
-	        if(response.status == 'error') return response.msg; //msg will be shown in editable form
-	    }
-	});
-	*/
-	/*
-	$('.schedule').editable({
-	    success: function(response, newValue) {
-	        userModel.set('schedule', newValue); //update backbone model
-	    }
-	});
-	*/
-
-
-	
-
 });
 
 /*
@@ -1107,7 +1043,6 @@ $(function(){
 */
 
 //Aquí es donde guardamos los valores de cada casilla del horario en la base de datos.
-
 $(document).ready(function() {
   	$("td").on("click", "button.btn.editable-submit", function(){
 

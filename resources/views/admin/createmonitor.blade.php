@@ -17,7 +17,7 @@
  </div>
  <hr />
 @endif
-<form method="POST" action="{{url('admin/createmonitor')}}">
+<form method="POST" action="{{url('admin/createmonitor')}}" enctype='multipart/form-data'>
     {!! csrf_field() !!}
 
     <div class='form-group'>
@@ -41,6 +41,12 @@
     <div class="form-group">
         <label for="password_confirmation">Confirmar Password:</label>
         <input type="password" class="form-control" name="password_confirmation">
+    </div>
+
+    <div class="form-group">
+        <label for='image'>Imagen de perfil: </label>
+        <input type="file" name="image" class="form-control" />
+        <div class='text-danger'>{{$errors->first('image')}}</div>
     </div>
 
     <div>

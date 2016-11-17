@@ -9,8 +9,12 @@
 		<title>@yield('title')</title>
 		<meta name="description" content="@yield('description')" />
 		<meta name="keywords" content="@yield('keywords')" />
+
+		<!-- CSRF_TOKEN() -->
+		<meta name="csrf-token" content="{{ csrf_token() }}" />
+
+
 		<!-- ========= Favicon Icons ========= -->
-		
 		<link rel="shortcut icon" href="{{ asset('images/favicon/favicon.ico') }}">
 		<!-- Standard iPhone Touch Icon-->
 		<link rel="apple-touch-icon" sizes="57x57" href="{{ asset('images/favicon/apple-touch-icon-57x57.png') }}">
@@ -30,12 +34,20 @@
 		<link rel="stylesheet" href="{{ URL::asset('css/color/color.css') }}" />
 		<link rel="stylesheet" href="{{ URL::asset('css/animate.css') }}" />
 		<!-- Nuevos links de la misma versión. FALTA PASAR A LARAVEL Y PONER EN LOCAL. -->
+		<link rel="stylesheet" href="{{ URL::asset('css/bootstrap-table.css') }}" />
+		<link rel="stylesheet" href="{{ URL::asset('css/address.css') }}" />
 		<!--
 		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 		-->
 		<!-- Latest compiled and minified CSS -->
+		<!--
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		-->
+		<link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}" />
+
+		<link rel="stylesheet" href="//rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/css/bootstrap-editable.css">
+
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -49,7 +61,6 @@
 		<!-- Latest compiled and minified Locales -->
 		<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/locale/bootstrap-table-zh-CN.min.js"></script>
 
-		
 
 	</head>
 	<body class="no-transition">
@@ -98,7 +109,7 @@
 							<div class="col-xs-12">
 								<!-- page logo -->
 								<div class="logo">
-									<a href="#">
+									<a href="{{ url('/') }}">
 										<img src="{{ asset('images/logo-fitness2.png') }}" alt="Fekra" class="img-responsive w-logo">
 										<img src="{{ asset('images/logopeque2.png') }}" alt="Fekra" class="img-responsive b-logo" />
 										<!--
@@ -982,7 +993,8 @@
 						</div>
 						<div class="parallax-holder">
 							<!--<div class="parallax-frame"><img src="http://placehold.it/1920x451" height="451" width="1920" alt="image description"></div>-->
-							<div class="parallax-frame"><img src="images/fueradelcentrogrande.jpg" height="451" width="1920" alt="image description"></div>
+							
+							<div class="parallax-frame"><img src="{{ asset('images/fueradelcentrogrande.jpg') }}" height="451" width="1920" alt="image description"></div>
 						</div>
 					</footer>
 				</div>
@@ -1067,5 +1079,19 @@
 		<script type="text/javascript" src="{{ URL::asset('js/jquery.main.js') }}"></script>
 		<!-- include plugins JavaScript -->
 		<script type="text/javascript" src="{{ URL::asset('js/plugins.js') }}"></script>
+		<!-- include Bootstrap tabs JavaScript -->
+		<script type="text/javascript" src="{{ URL::asset('js/responsive-tabs.js') }}"></script>
+		<!-- include Bootstrap table JavaScript -->
+		<script type="text/javascript" src="{{ URL::asset('js/bootstrap-table.js') }}"></script>
+		<!-- put your locale files after bootstrap-table.js -->
+		<script type="text/javascript" src="{{ URL::asset('js/bootstrap-table-es-ES.js') }}"></script>
+		<!-- include Bootstrap table editable JavaScript -->
+		<script type="text/javascript" src="{{ URL::asset('js/bootstrap-editable.js') }}"></script>
+		<!-- include Bootstrap table editable address type JavaScript -->
+		<script type="text/javascript" src="{{ URL::asset('js/address.js') }}"></script>
+
+		<script type="text/javascript">
+	        @yield ('scripts')
+	    </script>
 	</body>
 </html>

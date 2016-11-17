@@ -1,5 +1,7 @@
 <?php
 
+
+use Intervention\Image\ImageManagerStatic as Image;
 /*
 |--------------------------------------------------------------------------
 | Routes File
@@ -115,5 +117,20 @@ Route::group(['middleware' => ['web']], function () {
 	Route::get('user/{id}', 'UserController@public_profile')->where(['id' => '[0-9]+']);
     //
     Route::get('schedule', 'UserController@schedule');
+    Route::get('seeschedule', 'UserController@seeSchedule');
     Route::get('activities', 'UserController@activities');
+    //Route::get('activity/{id}', 'UserController@activity')->where(['id' => '[0-9]+']);
+    Route::get('activity/{id}', 'UserController@activity');
+
+
+    Route::get('thumb/{path}', 'AdminController@crop');
+    // usage inside a laravel route
+	Route::get('thumb', function(\Illuminate\Http\Request $request) // added "images/foo" myself
+	{
+	    $path = $request->query('img');
+
+        $img = Image::make($path)->crop(400, 400);
+
+        return $img->response('jpg');
+	});
 });

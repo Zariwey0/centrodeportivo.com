@@ -101,6 +101,12 @@ class AdminController extends Controller
             ->update(array('activity' => $request->activity, 'activity_type' => $request->activity_type, 'monitor' => $request->monitor));
 	}
 
+	public function crop($path){
+        $img = Image::make($path)->crop(400, 400);
+
+        return $img->response('jpg');
+	}
+
 	
     public function createAdmin(Request $request){
   
@@ -166,6 +172,7 @@ class AdminController extends Controller
 		    	'name' => 'required|min:3|max:16|regex:/^[a-záéíóúàèìòùäëïöüñ\s]+$/i',
 		    	'email' => 'required|email|max:255|unique:users,email',
 		    	'password' => 'required|min:6|max:18|confirmed',
+		    	'image' => 'required|image|max:1024*1024*1',
 		   	];
 		   
 		   	//Posibles mensajes de error de validación
@@ -182,6 +189,9 @@ class AdminController extends Controller
 		    	'password.min' => 'El mínimo de caracteres permitidos son 6',
 		    	'password.max' => 'El máximo de caracteres permitidos son 18',
 		    	'password.confirmed' => 'Los passwords no coinciden',
+		    	'image.required' => 'Es obligatorio añadir una imagen de perfil',
+            	'image.image' => 'La imagen no es válida',
+            	'image.max' => 'El tamaño máximo permitido es de 1 MB',
 		   	];
 		   
 		   	$validator = Validator::make($request->all(), $rules, $messages);
@@ -197,6 +207,10 @@ class AdminController extends Controller
 		    	$user->password = bcrypt($request->password);
 		    	$user->remember_token = str_random(100);
 		    	$user->confirm_token = str_random(100);
+		    	//Añadimos la imagen de perfil
+		    	$imagename = str_random(30).'-'.$request->file('image')->getClientOriginalName();
+            	$request->file('image')->move('profiles', $imagename);
+		    	$user->profile = 'profiles/'.$imagename;
 		    	//Activar al administrador sin necesidad de enviar correo electrónico
 		    	$user->active = 1;
 		    	//El valor 2 en la columna determina que el usuario es monitor

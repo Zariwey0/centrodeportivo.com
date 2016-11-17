@@ -1340,11 +1340,18 @@
         }
 
         html.push(
-            '<div class="pull-' + this.options.paginationDetailHAlign + ' pagination-detail">',
+            '<div class="pull-' + this.options.paginationDetailHAlign + ' pagination-detail">'
+
+            /////////////////////////////////
+            //                             //
+            //       INVENTACO BUENO       //
+            //                             //
+            /////////////////////////////////
+            /*,
             '<span class="pagination-info">',
             this.options.onlyInfoPagination ? this.options.formatDetailPagination(this.options.totalRows) :
             this.options.formatShowingRows(this.pageFrom, this.pageTo, this.options.totalRows),
-            '</span>');
+            '</span>'*/);
 
         if (!this.options.onlyInfoPagination) {
             html.push('<span class="page-list">');
@@ -1375,7 +1382,12 @@
                         that.options.formatAllRows() : +value);
                 });
             }
-
+            /////////////////////////////////
+            //                             //
+            //       INVENTACO BUENO       //
+            //                             //
+            /////////////////////////////////
+            /*
             $.each(pageList, function (i, page) {
                 if (!that.options.smartDisplay || i === 0 || pageList[i - 1] <= that.options.totalRows) {
                     var active;
@@ -1390,7 +1402,7 @@
             pageNumber.push('</ul></span>');
 
             html.push(this.options.formatRecordsPerPage(pageNumber.join('')));
-            html.push('</span>');
+            html.push('</span>');*/
 
             html.push('</div>',
                 '<div class="pull-' + this.options.paginationHAlign + ' pagination">',
