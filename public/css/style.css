@@ -1828,7 +1828,8 @@ body {
       display: block;
       color: #fff; }
     .price-section .box:hover .btn:hover, .price-section .box.active .btn:hover {
-      background: #2a2a2a;
+      /* BOTONES LISTADO SUSCRIPCIONES */
+      background: #F04B2D;
       border-color: #2a2a2a; }
   .price-section .price {
     color: #2a2a2a;
@@ -5800,7 +5801,7 @@ body {
         margin: 0 0 15px; } }
     .shop-gallery .button-slider .btn:hover {
       border-color: #2a2a2a;
-      background: #2a2a2a;
+      background: #f04b2d;
       color: #fff; }
 
 .shop-gallery .add-text {

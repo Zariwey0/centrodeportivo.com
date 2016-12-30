@@ -36,14 +36,16 @@
 		<!-- Nuevos links de la misma versión. FALTA PASAR A LARAVEL Y PONER EN LOCAL. -->
 		<link rel="stylesheet" href="{{ URL::asset('css/bootstrap-table.css') }}" />
 		<link rel="stylesheet" href="{{ URL::asset('css/address.css') }}" />
-		<!--<link rel="stylesheet" href="bootstrap-table.css">-->
 		<!--
 		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 		-->
 		<!-- Latest compiled and minified CSS -->
+		<!--
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
+		-->
+		<link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}" />
+		
 		<link rel="stylesheet" href="//rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/css/bootstrap-editable.css">
 		
 		<!--
@@ -91,11 +93,12 @@
 							<div class="col-xs-12">
 								<!-- page logo -->
 								<div class="logo">
-									<a href="#">
+									<a href="{{ url('/') }}">
 										<img src="{{ asset('images/logo-fitness2.png') }}" alt="Fekra" class="img-responsive w-logo">
-										<img src="{{ asset('images/logoguay.png') }}" alt="Fekra" class="img-responsive b-logo">
+										<img src="{{ asset('images/logopeque2.png') }}" alt="Fekra" class="img-responsive b-logo" />
 										<!--
-										<img src="images/logopropio2.png" alt="Fekra" class="img-responsive b-logo">-->
+										<img src="images/logoguay.png" alt="Fekra" class="img-responsive b-logo">
+										-->
 										<!--
 										<img src="images/logo-fitness.png" alt="Fekra" class="img-responsive b-logo">
 										-->
@@ -130,37 +133,34 @@
 										<div class="nav-holder">
 											<ul class="list-inline nav-top">
 												<li>
-													<a href="index.html">Home</a>
-													
+													<a href="{{ url('/') }}">Inicio</a>
 												</li>
 												<li>
-													<a href="pages.html">Pages</a>
-													
-												</li>
-												<li>
-													<a href="features.html">Features</a>
+													<a href="{{ url('/') }}">El Centro</a>
 													<div class="drop">
-														<ul class="list-unstyled">
-															<li>
-																<a href="rs-slider.html">SLIDERs</a>
-															</li>
-															<li>
-																<a href="index-agency.html#header">Headers</a>
-															</li>
-															<li>
-																<a href="index-agency.html#footer">Footers</a>
-															</li>
-															<li>
-																<a href="page-title.html">Page Title</a>
-															</li>
-														</ul>
+														<div class="coll">
+															<ul class="list-unstyled">
+																<li><a href="{{ url('/activities') }}">LAS INSTALACIONES</a></li>
+																<li><a href="{{ url('/team') }}">EL EQUIPO</a></li>
+																<li><a href="{{ url('/activities') }}">LAS ACTIVIDADES</a></li>
+																
+															</ul>
+														</div>
 													</div>
 												</li>
 												<li>
-													<a href="portfolio.html">Portfolio</a>
+													<a href="{{ url('/seeschedule') }}">Horario</a>
 												</li>
 												<li>
-													<a href="blogs.html">Blogs</a>
+													<a href="{{ url('/activities') }}">Noticias</a>		
+												</li>
+												@if (!Auth::check())
+												<li>
+													<a href="{{ url('auth/register') }}">Suscripción</a>										
+												</li>
+												@endif
+												<li>
+													<a href="{{ url('/blog') }}">Vive LisletaFIT</a>				
 												</li>
 											</ul>
 										</div>
@@ -235,58 +235,67 @@
 			                    <div class="row">
 			                        <div class="col-xs-12 col-sm-6 col-md-3 info-box column1">
 			                            <!-- f info col -->
-			                            <div class="f-info-col">
-			                                <div class="logo"><a href="#"><img src="{{ asset('images/construction/img25.png') }}" alt="Fekra"></a></div>
-			                                <p>Mea omnium explicari te, eu sit vidit harum fabellas, his no legere feugaitper in laudem malorum epicuri,.</p>
+			                            <div class="f-info-col">		  
+			                            <!--<img src="{{ asset('images/logo-fitness2.png') }}" alt="Fekra" class="img-responsive w-logo">-->
+										<!--<img src="{{ asset('images/logoguay.png') }}" alt="Fekra" class="img-responsive b-logo" />-->
+			                                <div class="logo"><a href="{{ url('/') }}"><img src="{{ asset('images/logopeque3.png') }}" alt="Logo"></a></div>
+			                                <p>El centro deportivo preferido de toda la familia. No olvides seguirnos en las redes sociales para estar informado de las últimas noticias y novedades.</p>
 			                                <!-- footer-social -->
 			                                <ul class="list-inline footer-social">
-			                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-			                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-			                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-			                                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
-			                                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
-			                                    <li><a href="#"><i class="fa fa-apple"></i></a></li>
+			                                    <li><a target="_blank" href="https://facebook.com/cdlisleta"><i class="fa fa-facebook"></i></a></li>
+												<li><a target="_blank" href="https://twitter.com/cdlisleta"><i class="fa fa-twitter"></i></a></li>
+												<li><a target="_blank" href="https://play.spotify.com/user/cdlisleta"><i class="fa fa-spotify"></i></a></li>
+												<li><a target="_blank" href="https://plus.google.com/u/0/113009037857170534534"><i class="fa fa-google-plus"></i></a></li>
+												<li><a target="_blank" href="https://www.instagram.com/cdlisleta/"><i class="fa fa-instagram"></i></a></li>
 			                                </ul>
 			                            </div>
 			                        </div>
 			                        <div class="col-xs-12 col-sm-6 col-md-3 column3">
 			                            <!-- f contact info2 -->
 			                            <div class="f-contact-info2">
-			                                <h5><span class="add-color">darna</span> office</h5>
-			                                <address><i class="fa fa-map-marker"></i> 1422 1st St. Santa Rosa,t CA 94559. USA</address>
+			                                <h5><span class="add-color">Datos</span> Contacto</h5>
+			                                <address><i class="fa fa-map-marker"></i> Avenida de la Universidad, 14, Las Palmas de Gran Canaria</address>
 			                                <div class="mail-box2">
-			                                    <span class="mail-box"><i class="fa fa-clock-o"></i> Opening from 10.00 am L 5.00p.m Sunday is off</span>
+			                                    <span class="mail-box"><i class="fa fa-clock-o"></i> Abierto todos los días de 7:00 a 23:00</span>
 			                                </div>
 			                                <div class="tel-holder">
-			                                    <span class="tel-box"><i class="fa fa-phone"></i> <a class="tel" href="tel:00201008431112">002- 01008431112</a></span>
+			                                    <span class="tel-box"><i class="fa fa-phone"></i> <a class="tel" href="tel:928987654">928 98 76 54</a></span>
 			                                </div>
 			                                <div class="mail-box2">
-			                                    <span class="mail-box"><i class="fa fa-envelope-o"></i> <a class="email" href="mailto:admin@e-mail.com"> admin@e-mail.com</a></span>
+			                                    <span class="mail-box"><i class="fa fa-envelope-o"></i> <a class="email" href="mailto:info@cdlisleta.com"> info@cdlisleta.com</a></span>
 			                                </div>
 			                            </div>
 			                        </div>
 			                        <div class="col-xs-12 col-sm-6 col-md-3 column3 clearfix-sm">
 			                            <!-- f lastest news -->
 			                            <div class="f-lastest-news">
-			                                <h5><span class="add-color">Latest</span> NEWS</h5>
+			                                <h5><span class="add-color">Últimas</span> noticias</h5>
 			                                <!-- footer-news-box -->
 			                                <div class="footer-news-box">
 			                                    <div class="img-box">
-			                                        <a href="#"><img src="http://placehold.it/70x70" alt="image description"></a>
+			                                        <?php
+														$ruta = "images/violenciamachista.jpg";
+														$imagen = Image::make($ruta)->fit(70,70)->encode("data-url");
+													?>
+													<a href="#"><img src="{{$imagen}}" alt="image description"></a>
 			                                    </div>
 			                                    <div class="txt">
-			                                        <p><a href="#">Lorem Ipsum is simply dummy text of the printing typese.</a></p>
-			                                        <time datetime="2015-02-02">2 FEB 2015</time>
+			                                        <p><a href="#">Día contra la violencia machista.</a></p>
+			                                        <time datetime="2015-02-02">25 NOV 2016</time>
 			                                    </div>
 			                                </div>
 			                                <!-- footer-news-box -->
 			                                <div class="footer-news-box">
 			                                    <div class="img-box">
-			                                        <a href="#"><img src="http://placehold.it/70x70" alt="image description"></a>
+			                                     	<?php
+														$ruta = "images/horariodiciembre.jpg";
+														$imagen = Image::make($ruta)->fit(70,70)->encode("data-url");
+													?>
+													<a href="#"><img src="{{$imagen}}" alt="image description"></a>
 			                                    </div>
 			                                    <div class="txt">
-			                                        <p><a href="#">Lorem Ipsum is simply dummy text of the printing typese.</a></p>
-			                                        <time datetime="2015-02-02">2 FEB 2015</time>
+			                                        <p><a href="#">Nuevo horario del mes de diciembre ya disponible.</a></p>
+			                                        <time datetime="2015-02-02">1 DIC 2016</time>
 			                                    </div>
 			                                </div>
 			                            </div>
@@ -294,8 +303,8 @@
 			                        <div class="col-xs-12 col-sm-6 col-md-3 column4">
 			                            <!-- f flicker -->
 			                            <div class="f-flicker">
-											<h5><span class="add-color">Instgram</span> Photos</h5>
-											<div class="insta-box instagram-photos" data-count="8" data-user="e37e5979509b44cb811a8be2b1067f11"></div>
+											<h5><span class="add-color">Fotos</span> Instagram</h5>
+											<div class="insta-box instagram-photos flickr-feed widget" data-count="9" data-id="20154996@N00"></div>
 			                            </div>
 			                        </div>
 			                    </div>
@@ -310,20 +319,25 @@
 			                            <div class="bottom-box1">
 			                                <!-- footer nav -->
 			                                <ul class="list-inline footer-nav">
-			                                    <li><a href="#">Home</a></li>
-			                                    <li><a href="#">About Us</a></li>
-			                                    <li><a href="#">PROJECTS</a></li>
-			                                    <li><a href="#">CONTACT</a></li>
-			                                    <li><a href="#">PRIVACY POLICY</a></li>
+			                                    <li><a href="{{ url('/') }}">| Inicio</a></li>
+			                                    <!--<li><a href="#">About Us</a></li>-->
+			                                    <!--<li><a href="#">| Sobre nosotros</a></li>-->
+			                                    <!--<li><a href="#">PROJECTS</a></li>-->
+			                                    <li><a href="{{ url('/contact') }}">| Contacto</a></li>
+			                                   	<li><a href="{{ url('/jobs') }}">| Trabaja con nosotros</a></li>
+			                                    <!--<li><a href="#">PRIVACY POLICY</a></li>-->
+			                                    <li><a href="{{ url('/privacy') }}">| Política de privacidad</a></li>
 			                                </ul>
-			                                <span class="copyright">&copy; 2015 <a href="#">Fekra corporation</a></span>
+			                                <span class="copyright">&copy; 2016 <a href="{{ url('/') }}">Centro Deportivo Lisleta</a></span>
 			                            </div>
 			                        </div>
 			                    </div>
 			                </div>
 						</div>
 						<div class="parallax-holder">
-							<div class="parallax-frame"><img src="http://placehold.it/1920x451" height="451" width="1920" alt="image description"></div>
+							<!--<div class="parallax-frame"><img src="http://placehold.it/1920x451" height="451" width="1920" alt="image description"></div>-->
+							
+							<div class="parallax-frame"><img src="{{ asset('images/fueradelcentrogrande.jpg') }}" height="451" width="1920" alt="image description"></div>
 						</div>
 					</footer>
 				</div>

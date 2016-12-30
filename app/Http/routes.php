@@ -121,6 +121,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('activities', 'UserController@activities');
     //Route::get('activity/{id}', 'UserController@activity')->where(['id' => '[0-9]+']);
     Route::get('activity/{id}', 'UserController@activity');
+    Route::get('team', 'UserController@team');
+    Route::get('blog', 'UserController@blog');
 
 
     Route::get('thumb/{path}', 'AdminController@crop');

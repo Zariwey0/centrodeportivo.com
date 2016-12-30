@@ -36,6 +36,14 @@ class UserController extends Controller{
 		return View('activities');
 	}
 
+	public function team(){
+		return View('team');
+	}
+
+	public function blog(){
+		return View('blog');
+	}
+
 	public function updateProfile(Request $request){
         $rules = ['image' => 'required|image|max:1024*1024*1',];
         $messages = [

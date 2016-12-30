@@ -36,10 +36,10 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 								<div class="row">
 									<div class="col-xs-12 shop-content add">
 										<header class="shop-heading">
-											<h1><span class="add-text">SUPÉRATE</span> DÍA A DÍA</h1>
-											<p>Ponemos todo nuestro equipo a tu entera disposición para que cada día suponga un nuevo reto fresco y estimulante.</p>
+											<h1><span class="add-text">ALCANZA</span> TUS METAS</h1>
+											<p>Ponemos todo nuestro equipo a tu entera disposición para que cada día suponga un nuevo reto y estimulante.</p>
 											<div class="button-slider">
-												<a href="http://fekra.csshunter.com" class="btn btn-f-default">EMPIEZA HOY</a>
+												<a href="{{url('auth/register')}}" class="btn btn-f-default">EMPIEZA HOY</a>
 											</div>
 										</header>
 									</div>
@@ -61,7 +61,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 											<h1><span class="add-text">DESAFÍA</span> TUS LÍMITES</h1>
 											<p>Tu cuerpo está hecho para hacer grandes cosas. Entrena con nosotros y déjanos sacar lo mejor que hay en ti.</p>
 											<div class="button-slider">
-												<a href="http://fekra.csshunter.com" class="btn btn-f-default">EMPIEZA HOY</a>
+												<a href="{{url('auth/register')}}" class="btn btn-f-default">EMPIEZA HOY</a>
 											</div>
 										</header>
 									</div>
@@ -118,7 +118,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 									<div class="frame">
 										<div class="box">
 											<h2><span class="txt">ENTRENA CON</span>  PROFESIONALES CUALIFICADOS</h2>
-											<a href="team-single.html" class="btn-shop add">CONÓCELOS <i class="fa fa-angle-right"></i></a>
+											<a href="{{url('team')}}" class="btn-shop add">CONÓCELOS <i class="fa fa-angle-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -135,7 +135,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 											<div class="frame">
 												<div class="box">
 													<h2><span class="txt">DATE AHORA <br>DE ALTA Y</span> APROVECHA <br>NUESTRAS OFERTAS</h2>
-													<a href="team-single.html" class="btn-shop add">SUSCRÍBETE <i class="fa fa-angle-right"></i></a>
+													<a href="{{url('auth/register')}}" class="btn-shop add">SUSCRÍBETE <i class="fa fa-angle-right"></i></a>
 												</div>
 											</div>
 										</div>
@@ -179,8 +179,8 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 				<div class="container">
                     <!-- page heading -->
                     <header class="page-heading margin-bottom-20">
-                        <h2 class="white text-capitalize font-medium margin-bottom-10">NUESTRA OFERTA</h2>
-                        <p class="heading7 title text-uppercase">Pensada para ti</p>
+                        <h2 class="white text-capitalize font-medium margin-bottom-10">¿POR QUÉ NOSOTROS?</h2>
+                        <p class="heading7 title text-uppercase">DESCUBRE NUESTRA OFERTA</p>
                     </header>
 					<div class="row">
 						<div class="col-xs-12">
@@ -197,9 +197,9 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 													<div class="frame">
 														<div class="block">
 															<span class="icon-users icon moonico"></span>
-															<span class="title">EQUIPO</span>
+															<span class="title">EL MEJOR EQUIPO</span>
 															<div class="text-box">
-																<p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+																<p>Ponemos a tu disposición el mejor capital humano</p>
 															</div>
 														</div>
 													</div>
@@ -215,14 +215,18 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 													<div class="frame">
 														<div class="block">
 															<span class="icon-bubbles icon moonico"></span>
-															<span class="title">CHAT</span>
+															<span class="title">SIEMPRE CONECTADOS</span>
 															<div class="text-box">
-																<p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+																<p>Contacta con nuestros monitores o administradores para resolver tus dudas</p>
 															</div>
 														</div>
 													</div>
 												</div>
-												<img src="http://placehold.it/291x270" alt="image description">
+												<?php
+													$ruta = "images/chat.png";
+													$imagen = Image::make($ruta)->fit(291,270)->encode("data-url");
+												?>
+												<img src="{{$imagen}}" alt="image description">
 											</div>
 											<div class="box">
 												<div class="over">
@@ -231,13 +235,16 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 															<span class="icon-alarm icon moonico"></span>
 															<span class="title">MULTIPLES HORARIOS</span>
 															<div class="text-box">
-																<p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+																<p>Todas nuestras actividades se repiten a lo largo del día para que no te las pierdas</p>
 															</div>
 														</div>
 													</div>
 												</div>
-												<!--<img src="http://placehold.it/291x270" alt="image description">-->
-												<img src="images/body_building.jpg" alt="image description">
+												<?php
+													$ruta = "images/multschedules.jpg";
+													$imagen = Image::make($ruta)->fit(291,270)->encode("data-url");
+												?>
+												<img src="{{$imagen}}" alt="image description">
 											</div>
 											<div class="box">
 												<div class="over">
@@ -246,7 +253,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 															<span class="icon-coin-euro icon moonico"></span>
 															<span class="title">ECONÓMICO</span>
 															<div class="text-box">
-																<p>Escoge el plan que más se ajuste a ti</p>
+																<p>Escoge el plan que más se ajuste a ti y aprovéchate de nuestros descuentos</p>
 															</div>
 														</div>
 													</div>
@@ -265,9 +272,9 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 													<div class="frame">
 														<div class="block">
 															<span class="icon-home icon moonico"></span>
-															<span class="title">SEGUNDO HOGAR</span>
+															<span class="title">COMO EN CASA</span>
 															<div class="text-box">
-																<p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+																<p>Sabemos que lo más importante son nuestros clientes por eso queremos que te sientas a gusto en todo momento</p>
 															</div>
 														</div>
 													</div>
@@ -301,9 +308,9 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 													<div class="frame">
 														<div class="block">
 															<span class="icon-anatomy icon moonico"></span>
-															<span class="title">CUERPO 10</span>
+															<span class="title">SUPÉRATE</span>
 															<div class="text-box">
-																<p>Consigue el cuerpo que siempre soñaste gracias a nuestros planes de entrenamiento</p>
+																<p>Consigue llegar a donde quieras con nuestra ayuda</p>
 															</div>
 														</div>
 													</div>
@@ -490,57 +497,57 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 						<div class="col-xs-12 col-sm-6 col-md-3">
 							<!-- box -->
 							<div class="box padding-bottom-10">
-								<strong class="heading margin-bottom-30">Muscle Pro</strong>
+								<strong class="heading margin-bottom-30">Mensual</strong>
 								<ul class="list-unstyled price-list margin-bottom-20">
 									<li>3 days a week program</li>
 									<li>Diet program Included</li>
 									<li>Professional Trainers</li>
 								</ul>
-								<span class="price"><sup>$</sup> 20.99</span>
-								<span class="month margin-bottom-30">Per week</span>
-								<a href="http://fekra.csshunter.com" class="btn btn-purchase margin-bottom-30">jOIn now</a>
+								<span class="price">20.99<sup>€</sup></span>
+								<span class="month margin-bottom-30">Cada mes</span>
+								<a href="{{url('auth/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-3">
 							<!-- box -->
 							<div class="box padding-bottom-10">
-								<strong class="heading margin-bottom-30">Fat Burning</strong>
+								<strong class="heading margin-bottom-30">Trimestral</strong>
 								<ul class="list-unstyled price-list margin-bottom-20">
-									<li>3 days a week program</li>
+									<li>15% de descuento</li>
 									<li>Diet program Included</li>
 									<li>Professional Trainers</li>
 								</ul>
-								<span class="price"><sup>$</sup> 9.99</span>
-								<span class="month margin-bottom-30">Per week</span>
-								<a href="http://fekra.csshunter.com" class="btn btn-purchase margin-bottom-30">jOIn now</a>
+								<span class="price">52.99<sup>€</sup></span>
+								<span class="month margin-bottom-30">Cada tres meses</span>
+								<a href="{{url('auth/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-3 clearfix-sm">
 							<!-- box -->
 							<div class="box active padding-bottom-10">
-								<strong class="heading margin-bottom-30">Heavy Weight</strong>
+								<strong class="heading margin-bottom-30">Semestral</strong>
 								<ul class="list-unstyled price-list margin-bottom-20">
-									<li>3 days a week program</li>
+									<li>24% de descuento</li>
 									<li>Diet program Included</li>
 									<li>Professional Trainers</li>
 								</ul>
-								<span class="price"><sup>$</sup> 78.99</span>
-								<span class="month margin-bottom-30">Per week</span>
-								<a href="http://fekra.csshunter.com" class="btn btn-purchase margin-bottom-30">jOIn now</a>
+								<span class="price">95.99<sup>€</sup></span>
+								<span class="month margin-bottom-30">Cada seis meses</span>
+								<a href="{{url('auth/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-3">
 							<!-- box -->
 							<div class="box padding-bottom-10">
-								<strong class="heading margin-bottom-30">3 In 1</strong>
+								<strong class="heading margin-bottom-30">Anual</strong>
 								<ul class="list-unstyled price-list margin-bottom-20">
-									<li>3 days a week program</li>
+									<li>36% de descuento</li>
 									<li>Diet program Included</li>
 									<li>Professional Trainers</li>
 								</ul>
-								<span class="price"><sup>$</sup> 98.99</span>
-								<span class="month margin-bottom-30">Per week</span>
-								<a href="http://fekra.csshunter.com" class="btn btn-purchase margin-bottom-30">jOIn now</a>
+								<span class="price">161.99<sup>€</sup></span>
+								<span class="month margin-bottom-30">Cada año</span>
+								<a href="{{url('auth/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
 							</div>
 						</div>
 					</div>
@@ -557,8 +564,8 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 				<div class="container">
                     <!-- page heading -->
                     <header class="page-heading margin-bottom-60">
-                        <h2 class="lime text-capitalize font-medium margin-bottom-10">WHAT PEOPLE SAYS</h2>
-                        <p class="heading7 title text-uppercase">LATEST TESTIMONILA FROM OUR TRAINERS</p>
+                        <h2 class="lime text-capitalize font-medium margin-bottom-10">OPINIONES DE NUESTROS USUARIOS </h2>
+                        <p class="heading7 title text-uppercase">qué carajos pongo aquí?</p>
                     </header>
 					<div class="row">
 						<div class="col-xs-12">
@@ -569,10 +576,10 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 										<!-- beans-slide -->
 										<div class="beans-slide">
 											<blockquote>
-												<q>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus Nam libero tempore, cum soluta nobis est eligendi optio.</q>
+												<q>La verdades que esta gente es la crema, sabeloquétedigo? Hacen las cosas de puta madre y se nota. Además cuando llegué aquí estaba más fondón que mi pelo y ahora estoy más cuadrado que una caja de zapatos. Gracias LisletaFIT, me secaste.</q>
 												<cite>
-													<span class="name">Rosa Lecher</span>
-													<span class="comp-name"><a href="#">COMPANY NAME - CEO</a></span>
+													<span class="name">Fulanita de Tal</span>
+													<span class="comp-name"><a href="#">Usuaria de nuestro centro</a></span>
 												</cite>
 											</blockquote>
 										</div>
@@ -581,8 +588,8 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 											<blockquote>
 												<q>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus Nam libero tempore, cum soluta nobis est eligendi optio.</q>
 												<cite>
-													<span class="name">Fatma</span>
-													<span class="comp-name"><a href="#">HTMLbeans - CEO</a></span>
+													<span class="name">Canarias 7</span>
+													<span class="comp-name"><a href="#">Periódico insular</a></span>
 												</cite>
 											</blockquote>
 										</div>
@@ -591,8 +598,8 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 											<blockquote>
 												<q>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus Nam libero tempore, cum soluta nobis est eligendi optio.</q>
 												<cite>
-													<span class="name">Hossam Eldin</span>
-													<span class="comp-name"><a href="#">wp creative - CEO</a></span>
+													<span class="name">Ciclanito el Escritor</span>
+													<span class="comp-name"><a href="#">Redactor Jefe - El deporte mola</a></span>
 												</cite>
 											</blockquote>
 										</div>

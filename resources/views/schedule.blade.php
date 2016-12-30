@@ -16,7 +16,7 @@ $types = DB::table('activities_type')->pluck('name', 'id');
 @section('content')
 
 <div class="container padding-bottom-100 padding-top-100">
-<h1> Configurar horario </h1>
+<h1>Configurar horario</h1>
 <div class="container">
 	<!--
 	<div id="toolbar">
@@ -31,10 +31,10 @@ $types = DB::table('activities_type')->pluck('name', 'id');
 		data-search="true"
 		data-editable-emptytext="Vacío"
 		data-show-refresh="false"
-		data-show-toggle="true"
-		data-show-columns="true"
+		data-show-toggle="false"
+		data-show-columns="false"
 		data-show-export="true"
-		data-detail-view="true"
+		data-detail-view="false"
 		
 		data-detail-formatter="detailFormatter"
 		data-id-field="id"
@@ -52,12 +52,7 @@ $types = DB::table('activities_type')->pluck('name', 'id');
 	            <th>Domingo</th>
 	        </tr>
 	    </thead>
-	    <!-------------------------->
-	    <!-- ID'S DE LOS ADDRESS: -->
-	    <!-- PRIMER VALOR: HORA   -->
-	    <!-- SEGUNDO VALOR: SALA  -->
-	    <!-- TERCER VALOR: DÍA    -->
-	    <!-------------------------->
+
 	    <tbody>
 	    	<!-- 9:00 -->
 	        <tr>
