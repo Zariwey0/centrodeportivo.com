@@ -41,13 +41,24 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 		-->
 		<!-- Latest compiled and minified CSS -->
-		<!--
+		
+
+		<!-- ¡¡¡IMPORTANTE!!!-->
+
+		<!-- CAMBIANDO LA LOCAL POR LA ONLINE SE SOLUCIONAN LOS PROBLEMAS DE LOS ICONOS QUE NO SE VEN Y LOS COLORES DE FONDO AL PASAR EL RATÓN POR ENCIMA -->
+		
+
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		-->
-		<link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}" />
 		
-		<link rel="stylesheet" href="//rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/css/bootstrap-editable.css">
+		<!--<link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}" />-->
 		
+
+		<link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
+
+		
+		<!--<link rel="stylesheet" href="//rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/css/bootstrap-editable.css">-->
+		
+
 		<!--
 		<style>
 		a.accordion-toggle {
@@ -140,7 +151,7 @@
 													<div class="drop">
 														<div class="coll">
 															<ul class="list-unstyled">
-																<li><a href="{{ url('/activities') }}">LAS INSTALACIONES</a></li>
+																<li><a href="{{ url('/facilities') }}">LAS INSTALACIONES</a></li>
 																<li><a href="{{ url('/team') }}">EL EQUIPO</a></li>
 																<li><a href="{{ url('/activities') }}">LAS ACTIVIDADES</a></li>
 																
@@ -152,7 +163,7 @@
 													<a href="{{ url('/seeschedule') }}">Horario</a>
 												</li>
 												<li>
-													<a href="{{ url('/activities') }}">Noticias</a>		
+													<a href="{{ url('/news') }}">Noticias</a>		
 												</li>
 												@if (!Auth::check())
 												<li>
@@ -328,7 +339,7 @@
 			                                    <!--<li><a href="#">PRIVACY POLICY</a></li>-->
 			                                    <li><a href="{{ url('/privacy') }}">| Política de privacidad</a></li>
 			                                </ul>
-			                                <span class="copyright">&copy; 2016 <a href="{{ url('/') }}">Centro Deportivo Lisleta</a></span>
+			                                <span class="copyright">&copy; 2017 <a href="{{ url('/') }}">Centro Deportivo Lisleta</a></span>
 			                            </div>
 			                        </div>
 			                    </div>
@@ -418,7 +429,8 @@
 		</div>
 
 		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>-->
+		<script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js')}}"></script>
 		<!-- include jQuery library -->
 		<script type="text/javascript" src="{{ URL::asset('js/jquery-1.11.3.min.js') }}"></script>
 		<!-- include custom JavaScript -->
@@ -432,9 +444,12 @@
 		<!-- put your locale files after bootstrap-table.js -->
 		<script type="text/javascript" src="{{ URL::asset('js/bootstrap-table-es-ES.js') }}"></script>
 		<!-- include Bootstrap table editable JavaScript -->
-		<script type="text/javascript" src="{{ URL::asset('js/bootstrap-editable.js') }}"></script>
+		<!--<script type="text/javascript" src="{{ URL::asset('js/bootstrap-editable.js') }}"></script>-->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
 		<!-- include Bootstrap table editable address type JavaScript -->
 		<script type="text/javascript" src="{{ URL::asset('js/address.js') }}"></script>
+
+
 
 		<script type="text/javascript">
 	        @yield ('scripts')

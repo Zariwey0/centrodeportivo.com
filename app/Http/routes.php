@@ -123,8 +123,13 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('activity/{id}', 'UserController@activity');
     Route::get('team', 'UserController@team');
     Route::get('blog', 'UserController@blog');
-
-
+    //		NUEVAS RUTAS QUE HAY QUE MEJORAR      //
+    Route::get('contact', 'UserController@contact');
+    Route::get('news', 'UserController@news');
+    Route::get('facilities', 'UserController@facilities');
+    Route::get('jobs', 'UserController@jobs');
+    Route::get('privacy', 'UserController@privacy');
+    ////////////////////////////////////////////////
     Route::get('thumb/{path}', 'AdminController@crop');
     // usage inside a laravel route
 	Route::get('thumb', function(\Illuminate\Http\Request $request) // added "images/foo" myself

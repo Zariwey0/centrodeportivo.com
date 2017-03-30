@@ -1139,6 +1139,13 @@ $.ajaxSetup({
 
 $(function(){
 
+	//PARA COMPROBAR VERSIÓN DE JQUERY.
+	//BORRAR!
+	if (typeof jQuery != 'undefined') {  
+	    // jQuery is loaded => print the version
+	    alert(jQuery.fn.jquery);
+	}
+
 	var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
 
 	var unvalue;

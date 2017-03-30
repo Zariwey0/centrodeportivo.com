@@ -44,6 +44,26 @@ class UserController extends Controller{
 		return View('blog');
 	}
 
+	public function privacy(){
+		return View('privacy');
+	}
+
+	public function news(){
+		return View('news');
+	}
+
+	public function facilities(){
+		return View('facilities');
+	}
+
+	public function contact(){
+		return View('contact');
+	}
+
+	public function jobs(){
+		return View('jobs');
+	}
+
 	public function updateProfile(Request $request){
         $rules = ['image' => 'required|image|max:1024*1024*1',];
         $messages = [

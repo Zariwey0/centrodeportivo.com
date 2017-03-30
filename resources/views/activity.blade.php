@@ -69,7 +69,7 @@ $schedule = DB::table('schedule')->select('id','monitor')->where('activity','=',
 						<div class="row padding-bottom-20">
 							<div class="col-xs-12 col-sm-4 col-md-4">
 								<?php
-									echo '<img src="'.Image::make($activity->image)->resize(500, null, function ($constraint) {$constraint->aspectRatio();})->crop(350,350)->encode("data-url").'" alt="image description" class="img-responsive">';
+									echo '<img src="'.Image::make($activity->image)->fit(350, null, function ($constraint) {$constraint->aspectRatio();})->crop(350,350)->encode("data-url").'" alt="image description" class="img-responsive">';
 								?>
 							</div>
 							<!--
@@ -159,7 +159,7 @@ $schedule = DB::table('schedule')->select('id','monitor')->where('activity','=',
 											<a href="../'.$related->image.'" class="search lightbox"><i class="fa fa-search"></i></a>
 											<a href="../activity/'.$related->name.'" class="link"><i class="fa fa-link"></i></a>
 										</div>
-										<img src="'.Image::make($related->image)->resize(500, null, function ($constraint) {$constraint->aspectRatio();})->crop(350,350)->encode("data-url").'" alt="image description">
+										<img src="'.Image::make($related->image)->fit(350, null, function ($constraint) {$constraint->aspectRatio();})->crop(350,350)->encode("data-url").'" alt="image description">
                                     </div>
                                 </div>
                             </div>';

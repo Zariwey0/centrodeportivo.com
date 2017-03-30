@@ -1,5 +1,5 @@
 @extends('layouts.home')
-@section('title', 'Centro Deportivo Lisleta - Home')
+@section('title', 'Centro Deportivo LisletaFIT - Home')
 @section('description', 'pruebita buena jodio')
 @section('keywords', 'palabras clave y tal')
 
@@ -102,7 +102,8 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 					
 				</div>
 				<div class="stretch">
-					<img alt="image description" src="images/bg-3.jpg">
+					<!--<img alt="image description" src="images/bg-3.jpg">-->
+					<img alt="image description" src="images/corchomasocuro.jpg">
 				</div>
 			</section>
 			<!-- collection block -->

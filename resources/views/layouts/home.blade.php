@@ -97,16 +97,16 @@
 								<ul class="list-inline info-list">
 									<li><i class="fa fa-clock-o"></i>  ABIERTO DE 7:00 A 23:00  </li>
 									<li><a class="tel" href="tel:01008431112"><i class="fa fa-phone"></i> LLÁMANOS AL 928 98 76 54</a></li>
-									<li><a href="#"><i class="fa fa-envelope"></i> info@cdlisleta.com</a></li>
+									<li><a href="#"><i class="fa fa-envelope"></i> info@cdlisletafit.com</a></li>
 								</ul>
 								<!-- top nav style2 -->
 								<nav class="top-nav style2">
 									<ul class="list-inline">
-										<li><a target="_blank" href="https://facebook.com/cdlisleta"><i class="fa fa-facebook"></i></a></li>
-										<li><a target="_blank" href="https://twitter.com/cdlisleta"><i class="fa fa-twitter"></i></a></li>
-										<li><a target="_blank" href="https://play.spotify.com/user/cdlisleta"><i class="fa fa-spotify"></i></a>
+										<li><a target="_blank" href="https://facebook.com/cdlisletafit"><i class="fa fa-facebook"></i></a></li>
+										<li><a target="_blank" href="https://twitter.com/cdlisletafit"><i class="fa fa-twitter"></i></a></li>
+										<li><a target="_blank" href="https://play.spotify.com/user/cdlisletafit"><i class="fa fa-spotify"></i></a>
 										<li><a target="_blank" href="https://plus.google.com/u/0/113009037857170534534"><i class="fa fa-google-plus"></i></a></li></li>
-										<li><a target="_blank" href="https://www.instagram.com/cdlisleta/"><i class="fa fa-instagram"></i></a></li></li>
+										<li><a target="_blank" href="https://www.instagram.com/cdlisletafit/"><i class="fa fa-instagram"></i></a></li></li>
 									</ul>
 								</nav>
 							</div>
@@ -162,7 +162,7 @@
 													<div class="drop">
 														<div class="coll">
 															<ul class="list-unstyled">
-																<li><a href="{{ url('/activities') }}">LAS INSTALACIONES</a></li>
+																<li><a href="{{ url('/facilities') }}">LAS INSTALACIONES</a></li>
 																<li><a href="{{ url('/team') }}">EL EQUIPO</a></li>
 																<li><a href="{{ url('/activities') }}">LAS ACTIVIDADES</a></li>
 																
@@ -174,7 +174,7 @@
 													<a href="{{ url('/seeschedule') }}">Horario</a>
 												</li>
 												<li>
-													<a href="{{ url('/activities') }}">Noticias</a>		
+													<a href="{{ url('/news') }}">Noticias</a>		
 												</li>
 												@if (!Auth::check())
 												<li>
@@ -264,11 +264,11 @@
 			                                <p>El centro deportivo preferido de toda la familia. No olvides seguirnos en las redes sociales para estar informado de las últimas noticias y novedades.</p>
 			                                <!-- footer-social -->
 			                                <ul class="list-inline footer-social">
-			                                    <li><a target="_blank" href="https://facebook.com/cdlisleta"><i class="fa fa-facebook"></i></a></li>
-												<li><a target="_blank" href="https://twitter.com/cdlisleta"><i class="fa fa-twitter"></i></a></li>
-												<li><a target="_blank" href="https://play.spotify.com/user/cdlisleta"><i class="fa fa-spotify"></i></a></li>
+			                                    <li><a target="_blank" href="https://facebook.com/cdlisletafit"><i class="fa fa-facebook"></i></a></li>
+												<li><a target="_blank" href="https://twitter.com/cdlisletafit"><i class="fa fa-twitter"></i></a></li>
+												<li><a target="_blank" href="https://play.spotify.com/user/cdlisletafit"><i class="fa fa-spotify"></i></a></li>
 												<li><a target="_blank" href="https://plus.google.com/u/0/113009037857170534534"><i class="fa fa-google-plus"></i></a></li>
-												<li><a target="_blank" href="https://www.instagram.com/cdlisleta/"><i class="fa fa-instagram"></i></a></li>
+												<li><a target="_blank" href="https://www.instagram.com/cdlisletafit/"><i class="fa fa-instagram"></i></a></li>
 			                                </ul>
 			                            </div>
 			                        </div>
@@ -284,7 +284,7 @@
 			                                    <span class="tel-box"><i class="fa fa-phone"></i> <a class="tel" href="tel:928987654">928 98 76 54</a></span>
 			                                </div>
 			                                <div class="mail-box2">
-			                                    <span class="mail-box"><i class="fa fa-envelope-o"></i> <a class="email" href="mailto:info@cdlisleta.com"> info@cdlisleta.com</a></span>
+			                                    <span class="mail-box"><i class="fa fa-envelope-o"></i> <a class="email" href="mailto:info@cdlisletafit.com"> info@cdlisletafit.com</a></span>
 			                                </div>
 			                            </div>
 			                        </div>
@@ -350,7 +350,7 @@
 			                                    <!--<li><a href="#">PRIVACY POLICY</a></li>-->
 			                                    <li><a href="{{ url('/privacy') }}">| Política de privacidad</a></li>
 			                                </ul>
-			                                <span class="copyright">&copy; 2016 <a href="{{ url('/') }}">Centro Deportivo Lisleta</a></span>
+			                                <span class="copyright">&copy; 2017 <a href="{{ url('/') }}">Centro Deportivo LisletaFIT</a></span>
 			                            </div>
 			                        </div>
 			                    </div>
