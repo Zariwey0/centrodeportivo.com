@@ -10,7 +10,8 @@
         "laravel/cashier": "^6.0",
         "wenzhixin/bootstrap-table": "^1.11",
         "intervention/image": "^2.3",
-        "doctrine/dbal": "^2.5"
+        "doctrine/dbal": "^2.5",
+        "heroku/heroku-buildpack-php": "^121.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
