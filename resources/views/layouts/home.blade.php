@@ -15,27 +15,27 @@
 
 
 		<!-- ========= Favicon Icons ========= -->
-		<link rel="shortcut icon" href="{{ asset('images/favicon/favicon.ico') }}">
+		<link rel="shortcut icon" href="{{ secure_asset('images/favicon/favicon.ico') }}">
 		<!-- Standard iPhone Touch Icon-->
-		<link rel="apple-touch-icon" sizes="57x57" href="{{ asset('images/favicon/apple-touch-icon-57x57.png') }}">
+		<link rel="apple-touch-icon" sizes="57x57" href="{{ secure_asset('images/favicon/apple-touch-icon-57x57.png') }}">
 		<!-- Retina iPhone Touch Icon-->
-		<link rel="apple-touch-icon" sizes="114x114" href="{{ asset('images/favicon/apple-touch-icon-114x114.png') }}">
+		<link rel="apple-touch-icon" sizes="114x114" href="{{ secure_asset('images/favicon/apple-touch-icon-114x114.png') }}">
 		<!-- Standard iPad Touch Icon-->
-		<link rel="apple-touch-icon" sizes="72x72" href="{{ asset('images/favicon/apple-touch-icon-72x72.png') }}">
+		<link rel="apple-touch-icon" sizes="72x72" href="{{ secure_asset('images/favicon/apple-touch-icon-72x72.png') }}">
 		<!-- Retina iPad Touch Icon-->
-		<link rel="apple-touch-icon" sizes="144x144" href="{{ asset('images/favicon/apple-touch-icon-144x144.png') }}">
+		<link rel="apple-touch-icon" sizes="144x144" href="{{ secure_asset('images/favicon/apple-touch-icon-144x144.png') }}">
 		<!-- include Google fonts  -->
 		<link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic%7CPlayfair+Display:400,400italic,700,700italic,900,900italic%7CRoboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900%7CRaleway:400,100,200,300,500,600,700,800,900%7CGreat+Vibes%7CPoppins:400,300,500,600,700' rel='stylesheet' type='text/css'>
 		<!-- Links pasados a formato LARAVEL 5 -->		
-		<link rel="stylesheet" href="{{ URL::asset('css/font-awesome.min.css') }}" />
-		<link rel="stylesheet" href="{{ URL::asset('css/page-assets.css') }}" />
-		<link rel="stylesheet" href="{{ URL::asset('css/helper-elements.css') }}" />
-		<link rel="stylesheet" href="{{ URL::asset('css/style.css') }}" />
-		<link rel="stylesheet" href="{{ URL::asset('css/color/color.css') }}" />
-		<link rel="stylesheet" href="{{ URL::asset('css/animate.css') }}" />
+		<link rel="stylesheet" href="{{ secure_asset('css/font-awesome.min.css') }}" />
+		<link rel="stylesheet" href="{{ secure_asset('css/page-assets.css') }}" />
+		<link rel="stylesheet" href="{{ secure_asset('css/helper-elements.css') }}" />
+		<link rel="stylesheet" href="{{ secure_asset('css/style.css') }}" />
+		<link rel="stylesheet" href="{{ secure_asset('css/color/color.css') }}" />
+		<link rel="stylesheet" href="{{ secure_asset('css/animate.css') }}" />
 		<!-- Nuevos links de la misma versión. FALTA PASAR A LARAVEL Y PONER EN LOCAL. -->
-		<link rel="stylesheet" href="{{ URL::asset('css/bootstrap-table.css') }}" />
-		<link rel="stylesheet" href="{{ URL::asset('css/address.css') }}" />
+		<link rel="stylesheet" href="{{ secure_asset('css/bootstrap-table.css') }}" />
+		<link rel="stylesheet" href="{{ secure_asset('css/address.css') }}" />
 		<!--
 		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
@@ -44,7 +44,7 @@
 		<!--
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		-->
-		<link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}" />
+		<link rel="stylesheet" href="{{ secure_asset('css/bootstrap.min.css') }}" />
 
 		<link rel="stylesheet" href="//rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/css/bootstrap-editable.css">
 
@@ -74,7 +74,7 @@
 	    <div id="pre-loader">
 	        <div class="loader-holder">
 	            <div class="frame">
-	                <img src="{{ asset('images/preloader/logo.png') }}" alt="Fekra"/>
+	                <img src="{{ secure_asset('images/preloader/logo.png') }}" alt="Fekra"/>
 	                <div class="spinner7">
 	                    <div class="circ1"></div>
 	                    <div class="circ2"></div>
@@ -116,8 +116,8 @@
 								<!-- page logo -->
 								<div class="logo">
 									<a href="{{ url('/') }}">
-										<img src="{{ asset('images/logo-fitness2.png') }}" alt="Fekra" class="img-responsive w-logo">
-										<img src="{{ asset('images/logopeque2.png') }}" alt="Fekra" class="img-responsive b-logo" />
+										<img src="{{ secure_asset('images/logo-fitness2.png') }}" alt="Fekra" class="img-responsive w-logo">
+										<img src="{{ secure_asset('images/logopeque2.png') }}" alt="Fekra" class="img-responsive b-logo" />
 										<!--
 										<img src="images/logoguay.png" alt="Fekra" class="img-responsive b-logo">
 										-->
@@ -260,7 +260,7 @@
 			                            <div class="f-info-col">		  
 			                            <!--<img src="{{ asset('images/logo-fitness2.png') }}" alt="Fekra" class="img-responsive w-logo">-->
 										<!--<img src="{{ asset('images/logoguay.png') }}" alt="Fekra" class="img-responsive b-logo" />-->
-			                                <div class="logo"><a href="{{ url('/') }}"><img src="{{ asset('images/logopeque3.png') }}" alt="Logo"></a></div>
+			                                <div class="logo"><a href="{{ url('/') }}"><img src="{{ secure_asset('images/logopeque3.png') }}" alt="Logo"></a></div>
 			                                <p>El centro deportivo preferido de toda la familia. No olvides seguirnos en las redes sociales para estar informado de las últimas noticias y novedades.</p>
 			                                <!-- footer-social -->
 			                                <ul class="list-inline footer-social">
@@ -359,7 +359,7 @@
 						<div class="parallax-holder">
 							<!--<div class="parallax-frame"><img src="http://placehold.it/1920x451" height="451" width="1920" alt="image description"></div>-->
 							
-							<div class="parallax-frame"><img src="{{ asset('images/fueradelcentrogrande.jpg') }}" height="451" width="1920" alt="image description"></div>
+							<div class="parallax-frame"><img src="{{ secure_asset('images/fueradelcentrogrande.jpg') }}" height="451" width="1920" alt="image description"></div>
 						</div>
 					</footer>
 				</div>
@@ -439,23 +439,23 @@
 				<!-- FIN DE LO NUEVO -->
 		</div>
 		<!-- include jQuery library -->
-		<script type="text/javascript" src="{{ URL::asset('js/jquery-1.11.3.min.js') }}"></script>
+		<script type="text/javascript" src="{{ secure_asset('js/jquery-1.11.3.min.js') }}"></script>
 		<!-- include custom JavaScript -->
-		<script type="text/javascript" src="{{ URL::asset('js/jquery.main.js') }}"></script>
+		<script type="text/javascript" src="{{ secure_asset('js/jquery.main.js') }}"></script>
 		<!-- include plugins JavaScript -->
-		<script type="text/javascript" src="{{ URL::asset('js/plugins.js') }}"></script>
+		<script type="text/javascript" src="{{ secure_asset('js/plugins.js') }}"></script>
 		<!-- include Bootstrap tabs JavaScript -->
-		<script type="text/javascript" src="{{ URL::asset('js/responsive-tabs.js') }}"></script>
+		<script type="text/javascript" src="{{ secure_asset('js/responsive-tabs.js') }}"></script>
 		<!-- include Bootstrap table JavaScript -->
-		<script type="text/javascript" src="{{ URL::asset('js/bootstrap-table.js') }}"></script>
+		<script type="text/javascript" src="{{ secure_asset('js/bootstrap-table.js') }}"></script>
 		<!-- put your locale files after bootstrap-table.js -->
-		<script type="text/javascript" src="{{ URL::asset('js/bootstrap-table-es-ES.js') }}"></script>
+		<script type="text/javascript" src="{{ secure_asset('js/bootstrap-table-es-ES.js') }}"></script>
 		<!-- include Bootstrap table editable JavaScript -->
-		<script type="text/javascript" src="{{ URL::asset('js/bootstrap-editable.js') }}"></script>
+		<script type="text/javascript" src="{{ secure_asset('js/bootstrap-editable.js') }}"></script>
 		<!-- include Bootstrap table editable address type JavaScript -->
-		<script type="text/javascript" src="{{ URL::asset('js/address.js') }}"></script>
+		<script type="text/javascript" src="{{ secure_asset('js/address.js') }}"></script>
 		<!-- include Bootstrap JavaScript -->
-		<script type="text/javascript" src="{{ URL::asset('js/bootstrap.js') }}"></script>
+		<script type="text/javascript" src="{{ secure_asset('js/bootstrap.js') }}"></script>
 
 		<script type="text/javascript">
 	        @yield ('scripts')
