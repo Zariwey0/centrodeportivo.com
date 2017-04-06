@@ -357,7 +357,7 @@
 					<!-- popup1 -->
 					<div id="popup1" class="lightbox team-lightbox">
 						<div class="img-box">
-							<img src="http://placehold.it/250x320" alt="image description"/>
+							<img src="//placehold.it/250x320" alt="image description"/>
 						</div>
 						<div class="holder">
 							<strong class="title">Mohammed Arafa</strong>
@@ -374,7 +374,7 @@
 					<!-- popup2 -->
 					<div id="popup2" class="lightbox team-lightbox">
 						<div class="img-box">
-							<img src="http://placehold.it/250x320" alt="image description"/>
+							<img src="//placehold.it/250x320" alt="image description"/>
 						</div>
 						<div class="holder">
 							<strong class="title">Fatma Mahmoud</strong>
@@ -391,7 +391,7 @@
 					<!-- popup3 -->
 					<div id="popup3" class="lightbox team-lightbox">
 						<div class="img-box">
-							<img src="http://placehold.it/250x320" alt="image description"/>
+							<img src="//placehold.it/250x320" alt="image description"/>
 						</div>
 						<div class="holder">
 							<strong class="title">Hossam Eldin Mostafa</strong>
@@ -408,7 +408,7 @@
 					<!-- popup4 -->
 					<div id="popup4" class="lightbox team-lightbox">
 						<div class="img-box">
-							<img src="http://placehold.it/250x320" alt="image description"/>
+							<img src="//placehold.it/250x320" alt="image description"/>
 						</div>
 						<div class="holder">
 							<strong class="title">Amanay Abdel Fattah</strong>

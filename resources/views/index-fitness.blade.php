@@ -634,7 +634,7 @@ var rooms = {1: "Sala 1", 2: "Sala 2", 3: "Sala 3", 4: "Piscina"};
 var i, leng;
 var text = '';
 var aux = [];
-var web1 = '<a class=\\"index\\" href=\\"http://www.marca.com\\">';
+var web1 = '<a class=\\"index\\" href=\\"//www.marca.com\\">';
 var web2 = '</a>';
 
 for (i=0, leng = schedule.length; i<leng; ++i){
@@ -841,9 +841,9 @@ $('#table2').bootstrapTable({
 	        var scripts = [
 	                location.search.substring(1) || 'assets/bootstrap-table/src/bootstrap-table.js',
 	                'assets/bootstrap-table/src/extensions/export/bootstrap-table-export.js',
-	                'http://rawgit.com/hhurz/tableExport.jquery.plugin/master/tableExport.js',
+	                '//rawgit.com/hhurz/tableExport.jquery.plugin/master/tableExport.js',
 	                'assets/bootstrap-table/src/extensions/editable/bootstrap-table-editable.js',
-	                'http://rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/js/bootstrap-editable.js'
+	                '//rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/js/bootstrap-editable.js'
 	            ],
 	            eachSeries = function (arr, iterator, callback) {
 	                callback = callback || function () {};
