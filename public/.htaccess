@@ -5,8 +5,8 @@
 
     RewriteEngine On
     ############################## nuevo ##############################
-    RewriteCond %{HTTPS} off
-    RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+    #RewriteCond %{HTTPS} off
+    #RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
     ##################################################################
 
     # Redirect Trailing Slashes If Not A Folder...
