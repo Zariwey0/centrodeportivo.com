@@ -48,23 +48,77 @@ $schedule = DB::table('schedule')->select('id','monitor')->where('activity','=',
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-12 text-center">
-								<a href="../activity/{{$prev}}" class="prev"><i class="fa fa-angle-left"></i></a>
-								<a href="../activities" class="dashboard"><i class="fa fa-th"></i></a>
-								<a href="../activity/{{$next}}" class="next"><i class="fa fa-angle-right"></i></a>
+								<a href="../activity/{{$prev}}" class="prev dark btn-f-default"><i class="fa fa-angle-left"></i></a>
+								<a href="../activities" class="dashboard dark btn-f-default"><i class="fa fa-th"></i></a>
+								<a href="../activity/{{$next}}" class="next dark btn-f-default"><i class="fa fa-angle-right"></i></a>
 							</div>
 						</div>
+					<!--  nuevo -->
+					</div>
+					<header class="page-banner grey small padding-top-zero padding-bottom-zero">
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="holder">
+										<?php
+											echo '<h2>'.$activity->name.'</h2>';
+											//echo '<h1 class="heading text-uppercase">'.$activity->name.'</h1>';
+											echo '<p>'.$types[$activity->id_type].'</p>';
+											//echo $index;
+											//echo count($activities);
+											//echo $first;
+										?>
+									</div>
+									<ul class="breadcrumbs list-inline">
+										<li><a href="{{url('/')}}">INICIO</a></li>
+										<li><a class="" href="{{url('activities')}}">ACTIVIDADES</a></li>		
+										<li class="active"><a href="#">AQUAGYM</a></li>							
+									</ul>
+								</div>
+							</div>
+					    </div>
+					</header>
+					<div class="container">
+					<!--  nuevo -->
 						<div class="row text-upercase">
 							<div class="col-xs-12 text-center">
-							<?php
-								echo '<h2>'.$activity->name.'</h2>';
-								echo '<p>'.$types[$activity->id_type].'</p>';
-								//echo $index;
-								//echo count($activities);
-								//echo $first;
-							?>
-								
-								
+							<!--<div class="col-xs-12">-->
+								<div class="holder">
+								<?php
+									//echo '<h2>'.$activity->name.'</h2>';
+									//echo '<h1 class="heading text-uppercase">'.$activity->name.'</h1>';
+									//echo '<p>'.$types[$activity->id_type].'</p>';
+									//echo $index;
+									//echo count($activities);
+									//echo $first;
+								?>
+								</div>
+								<!--
+								<ul class="breadcrumbs list-inline">
+									<li><a href="{{url('/')}}">INICIO</a></li>
+									<li class="active"><a href="#">ACTIVIDADES</a></li>
+									
+								</ul>-->
 							</div>
+<!--
+							<header class="page-banner grey small">
+								<div class="container">
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="holder">
+												<h1 class="heading text-uppercase">actividades</h1>
+											</div>
+											<ul class="breadcrumbs list-inline">
+												<li><a href="{{url('/')}}">INICIO</a></li>
+												<li class="active"><a href="#">ACTIVIDADES</a></li>									
+											</ul>
+										</div>
+									</div>
+							    </div>
+							</header>
+
+-->
+
 						</div>
 						<div class="row padding-bottom-20">
 							<div class="col-xs-12 col-sm-4 col-md-4">
@@ -113,11 +167,11 @@ $schedule = DB::table('schedule')->select('id','monitor')->where('activity','=',
 
 						    <table id="table2"
 						    		data-toolbar="#toolbar"
-						           	data-search="true"
-						           	data-show-toggle="true"
-						           	data-show-columns="true"
-						           	data-show-export="true"
-						           	data-detail-view="true"
+						           	data-search="false"
+						           	data-show-toggle="false"
+						           	data-show-columns="false"
+						           	data-show-export="false"
+						           	data-detail-view="false"
 						           	data-sort-name="day"
 						           	data-detail-formatter="detailFormatter"
 						           	data-minimum-count-columns="2"

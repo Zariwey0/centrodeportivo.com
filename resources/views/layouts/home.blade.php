@@ -57,11 +57,7 @@
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.css">
 
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
-
-		<!-- Latest compiled and minified Locales -->
-		<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/locale/bootstrap-table-zh-CN.min.js"></script>
+		
 
 		<?php
 			use Intervention\Image\ImageManager;
@@ -97,16 +93,16 @@
 								<ul class="list-inline info-list">
 									<li><i class="fa fa-clock-o"></i>  ABIERTO DE 7:00 A 23:00  </li>
 									<li><a class="tel" href="tel:01008431112"><i class="fa fa-phone"></i> LLÁMANOS AL 928 98 76 54</a></li>
-									<li><a href="#"><i class="fa fa-envelope"></i> info@cdlisletafit.com</a></li>
+									<li><a href="#"><i class="fa fa-envelope"></i> info@cdlaisletafit.com</a></li>
 								</ul>
 								<!-- top nav style2 -->
 								<nav class="top-nav style2">
 									<ul class="list-inline">
-										<li><a target="_blank" href="https://facebook.com/cdlisletafit"><i class="fa fa-facebook"></i></a></li>
-										<li><a target="_blank" href="https://twitter.com/cdlisletafit"><i class="fa fa-twitter"></i></a></li>
-										<li><a target="_blank" href="https://play.spotify.com/user/cdlisletafit"><i class="fa fa-spotify"></i></a>
+										<li><a target="_blank" href="https://facebook.com/cdlaisletafit"><i class="fa fa-facebook"></i></a></li>
+										<li><a target="_blank" href="https://twitter.com/cdlaisletafit"><i class="fa fa-twitter"></i></a></li>
+										<li><a target="_blank" href="https://play.spotify.com/user/cdlaisletafit"><i class="fa fa-spotify"></i></a>
 										<li><a target="_blank" href="https://plus.google.com/u/0/113009037857170534534"><i class="fa fa-google-plus"></i></a></li></li>
-										<li><a target="_blank" href="https://www.instagram.com/cdlisletafit/"><i class="fa fa-instagram"></i></a></li></li>
+										<li><a target="_blank" href="https://www.instagram.com/cdlaisletafit/"><i class="fa fa-instagram"></i></a></li></li>
 									</ul>
 								</nav>
 							</div>
@@ -117,7 +113,7 @@
 								<div class="logo">
 									<a href="{{ url('/') }}">
 										<img src="{{ secure_asset('images/logo-fitness2.png') }}" alt="Fekra" class="img-responsive w-logo">
-										<img src="{{ secure_asset('images/logopeque2.png') }}" alt="Fekra" class="img-responsive b-logo" />
+										<img src="{{ secure_asset('images/logoFIT.png') }}" alt="Fekra" class="img-responsive b-logo" />
 										<!--
 										<img src="images/logoguay.png" alt="Fekra" class="img-responsive b-logo">
 										-->
@@ -182,7 +178,7 @@
 												</li>
 												@endif
 												<li>
-													<a href="{{ url('/blog') }}">Vive LisletaFIT</a>				
+													<a href="{{ url('/blog') }}">Vive LaIsletaFIT</a>				
 												</li>
 											</ul>
 										</div>
@@ -201,7 +197,7 @@
 									<a href="#" class="close-btn">close</a>
 									<form action="#" class="search-form">
 										<fieldset>
-											<input type="search" placeholder="search..." class="search">
+											<input type="search" placeholder="¿Qué quieres buscar?" class="search">
 											<button class="submit"><i class="fa fa-search"></i></button>
 										</fieldset>
 									</form>
@@ -264,11 +260,11 @@
 			                                <p>El centro deportivo preferido de toda la familia. No olvides seguirnos en las redes sociales para estar informado de las últimas noticias y novedades.</p>
 			                                <!-- footer-social -->
 			                                <ul class="list-inline footer-social">
-			                                    <li><a target="_blank" href="https://facebook.com/cdlisletafit"><i class="fa fa-facebook"></i></a></li>
-												<li><a target="_blank" href="https://twitter.com/cdlisletafit"><i class="fa fa-twitter"></i></a></li>
-												<li><a target="_blank" href="https://play.spotify.com/user/cdlisletafit"><i class="fa fa-spotify"></i></a></li>
+			                                    <li><a target="_blank" href="https://facebook.com/cdlaisletafit"><i class="fa fa-facebook"></i></a></li>
+												<li><a target="_blank" href="https://twitter.com/cdlaisletafit"><i class="fa fa-twitter"></i></a></li>
+												<li><a target="_blank" href="https://play.spotify.com/user/cdlaisletafit"><i class="fa fa-spotify"></i></a></li>
 												<li><a target="_blank" href="https://plus.google.com/u/0/113009037857170534534"><i class="fa fa-google-plus"></i></a></li>
-												<li><a target="_blank" href="https://www.instagram.com/cdlisletafit/"><i class="fa fa-instagram"></i></a></li>
+												<li><a target="_blank" href="https://www.instagram.com/cdlaisletafit/"><i class="fa fa-instagram"></i></a></li>
 			                                </ul>
 			                            </div>
 			                        </div>
@@ -284,7 +280,7 @@
 			                                    <span class="tel-box"><i class="fa fa-phone"></i> <a class="tel" href="tel:928987654">928 98 76 54</a></span>
 			                                </div>
 			                                <div class="mail-box2">
-			                                    <span class="mail-box"><i class="fa fa-envelope-o"></i> <a class="email" href="mailto:info@cdlisletafit.com"> info@cdlisletafit.com</a></span>
+			                                    <span class="mail-box"><i class="fa fa-envelope-o"></i> <a class="email" href="mailto:info@cdlaisletafit.com"> info@cdlaisletafit.com</a></span>
 			                                </div>
 			                            </div>
 			                        </div>
@@ -326,7 +322,89 @@
 			                            <!-- f flicker -->
 			                            <div class="f-flicker">
 											<h5><span class="add-color">Fotos</span> Instagram</h5>
-											<div class="insta-box instagram-photos flickr-feed widget" data-count="9" data-id="20154996@N00"></div>
+											<!--<div class="flickr-feed" data-count="9" data-id="20154996@N00"></div>-->
+											<!--
+											<h5><span class="add-color">Fotos</span> Instagram</h5>
+											<div class="flickr-feed" data-id="121500546@N06" data-count="9"></div>
+											-->
+
+			                                <!-- footer-news-box -->
+			                                <div class="footer-news-box">
+			                                    <div class="img-box">
+			                                        <?php
+														$ruta = "images/instafotos/insta1.jpg";
+														$imagen = Image::make($ruta)->fit(60,60)->encode("data-url");
+														$imagenG = Image::make($ruta)->encode("data-url");
+													?>
+													<a href="{{$imagenG}}" class="search lightbox"><img src="{{$imagen}}" alt="image description"></a>
+			                                    </div>
+			                                    <div class="img-box">
+			                                        <?php
+														$ruta = "images/instafotos/insta2.jpg";
+														$imagen = Image::make($ruta)->fit(60,60)->encode("data-url");
+														$imagenG = Image::make($ruta)->encode("data-url");
+													?>
+													<a href="{{$imagenG}}" class="search lightbox"><img src="{{$imagen}}" alt="image description"></a>
+			                                    </div>
+			                                    <div class="img-box">
+			                                        <?php
+														$ruta = "images/instafotos/insta3.jpg";
+														$imagen = Image::make($ruta)->fit(60,60)->encode("data-url");
+														$imagenG = Image::make($ruta)->encode("data-url");
+													?>
+													<a href="{{$imagenG}}" class="search lightbox"><img src="{{$imagen}}" alt="image description"></a>
+			                                    </div>
+			                                    <div class="img-box">
+			                                        <?php
+														$ruta = "images/instafotos/insta4.jpg";
+														$imagen = Image::make($ruta)->fit(60,60)->encode("data-url");
+														$imagenG = Image::make($ruta)->encode("data-url");
+													?>
+													<a href="{{$imagenG}}" class="search lightbox"><img src="{{$imagen}}" alt="image description"></a>
+			                                    </div>
+			                                    <div class="img-box">
+			                                        <?php
+														$ruta = "images/instafotos/insta5.jpg";
+														$imagen = Image::make($ruta)->fit(60,60)->encode("data-url");
+														$imagenG = Image::make($ruta)->encode("data-url");
+													?>
+													<a href="{{$imagenG}}" class="search lightbox"><img src="{{$imagen}}" alt="image description"></a>
+			                                    </div>
+			                                    <div class="img-box">
+			                                        <?php
+														$ruta = "images/instafotos/insta6.jpg";
+														$imagen = Image::make($ruta)->fit(60,60)->encode("data-url");
+														$imagenG = Image::make($ruta)->encode("data-url");
+													?>
+													<a href="{{$imagenG}}" class="search lightbox"><img src="{{$imagen}}" alt="image description"></a>
+			                                    </div>
+			                                    <div class="img-box">
+			                                        <?php
+														$ruta = "images/instafotos/insta7.jpg";
+														$imagen = Image::make($ruta)->fit(60,60)->encode("data-url");
+														$imagenG = Image::make($ruta)->encode("data-url");
+													?>
+													<a href="{{$imagenG}}" class="search lightbox"><img src="{{$imagen}}" alt="image description"></a>
+			                                    </div>
+			                                    <div class="img-box">
+			                                        <?php
+														$ruta = "images/instafotos/insta8.jpg";
+														$imagen = Image::make($ruta)->fit(60,60)->encode("data-url");
+														$imagenG = Image::make($ruta)->encode("data-url");
+													?>
+													<a href="{{$imagenG}}" class="search lightbox"><img src="{{$imagen}}" alt="image description"></a>
+			                                    </div>
+			                                    <div class="img-box">
+			                                        <?php
+														$ruta = "images/instafotos/insta9.jpg";
+														$imagen = Image::make($ruta)->fit(60,60)->encode("data-url");
+														$imagenG = Image::make($ruta)->encode("data-url");
+													?>
+													<a href="{{$imagenG}}" class="search lightbox"><img src="{{$imagen}}" alt="image description"></a>
+			                                    </div>
+			                                   
+			                                </div>
+
 			                            </div>
 			                        </div>
 			                    </div>
@@ -350,7 +428,7 @@
 			                                    <!--<li><a href="#">PRIVACY POLICY</a></li>-->
 			                                    <li><a href="{{ url('/privacy') }}">| Política de privacidad</a></li>
 			                                </ul>
-			                                <span class="copyright">&copy; 2017 <a href="{{ url('/') }}">Centro Deportivo LisletaFIT</a></span>
+			                                <span class="copyright">&copy; 2017 <a href="{{ url('/') }}">Centro Deportivo LaIsletaFIT</a></span>
 			                            </div>
 			                        </div>
 			                    </div>
@@ -442,6 +520,8 @@
 		<script type="text/javascript" src="{{ secure_asset('js/jquery-1.11.3.min.js') }}"></script>
 		<!-- include custom JavaScript -->
 		<script type="text/javascript" src="{{ secure_asset('js/jquery.main.js') }}"></script>
+		<!-- include Bootstrap JavaScript -->
+		<script type="text/javascript" src="{{ secure_asset('js/bootstrap.js') }}"></script>
 		<!-- include plugins JavaScript -->
 		<script type="text/javascript" src="{{ secure_asset('js/plugins.js') }}"></script>
 		<!-- include Bootstrap tabs JavaScript -->
@@ -454,8 +534,16 @@
 		<script type="text/javascript" src="{{ secure_asset('js/bootstrap-editable.js') }}"></script>
 		<!-- include Bootstrap table editable address type JavaScript -->
 		<script type="text/javascript" src="{{ secure_asset('js/address.js') }}"></script>
-		<!-- include Bootstrap JavaScript -->
-		<script type="text/javascript" src="{{ secure_asset('js/bootstrap.js') }}"></script>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
+
+		<!-- Latest compiled and minified Locales -->
+		<!--<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/locale/bootstrap-table-zh-CN.min.js"></script>-->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/locale/bootstrap-table-es-ES.min.js"></script>
+
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeMi4diOknZ126AdCH4ubY7qj6pIwdDDQ"
+  type="text/javascript"></script>
 
 		<script type="text/javascript">
 	        @yield ('scripts')

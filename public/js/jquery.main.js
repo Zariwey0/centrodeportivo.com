@@ -63,8 +63,10 @@ function initSlickSlider() {
     	slider.slick({
     		arrows: (btnPrev.length > 0) && (btnNext.length > 0) ? true : false,
     		dots: pagination.length > 0 ? true : false,
-    		pauseOnHover: false,
+    		pauseOnHover: true,
     		autoplay: true,
+    		//CAMBIA EL DELAY DEL CARRUSEL
+    		autoplaySpeed: 9000,
     		speed: 800
     	});
 
@@ -508,7 +510,7 @@ function initVideoPlayer() {
 // GoogleMap init
 function initGoogleMap() {
 	jQuery('.map').googleMapAPI({
-		marker: 'images/marker.png',
+		marker: 'images/logoMARKER.png',
 		mapInfoContent: '.map-info',
 		streetViewControl: false,
 		mapTypeControl: false,

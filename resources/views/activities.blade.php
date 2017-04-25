@@ -25,12 +25,12 @@ $activities = DB::table('activities')->select('name', 'id_type', 'image')->order
 						<div class="row">
 							<div class="col-xs-12">
 								<div class="holder">
-									<h1 class="heading text-uppercase">portfolio</h1>
+									<h1 class="heading text-uppercase">actividades</h1>
 								</div>
 								<ul class="breadcrumbs list-inline">
-									<li><a href="#">HOME</a></li>
-									<li><a href="#">PORTFOLIO</a></li>
-									<li class="active"><a href="#"> PORTFOLIO GIRD 3 COLUMN no space</a></li>
+									<li><a href="{{url('/')}}">INICIO</a></li>
+									<li class="active"><a href="#">ACTIVIDADES</a></li>
+									<!--<li class="active"><a href="#"> PORTFOLIO GIRD 3 COLUMN no space</a></li>-->
 								</ul>
 							</div>
 						</div>

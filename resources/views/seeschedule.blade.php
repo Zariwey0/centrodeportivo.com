@@ -57,11 +57,11 @@ $schedule = DB::table('schedule')->get();
                     </div>
                     <div class="container">
                         <div class="row">
-
+                        <input class="buscadorTabla" type="text" id="myInput" onkeyup="searchInSchedule()" placeholder="¿Qué quieres buscar?">
 						    <table data-toggle="table"
 						    	id="table3"
 								data-toolbar="#toolbar"
-								data-search="true"
+								data-search="false"
 								data-editable-emptytext="Vacío"
 								data-show-refresh="false"
 								data-show-toggle="false"
@@ -905,5 +905,48 @@ for (i=0, leng = schedule.length; i<leng; ++i){
 	        if (a < b) return -1;
 	        return 0;
 	    }
+
+
+	    function searchInSchedule() {
+			// Declare variables 
+			var input, filter, table, tr, td, i, j;
+		  	input = document.getElementById("myInput");
+		  	filter = input.value.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+		  	table = document.getElementById("table3");
+		  	tr = table.getElementsByTagName("tr");
+		  	// Loop through all table rows, and hide those who don't match the search query
+		  	for (i = 1; i < tr.length; i++) {
+		  		//Controlamos el desfase de la primera fila de cada hora de la tabla
+		  		if (i%4 == 1){
+			  		for (j = 2; j < 9; j++) {
+				    	td = tr[i].getElementsByTagName("td")[j];
+				    	if (td) {
+				      		if (td.innerHTML.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").indexOf(filter) > -1 && filter.length > 1) {
+				        		//tr[i].style.display = "";
+				        		td.style.backgroundColor = "#eef02f";
+				      		} else {
+					    	    //tr[i].style.display = "none";
+					    	    td.style.backgroundColor = "white";
+					    	}
+				    	} 
+				    }
+				} else {
+					for (j = 1; j < 8; j++) {
+				    	td = tr[i].getElementsByTagName("td")[j];
+				    	if (td) {
+				      		if (td.innerHTML.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").indexOf(filter) > -1 && filter.length > 1) {
+				        		//tr[i].style.display = "";
+				        		td.style.backgroundColor = "#eef02f";
+				      		} else {
+					    	    //tr[i].style.display = "none";
+					    	    td.style.backgroundColor = "white";
+					    	}
+				    	} 
+				    }
+
+				}
+		  	}
+		}
+
 
 @stop

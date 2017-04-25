@@ -1,5 +1,5 @@
 @extends('layouts.home')
-@section('title', 'Centro Deportivo LisletaFIT - Home')
+@section('title', 'Centro Deportivo LaIsletaFIT - Home')
 @section('description', 'pruebita buena jodio')
 @section('keywords', 'palabras clave y tal')
 
@@ -17,7 +17,7 @@ $activities = DB::table('activities')->select('id','name')->orderBy('name')->get
 $monitors = DB::table('users')->where('user','=','2')->latest()->take(4)->get();
 
 $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('id%7 = '.$dw)->whereRaw('ceil(id/28) >'.$hs)->get();
-//+34 91 1230 490
+
 ?>
 
 			<!-- shop gallery fitness -->
@@ -83,6 +83,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
                     </header>
 					<div class="row">
 						<table id="table2"
+							class="tablahome"
 							data-toolbar="#toolbar"
 					       	data-search="false"
 					       	data-show-toggle="false"
@@ -103,7 +104,9 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 				</div>
 				<div class="stretch">
 					<!--<img alt="image description" src="images/bg-3.jpg">-->
-					<img alt="image description" src="images/corchomasocuro.jpg">
+					<!--<img alt="image description" src="images/corchomasocuro.jpg">-->
+					<!--<img alt="image description" src="images/corchooscuro5.jpg">-->
+					<img alt="image description" src="images/maderaoscura2.jpg">
 				</div>
 			</section>
 			<!-- collection block -->
@@ -500,9 +503,11 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 							<div class="box padding-bottom-10">
 								<strong class="heading margin-bottom-30">Mensual</strong>
 								<ul class="list-unstyled price-list margin-bottom-20">
-									<li>3 days a week program</li>
-									<li>Diet program Included</li>
-									<li>Professional Trainers</li>
+									<li>Acceso a todas las actividades</li>
+									<li>Plan específico</li>
+									<li>Entrenadores personales</li>
+									<li style="visibility:hidden">_</li>
+									<li style="visibility:hidden">_</li>
 								</ul>
 								<span class="price">20.99<sup>€</sup></span>
 								<span class="month margin-bottom-30">Cada mes</span>
@@ -511,12 +516,14 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-3">
 							<!-- box -->
-							<div class="box padding-bottom-10">
+							<div class="box active padding-bottom-10">
 								<strong class="heading margin-bottom-30">Trimestral</strong>
 								<ul class="list-unstyled price-list margin-bottom-20">
 									<li>15% de descuento</li>
-									<li>Diet program Included</li>
-									<li>Professional Trainers</li>
+									<li>Acceso a todas las actividades</li>
+									<li>Plan específico</li>
+									<li>Entrenadores personales</li>
+									<li style="visibility:hidden">_</li>
 								</ul>
 								<span class="price">52.99<sup>€</sup></span>
 								<span class="month margin-bottom-30">Cada tres meses</span>
@@ -525,15 +532,17 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-3 clearfix-sm">
 							<!-- box -->
-							<div class="box active padding-bottom-10">
-								<strong class="heading margin-bottom-30">Semestral</strong>
+							<div class="box padding-bottom-10">
+								<strong class="heading margin-bottom-30">Familiar trimestral</strong>
 								<ul class="list-unstyled price-list margin-bottom-20">
-									<li>24% de descuento</li>
-									<li>Diet program Included</li>
-									<li>Professional Trainers</li>
+									<li>13% de descuento</li>
+									<li>Dos adultos y hasta dos niños gratis</li>
+									<li>Acceso a todas las actividades</li>
+									<li>Plan específico</li>
+									<li>Entrenadores personales</li>
 								</ul>
-								<span class="price">95.99<sup>€</sup></span>
-								<span class="month margin-bottom-30">Cada seis meses</span>
+								<span class="price">109.99<sup>€</sup></span>
+								<span class="month margin-bottom-30">Cada tres meses</span>
 								<a href="{{url('auth/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
 							</div>
 						</div>
@@ -543,8 +552,10 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 								<strong class="heading margin-bottom-30">Anual</strong>
 								<ul class="list-unstyled price-list margin-bottom-20">
 									<li>36% de descuento</li>
-									<li>Diet program Included</li>
-									<li>Professional Trainers</li>
+									<li>Acceso a todas las actividades</li>
+									<li>Plan específico</li>
+									<li>Entrenadores personales</li>
+									<li>Club premium</li>
 								</ul>
 								<span class="price">161.99<sup>€</sup></span>
 								<span class="month margin-bottom-30">Cada año</span>
@@ -565,19 +576,19 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 				<div class="container">
                     <!-- page heading -->
                     <header class="page-heading margin-bottom-60">
-                        <h2 class="lime text-capitalize font-medium margin-bottom-10">OPINIONES DE NUESTROS USUARIOS </h2>
-                        <p class="heading7 title text-uppercase">qué carajos pongo aquí?</p>
+                        <h2 class="lime text-capitalize font-medium margin-bottom-10">TESTIMONIOS </h2>
+                        <p class="heading7 title text-uppercase">nuestros usuarios opinan</p>
                     </header>
 					<div class="row">
 						<div class="col-xs-12">
 							<!-- beans-slider -->
-							<div class="beans-slider" data-rotate="true">
+							<div class="beans-slider" data-interval="6000" data-rotate="true">
 								<div class="beans-mask">
 									<div class="beans-slideset">
 										<!-- beans-slide -->
 										<div class="beans-slide">
 											<blockquote>
-												<q>La verdades que esta gente es la crema, sabeloquétedigo? Hacen las cosas de puta madre y se nota. Además cuando llegué aquí estaba más fondón que mi pelo y ahora estoy más cuadrado que una caja de zapatos. Gracias LisletaFIT, me secaste.</q>
+												<q>La verdades que esta gente es la crema, sabeloquétedigo? Hacen las cosas de puta madre y se nota. Además cuando llegué aquí estaba más fondón que mi pelo y ahora estoy más cuadrado que una caja de zapatos. Gracias LaIsletaFIT, me secaste.</q>
 												<cite>
 													<span class="name">Fulanita de Tal</span>
 													<span class="comp-name"><a href="#">Usuaria de nuestro centro</a></span>
