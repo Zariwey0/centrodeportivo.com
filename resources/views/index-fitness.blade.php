@@ -39,7 +39,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 											<h1><span class="add-text">ALCANZA</span> TUS METAS</h1>
 											<p>Ponemos todo nuestro equipo a tu entera disposición para que cada día suponga un nuevo reto y estimulante.</p>
 											<div class="button-slider">
-												<a href="{{url('auth/register')}}" class="btn btn-f-default">EMPIEZA HOY</a>
+												<a href="{{secure_url('auth/register')}}" class="btn btn-f-default">EMPIEZA HOY</a>
 											</div>
 										</header>
 									</div>
@@ -61,7 +61,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 											<h1><span class="add-text">DESAFÍA</span> TUS LÍMITES</h1>
 											<p>Tu cuerpo está hecho para hacer grandes cosas. Entrena con nosotros y déjanos sacar lo mejor que hay en ti.</p>
 											<div class="button-slider">
-												<a href="{{url('auth/register')}}" class="btn btn-f-default">EMPIEZA HOY</a>
+												<a href="{{secure_url('auth/register')}}" class="btn btn-f-default">EMPIEZA HOY</a>
 											</div>
 										</header>
 									</div>
@@ -99,7 +99,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 					       	data-response-handler="responseHandler">
 						</table>
 					</div>
-					<p align="left">Pulsa <a target="_blank" href="{{url('seeschedule')}}">aquí</a> para ver el horario semanal al completo.</p>
+					<p align="left">Pulsa <a target="_blank" href="{{secure_url('seeschedule')}}">aquí</a> para ver el horario semanal al completo.</p>
 					
 				</div>
 				<div class="stretch">
@@ -122,7 +122,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 									<div class="frame">
 										<div class="box">
 											<h2><span class="txt">ENTRENA CON</span>  PROFESIONALES CUALIFICADOS</h2>
-											<a href="{{url('team')}}" class="btn-shop add">CONÓCELOS <i class="fa fa-angle-right"></i></a>
+											<a href="{{secure_url('team')}}" class="btn-shop add">CONÓCELOS <i class="fa fa-angle-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -139,7 +139,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 											<div class="frame">
 												<div class="box">
 													<h2><span class="txt">DATE AHORA <br>DE ALTA Y</span> APROVECHA <br>NUESTRAS OFERTAS</h2>
-													<a href="{{url('auth/register')}}" class="btn-shop add">SUSCRÍBETE <i class="fa fa-angle-right"></i></a>
+													<a href="{{secure_url('auth/register')}}" class="btn-shop add">SUSCRÍBETE <i class="fa fa-angle-right"></i></a>
 												</div>
 											</div>
 										</div>
@@ -154,7 +154,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 											<div class="frame">
 												<div class="box">
 													<h2>CLASES <span class="txt">PARA TODOS <br> LOS GUSTOS</span></h2>
-													<a href="{{url('activities')}}" class="btn-shop add">INFORMÁTE  <i class="fa fa-angle-right"></i></a>
+													<a href="{{secure_url('activities')}}" class="btn-shop add">INFORMÁTE  <i class="fa fa-angle-right"></i></a>
 												</div>
 											</div>
 										</div>
@@ -511,7 +511,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 								</ul>
 								<span class="price">20.99<sup>€</sup></span>
 								<span class="month margin-bottom-30">Cada mes</span>
-								<a href="{{url('auth/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
+								<a href="{{secure_url('auth/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-3">
@@ -527,7 +527,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 								</ul>
 								<span class="price">52.99<sup>€</sup></span>
 								<span class="month margin-bottom-30">Cada tres meses</span>
-								<a href="{{url('auth/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
+								<a href="{{secure_url('auth/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-3 clearfix-sm">
@@ -543,7 +543,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 								</ul>
 								<span class="price">109.99<sup>€</sup></span>
 								<span class="month margin-bottom-30">Cada tres meses</span>
-								<a href="{{url('auth/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
+								<a href="{{secure_url('auth/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-3">
@@ -559,7 +559,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 								</ul>
 								<span class="price">161.99<sup>€</sup></span>
 								<span class="month margin-bottom-30">Cada año</span>
-								<a href="{{url('auth/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
+								<a href="{{secure_url('auth/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
 							</div>
 						</div>
 					</div>

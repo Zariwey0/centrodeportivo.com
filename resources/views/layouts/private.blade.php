@@ -104,7 +104,7 @@
 							<div class="col-xs-12">
 								<!-- page logo -->
 								<div class="logo">
-									<a href="{{ url('/') }}">
+									<a href="{{ secure_url('/') }}">
 										<img src="{{ secure_asset('images/logo-fitness2.png') }}" alt="Fekra" class="img-responsive w-logo">
 										<img src="{{ secure_asset('images/logoFIT.png') }}" alt="Fekra" class="img-responsive b-logo" />
 										<!--
@@ -126,11 +126,11 @@
 																		
 										@if (Auth::check())
 											@if (Auth::user()->user == 0)
-												<li><a href="{{url('user')}}" class="opener-icons"><i class="fa fa-user"></i> {{Auth::user()->name}}</a></li>
+												<li><a href="{{secure_url('user')}}" class="opener-icons"><i class="fa fa-user"></i> {{Auth::user()->name}}</a></li>
 											@elseif (Auth::user()->user == 1)
-												<li><a href="{{url('admin')}}" class="opener-icons"><i class="fa fa-user"></i> {{Auth::user()->name}}</a></li>
+												<li><a href="{{secure_url('admin')}}" class="opener-icons"><i class="fa fa-user"></i> {{Auth::user()->name}}</a></li>
 											@endif
-											<li><a href="{{url('auth/logout')}}" class="opener-icons"><i class="fa fa-sign-out"></i> Salir</a></li>
+											<li><a href="{{secure_url('auth/logout')}}" class="opener-icons"><i class="fa fa-sign-out"></i> Salir</a></li>
 										@else
 											<li><a href="#" class="user-opener opener-icons"><i class="fa fa-lock"></i><small> ÁREA PRIVADA</small></a></li>
 										@endif	
@@ -144,34 +144,34 @@
 										<div class="nav-holder">
 											<ul class="list-inline nav-top">
 												<li>
-													<a href="{{ url('/') }}">Inicio</a>
+													<a href="{{ secure_url('/') }}">Inicio</a>
 												</li>
 												<li>
-													<a href="{{ url('/') }}">El Centro</a>
+													<a href="{{ secure_url('/') }}">El Centro</a>
 													<div class="drop">
 														<div class="coll">
 															<ul class="list-unstyled">
-																<li><a href="{{ url('/facilities') }}">LAS INSTALACIONES</a></li>
-																<li><a href="{{ url('/team') }}">EL EQUIPO</a></li>
-																<li><a href="{{ url('/activities') }}">LAS ACTIVIDADES</a></li>
+																<li><a href="{{ secure_url('/facilities') }}">LAS INSTALACIONES</a></li>
+																<li><a href="{{ secure_url('/team') }}">EL EQUIPO</a></li>
+																<li><a href="{{ secure_url('/activities') }}">LAS ACTIVIDADES</a></li>
 																
 															</ul>
 														</div>
 													</div>
 												</li>
 												<li>
-													<a href="{{ url('/seeschedule') }}">Horario</a>
+													<a href="{{ secure_url('/seeschedule') }}">Horario</a>
 												</li>
 												<li>
-													<a href="{{ url('/news') }}">Noticias</a>		
+													<a href="{{ secure_url('/news') }}">Noticias</a>		
 												</li>
 												@if (!Auth::check())
 												<li>
-													<a href="{{ url('auth/register') }}">Suscripción</a>										
+													<a href="{{ secure_url('auth/register') }}">Suscripción</a>										
 												</li>
 												@endif
 												<li>
-													<a href="{{ url('/blog') }}">Vive LaIsletaFIT</a>				
+													<a href="{{ secure_url('/blog') }}">Vive LaIsletaFIT</a>				
 												</li>
 											</ul>
 										</div>
@@ -215,7 +215,7 @@
 									</form>
 
 									-->
-									<form class="user-form" method="post" action="{{url('auth/login')}}">
+									<form class="user-form" method="post" action="{{secure_url('auth/login')}}">
 		                                {!! csrf_field() !!}
 		                                <fieldset>
 			                                <input type="email" name="email" id="email" placeholder="Introduce tu email" />
@@ -249,7 +249,7 @@
 			                            <div class="f-info-col">		  
 			                            <!--<img src="{{ asset('images/logo-fitness2.png') }}" alt="Fekra" class="img-responsive w-logo">-->
 										<!--<img src="{{ asset('images/logoguay.png') }}" alt="Fekra" class="img-responsive b-logo" />-->
-			                                <div class="logo"><a href="{{ url('/') }}"><img src="{{ secure_asset('images/logopeque3.png') }}" alt="Logo"></a></div>
+			                                <div class="logo"><a href="{{ secure_url('/') }}"><img src="{{ secure_asset('images/logopeque3.png') }}" alt="Logo"></a></div>
 			                                <p>El centro deportivo preferido de toda la familia. No olvides seguirnos en las redes sociales para estar informado de las últimas noticias y novedades.</p>
 			                                <!-- footer-social -->
 			                                <ul class="list-inline footer-social">
@@ -412,16 +412,16 @@
 			                            <div class="bottom-box1">
 			                                <!-- footer nav -->
 			                                <ul class="list-inline footer-nav">
-			                                    <li><a href="{{ url('/') }}">| Inicio</a></li>
+			                                    <li><a href="{{ secure_url('/') }}">| Inicio</a></li>
 			                                    <!--<li><a href="#">About Us</a></li>-->
 			                                    <!--<li><a href="#">| Sobre nosotros</a></li>-->
 			                                    <!--<li><a href="#">PROJECTS</a></li>-->
-			                                    <li><a href="{{ url('/contact') }}">| Contacto</a></li>
-			                                   	<li><a href="{{ url('/jobs') }}">| Trabaja con nosotros</a></li>
+			                                    <li><a href="{{ secure_url('/contact') }}">| Contacto</a></li>
+			                                   	<li><a href="{{ secure_url('/jobs') }}">| Trabaja con nosotros</a></li>
 			                                    <!--<li><a href="#">PRIVACY POLICY</a></li>-->
-			                                    <li><a href="{{ url('/privacy') }}">| Política de privacidad</a></li>
+			                                    <li><a href="{{ secure_url('/privacy') }}">| Política de privacidad</a></li>
 			                                </ul>
-			                                <span class="copyright">&copy; 2017 <a href="{{ url('/') }}">Centro Deportivo LaIsletaFIT</a></span>
+			                                <span class="copyright">&copy; 2017 <a href="{{ secure_url('/') }}">Centro Deportivo LaIsletaFIT</a></span>
 			                            </div>
 			                        </div>
 			                    </div>
