@@ -100,8 +100,8 @@
 			        ?>
 			        <div class="row">
 			            <div class="col-md-1">
-			                <img src='{{url($user->profile)}}' class='img-responsive' style='max-width: 60px' />
-			                <strong><a href="{{url('user/'.$user->id)}}">{{$user->name}}</a></strong>        
+			                <img src='{{secure_url($user->profile)}}' class='img-responsive' style='max-width: 60px' />
+			                <strong><a href="{{secure_url('user/'.$user->id)}}">{{$user->name}}</a></strong>        
 			            </div>
 			            <div class='col-md-6'>
 			            	{{$comment->comment}} 
@@ -125,7 +125,7 @@
 			                        <h4 class="modal-title" id="myModalLabel">¿Realmente quieres eliminar este comentario?</h4>
 			                      </div>
 			                      <div class="modal-body">
-			                        <form method="post" action="{{url('user/deletecomment')}}">
+			                        <form method="post" action="{{secure_url('user/deletecomment')}}">
 			                            {{csrf_field()}}
 			                            <input type="hidden" name="id_comment" value="{{$comment->id}}" />
 			                            <button type="submit" class="btn btn-danger">Eliminar</button>
@@ -152,7 +152,7 @@
 			                        <h4 class="modal-title" id="myModalLabel">Editar comentario</h4>
 			                      </div>
 			                      <div class="modal-body">
-			                        <form method="post" action="{{url('user/editcomment')}}">
+			                        <form method="post" action="{{secure_url('user/editcomment')}}">
 			                            {{csrf_field()}}
 			                            <div class="form-group">
 			                            <textarea name="comment" rows="10" class="form-control">{{$comment->comment}}</textarea>
@@ -173,14 +173,14 @@
 			        </div>
 			        <hr />
 			        <?php endforeach ?>
-			        <form method="post" action="{{url('user/createcomment')}}">
+			        <form method="post" action="{{secure_url('user/createcomment')}}">
 						{{csrf_field()}}
 						<div class="form-group">
 							<h3>Únete a la conversación:</h3>
 							<div class="row">
 								<div class="col-md-1">
-									<img src="{{url(Auth::user()->profile)}}" class='img-responsive' style='max-width: 60px' />
-									<strong><a href="{{url('user/'.Auth::user()->id)}}">{{Auth::user()->name}}</a></strong>
+									<img src="{{secure_url(Auth::user()->profile)}}" class='img-responsive' style='max-width: 60px' />
+									<strong><a href="{{secure_url('user/'.Auth::user()->id)}}">{{Auth::user()->name}}</a></strong>
 								</div>
 								<div class="col-md-6">
 									<textarea name="comment" class="form-control"></textarea>
@@ -210,14 +210,14 @@
 				<section class="widget cate-widget">
 					<h2>Opciones</h2>
 					<ul class="list-unstyled">
-						<li><a href="{{url('profile')}}"><i class="fa fa-caret-right"></i>Cambiar mi imagen de perfil</a></li>
-    					<li><a href="{{url('password')}}"><i class="fa fa-caret-right"></i>Cambiar mi password</a></li>
-    					<li><a href="{{url('admin/createadmin')}}"><i class="fa fa-caret-right"></i>Crear nuevo editor</a></li>
-    					<li><a href="{{url('admin/createmonitor')}}"><i class="fa fa-caret-right"></i>Crear nuevo monitor</a></li>
-    					<li><a href="{{url('admin/createactivitytype')}}"><i class="fa fa-caret-right"></i>Crear nuevo tipo de actividad</a></li>
-    					<li><a href="{{url('admin/createactivity')}}"><i class="fa fa-caret-right"></i>Crear nueva actividad</a></li>
-    					<li><a href="{{url('schedule')}}"><i class="fa fa-caret-right"></i>Configurar horario</a></li>
-    					<li><a href="{{url('seeschedule')}}"><i class="fa fa-caret-right"></i>Ver horario</a></li>
+						<li><a href="{{secure_url('profile')}}"><i class="fa fa-caret-right"></i>Cambiar mi imagen de perfil</a></li>
+    					<li><a href="{{secure_url('password')}}"><i class="fa fa-caret-right"></i>Cambiar mi password</a></li>
+    					<li><a href="{{secure_url('admin/createadmin')}}"><i class="fa fa-caret-right"></i>Crear nuevo editor</a></li>
+    					<li><a href="{{secure_url('admin/createmonitor')}}"><i class="fa fa-caret-right"></i>Crear nuevo monitor</a></li>
+    					<li><a href="{{secure_url('admin/createactivitytype')}}"><i class="fa fa-caret-right"></i>Crear nuevo tipo de actividad</a></li>
+    					<li><a href="{{secure_url('admin/createactivity')}}"><i class="fa fa-caret-right"></i>Crear nueva actividad</a></li>
+    					<li><a href="{{secure_url('schedule')}}"><i class="fa fa-caret-right"></i>Configurar horario</a></li>
+    					<li><a href="{{secure_url('seeschedule')}}"><i class="fa fa-caret-right"></i>Ver horario</a></li>
 					</ul>
 				</section>
 					<!-- widget -->
@@ -323,7 +323,7 @@
 				 	</div>
 				 	<hr />
 				@endif
-				<form method="POST" action="{{url('admin/createmonitor')}}" enctype='multipart/form-data'>
+				<form method="POST" action="{{secure_url('admin/createmonitor')}}" enctype='multipart/form-data'>
 				    {!! csrf_field() !!}
 
 				    <div class='form-group'>
@@ -375,7 +375,7 @@
 					</div>
 				 	<hr />
 				@endif
-				<form method="POST" action="{{url('admin/createadmin')}}">
+				<form method="POST" action="{{secure_url('admin/createadmin')}}">
 				    {!! csrf_field() !!}
 
 				    <div class='form-group'>
@@ -423,7 +423,7 @@
 				@endif
 
 
-				<form method="POST" enctype="multipart/form-data" action="{{url('admin/createactivity')}}">
+				<form method="POST" enctype="multipart/form-data" action="{{secure_url('admin/createactivity')}}">
 				    {{ csrf_field() }}
 
 
@@ -480,7 +480,7 @@
 				 	</div>
 				 	<hr />
 				@endif
-				<form method="POST" action="{{url('admin/createactivitytype')}}">
+				<form method="POST" action="{{secure_url('admin/createactivitytype')}}">
 				    {!! csrf_field() !!}
 
 				    <div class='form-group'>
@@ -1087,7 +1087,7 @@
 			<!--<div class="tab-pane" id="verHorario">...Ver Horario...</div>-->
 			<div class="tab-pane" id="cambiarImagen">
 				<h1>Cambiar imagen de perfil</h1>
-				<form method='post' action='{{url("updateprofile")}}' enctype='multipart/form-data'>
+				<form method='post' action='{{secure_url("updateprofile")}}' enctype='multipart/form-data'>
 					{{csrf_field()}}
 					<div class='form-group'>
 						<label for='image'>Imagen: </label>
@@ -1105,7 +1105,7 @@
 				 	</div>
 				@endif
 				<hr />
-				<form method="post" action="{{url('user/updatepassword')}}">
+				<form method="post" action="{{secure_url('user/updatepassword')}}">
 				 	{{csrf_field()}}
 				 	<div class="form-group">
 				  		<label for="mypassword">Introduce la contraseña actual:</label>
