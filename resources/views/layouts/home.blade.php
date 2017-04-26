@@ -137,9 +137,9 @@
 											@elseif (Auth::user()->user == 1)
 												<li><a href="{{secure_url('admin')}}" class="opener-icons"><i class="fa fa-user"></i> {{Auth::user()->name}}</a></li>
 											@endif
-											<li><a href="{{secure_url('logout')}}" class="opener-icons"><i class="fa fa-sign-out"></i> Salir</a></li>
+											<li><a href="{{secure_url('logout')}}" class="opener-icons"><i class="fa fa-sign-out"></i> </a></li>
 										@else
-											<li><a href="#" class="user-opener opener-icons"><i class="fa fa-lock"></i><small> ÁREA PRIVADA</small></a></li>
+											<li><a href="#" class="user-opener opener-icons"><i class="fa fa-lock"></i><small> LOGIN</small></a></li>
 										@endif	
 										
 										
