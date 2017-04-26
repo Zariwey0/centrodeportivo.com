@@ -130,7 +130,7 @@
 											@elseif (Auth::user()->user == 1)
 												<li><a href="{{secure_url('admin')}}" class="opener-icons"><i class="fa fa-user"></i> {{Auth::user()->name}}</a></li>
 											@endif
-											<li><a href="{{secure_url('auth/logout')}}" class="opener-icons"><i class="fa fa-sign-out"></i> Salir</a></li>
+											<li><a href="{{secure_url('logout')}}" class="opener-icons"><i class="fa fa-sign-out"></i> Salir</a></li>
 										@else
 											<li><a href="#" class="user-opener opener-icons"><i class="fa fa-lock"></i><small> ÁREA PRIVADA</small></a></li>
 										@endif	
@@ -167,7 +167,7 @@
 												</li>
 												@if (!Auth::check())
 												<li>
-													<a href="{{ secure_url('auth/register') }}">Suscripción</a>										
+													<a href="{{ secure_url('/register') }}">Suscripción</a>										
 												</li>
 												@endif
 												<li>
@@ -215,7 +215,7 @@
 									</form>
 
 									-->
-									<form class="user-form" method="post" action="{{secure_url('auth/login')}}">
+									<form class="user-form" method="post" action="{{secure_url('/login')}}">
 		                                {!! csrf_field() !!}
 		                                <fieldset>
 			                                <input type="email" name="email" id="email" placeholder="Introduce tu email" />
@@ -421,7 +421,7 @@
 			                                    <!--<li><a href="#">PRIVACY POLICY</a></li>-->
 			                                    <li><a href="{{ secure_url('/privacy') }}">| Política de privacidad</a></li>
 			                                </ul>
-			                                <span class="copyright">&copy; 2017 <a href="{{ secure_url('/') }}">Centro Deportivo LaIsletaFIT</a></span>
+			                                <span class="copyright">&copy; 2017 <a href="{{ secure_url('/') }}">Centro Deportivo La Isleta FIT</a></span>
 			                            </div>
 			                        </div>
 			                    </div>

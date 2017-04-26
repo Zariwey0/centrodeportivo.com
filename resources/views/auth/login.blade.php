@@ -12,7 +12,7 @@
 
  <div class="container padding-top-100 padding-bottom-50">
   <h1>Inicia sesión</h1>
-   <form method="post" action="{{secure_url('auth/login')}}">
+   <form method="post" action="{{secure_url('/login')}}">
     {{csrf_field()}}
     <div class="form-group">
      <label for="email">Email:</label>
@@ -33,7 +33,7 @@
  
 
 
-    <a href="{{secure_url('auth/register')}}">Registrarme</a>
+    <a href="{{secure_url('/register')}}">Registrarme</a>
 </div>
 @stop
 

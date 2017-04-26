@@ -13,7 +13,8 @@ use App\Comments;
 class UserController extends Controller{
 	
 	public function __construct(){
-		$this->middleware('auth');
+		//$this->middleware('auth');
+		$this->middleware('auth', ['except' => ['seeSchedule','activities','team','blog','privacy','news','facilities','contact','jobs','public_profile','activity']]);
 	}
 	
 	public function user(){

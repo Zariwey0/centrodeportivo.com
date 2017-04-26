@@ -105,7 +105,7 @@ class AuthController extends Controller
         $validator = Validator::make($request->all(), $rules, $messages);
         
         if ($validator->fails()){
-            return redirect("auth/register")
+            return redirect("/register")
             ->withErrors($validator)
             ->withInput();
         }
@@ -137,7 +137,7 @@ class AuthController extends Controller
                 $mail->to($data['email'], $data['name']);
             });
             
-            return redirect("auth/register")
+            return redirect("/register")
             ->with("message", "Hemos enviado un enlace de confirmación a su cuenta de correo electrónico");
         }
             
@@ -154,7 +154,7 @@ class AuthController extends Controller
             $confirm_token = str_random(100);
             $user->where('email', '=', $email)
             ->update(['active' => $active, 'confirm_token' => $confirm_token]);
-            return redirect('auth/register')
+            return redirect('/register')
             ->with('message', 'Enhorabuena ' . $the_user[0]['name'] . ' ya puede iniciar sesión');
         }
         else
@@ -190,7 +190,7 @@ class AuthController extends Controller
                 'password.required' => 'El campo password es requerido',
             ];
             $validator = Validator::make($request->all(), $rules, $messages);       
-            return redirect('auth/login')
+            return redirect('/login')
             ->withErrors($validator)
             ->withInput()
             ->with('message', 'Error al iniciar sesión');
