@@ -171,7 +171,7 @@
 												</li>
 												@endif
 												<li>
-													<a href="{{ secure_url('/blog') }}">Vive LaIsletaFIT</a>				
+													<a href="{{ secure_url('/blog') }}">Vive La Isleta FIT</a>				
 												</li>
 											</ul>
 										</div>
@@ -273,7 +273,7 @@
 			                                    <span class="tel-box"><i class="fa fa-phone"></i> <a class="tel" href="tel:928987654">928 98 76 54</a></span>
 			                                </div>
 			                                <div class="mail-box2">
-			                                    <span class="mail-box"><i class="fa fa-envelope-o"></i> <a class="email" href="mailto:info@cdlaisleta.com"> info@cdlaisleta.com</a></span>
+			                                    <span class="mail-box"><i class="fa fa-envelope-o"></i> <a class="email" href="mailto:info@cdlaisleta.com" target="_top"> info@cdlaisleta.com</a></span>
 			                                </div>
 			                            </div>
 			                        </div>

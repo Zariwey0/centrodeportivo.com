@@ -17,7 +17,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<div class="holder">
-						<h1 class="heading text-uppercase">vive lisletafit</h1>
+						<h1 class="heading text-uppercase">vive la isleta fit</h1>
 					</div>
 					<ul class="breadcrumbs">
 						<p>Vida sana con nuestros consejos</p>

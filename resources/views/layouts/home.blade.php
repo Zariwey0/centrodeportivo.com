@@ -93,7 +93,7 @@
 								<ul class="list-inline info-list">
 									<li><i class="fa fa-clock-o"></i>  ABIERTO DE 7:00 A 23:00  </li>
 									<li><a class="tel" href="tel:01008431112"><i class="fa fa-phone"></i> LLÁMANOS AL 928 98 76 54</a></li>
-									<li><a href="#"><i class="fa fa-envelope"></i> info@cdlaisletafit.com</a></li>
+									<li><a href="mailto:info@cdlaisletafit.com" target="_top"><i class="fa fa-envelope"></i> info@cdlaisletafit.com</a></li>
 								</ul>
 								<!-- top nav style2 -->
 								<nav class="top-nav style2">
@@ -178,7 +178,7 @@
 												</li>
 												@endif
 												<li>
-													<a href="{{ secure_url('/blog') }}">Vive LaIsletaFIT</a>				
+													<a href="{{ secure_url('/blog') }}">Vive La Isleta FIT</a>				
 												</li>
 											</ul>
 										</div>
@@ -280,7 +280,7 @@
 			                                    <span class="tel-box"><i class="fa fa-phone"></i> <a class="tel" href="tel:928987654">928 98 76 54</a></span>
 			                                </div>
 			                                <div class="mail-box2">
-			                                    <span class="mail-box"><i class="fa fa-envelope-o"></i> <a class="email" href="mailto:info@cdlaisletafit.com"> info@cdlaisletafit.com</a></span>
+			                                    <span class="mail-box"><i class="fa fa-envelope-o"></i> <a class="email" href="mailto:info@cdlaisletafit.com" target="_top"> info@cdlaisletafit.com</a></span>
 			                                </div>
 			                            </div>
 			                        </div>

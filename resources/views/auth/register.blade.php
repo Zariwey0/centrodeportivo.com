@@ -1,8 +1,11 @@
 @extends('layouts.home')
 
 @section('content')
-<div class="padding-top-100">
-  <div class="container padding-bottom-100 padding-top-100">
+<div class="padding-top-100" style="position: relative;">
+  <header class="page-banner">
+    <h1>Formulario de registro</h1>
+  </header>
+  <div class="container padding-bottom-100 padding-top-30">
 
       <h1>Formulario de registro</h1>
 
@@ -51,7 +54,7 @@
             data-amount="900"
             data-name="Centro Deportivo Lisleta"
             data-description="Suscripción Mensual"
-            data-image="http://imgur.com/lH6mLVf.png"
+            data-image="https://imgur.com/lH6mLVf.png"
             data-locale="auto"
             data-zip-code="false"
             data-currency="eur">
