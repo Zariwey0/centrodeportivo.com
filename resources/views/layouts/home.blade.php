@@ -154,7 +154,7 @@
 													<a href="{{ secure_url('/') }}">Inicio</a>
 												</li>
 												<li>
-													<a href="{{ secure_url('/') }}">El Centro</a>
+													<a href="{{ secure_url('#') }}">El Centro</a>
 													<div class="drop">
 														<div class="coll">
 															<ul class="list-unstyled">
@@ -256,7 +256,7 @@
 			                            <div class="f-info-col">		  
 			                            <!--<img src="{{ asset('images/logo-fitness2.png') }}" alt="Fekra" class="img-responsive w-logo">-->
 										<!--<img src="{{ asset('images/logoguay.png') }}" alt="Fekra" class="img-responsive b-logo" />-->
-			                                <div class="logo"><a href="{{ secure_url('/') }}"><img src="{{ secure_asset('images/logopeque3.png') }}" alt="Logo"></a></div>
+			                                <div class="logo"><a href="{{ secure_url('/') }}"><img src="{{ secure_asset('images/logoFITfooter.png') }}" alt="Logo"></a></div>
 			                                <p>El centro deportivo preferido de toda la familia. No olvides seguirnos en las redes sociales para estar informado de las últimas noticias y novedades.</p>
 			                                <!-- footer-social -->
 			                                <ul class="list-inline footer-social">
@@ -299,7 +299,7 @@
 			                                    </div>
 			                                    <div class="txt">
 			                                        <p><a href="#">Día contra la violencia machista.</a></p>
-			                                        <time datetime="2015-02-02">25 NOV 2016</time>
+			                                        <time datetime="2015-02-02">25 MAY 2017</time>
 			                                    </div>
 			                                </div>
 			                                <!-- footer-news-box -->
@@ -312,8 +312,8 @@
 													<a href="#"><img src="{{$imagen}}" alt="image description"></a>
 			                                    </div>
 			                                    <div class="txt">
-			                                        <p><a href="#">Nuevo horario del mes de diciembre ya disponible.</a></p>
-			                                        <time datetime="2015-02-02">1 DIC 2016</time>
+			                                        <p><a href="#">Nuevo horario del mes de junio ya disponible.</a></p>
+			                                        <time datetime="2015-02-02">1 JUN 2017</time>
 			                                    </div>
 			                                </div>
 			                            </div>

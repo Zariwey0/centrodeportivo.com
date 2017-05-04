@@ -213,7 +213,7 @@ $schedule = DB::table('schedule')->select('id','monitor')->where('activity','=',
 											<a href="../'.$related->image.'" class="search lightbox"><i class="fa fa-search"></i></a>
 											<a href="../activity/'.$related->name.'" class="link"><i class="fa fa-link"></i></a>
 										</div>
-										<img src="'.Image::make($related->image)->fit(350, null, function ($constraint) {$constraint->aspectRatio();})->crop(350,350)->encode("data-url").'" alt="image description">
+										<img src="'.Image::make($related->image)->fit(350, null, function ($constraint) {$constraint->aspectRatio();})->crop(350,350)->encode("data-url").'" alt="image description" class="img-responsive">
                                     </div>
                                 </div>
                             </div>';

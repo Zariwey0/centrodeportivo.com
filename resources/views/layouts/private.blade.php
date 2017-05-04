@@ -59,18 +59,29 @@
 		<!--<link rel="stylesheet" href="//rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/css/bootstrap-editable.css">-->
 		
 
-		<!--
+		
 		<style>
-		a.accordion-toggle {
-		  display: block;
-		  padding: 10px  15px;
-		}
+			.nav.nav-tabs > li.dropdown.active.open > a, 
+			.nav.nav-tabs > li.dropdown.active.open > ul.dropdown-menu a:hover,
+			.nav.nav-tabs > li.dropdown.open > a, 
+			.nav.nav-tabs > li.dropdown.open > ul.dropdown-menu a:hover
+			{
+			  color: #fff;
+			  background-color: #f04b2d;
+			  border-color: #fff;
+			}
 
-		div.panel-heading {
-		  padding: 0;
-		}
+			.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active     >     a:focus {
+			    background-color: #f04b2d !important;
+			    /*background-image: linear-gradient(to bottom, #17AA76, #149466) !important;
+			    background-repeat: repeat-x !important;
+			    color: #FFFFFF;
+			    outline: 0 none;
+			    text-decoration: none;*/
+			}
+		
 		</style>
-		-->
+		
 	</head>
 	<body class="no-transition">
 		<!-- Page pre loader -->
@@ -249,7 +260,7 @@
 			                            <div class="f-info-col">		  
 			                            <!--<img src="{{ asset('images/logo-fitness2.png') }}" alt="Fekra" class="img-responsive w-logo">-->
 										<!--<img src="{{ asset('images/logoguay.png') }}" alt="Fekra" class="img-responsive b-logo" />-->
-			                                <div class="logo"><a href="{{ secure_url('/') }}"><img src="{{ secure_asset('images/logopeque3.png') }}" alt="Logo"></a></div>
+			                                <div class="logo"><a href="{{ secure_url('/') }}"><img src="{{ secure_asset('images/logoFITfooter.png') }}" alt="Logo"></a></div>
 			                                <p>El centro deportivo preferido de toda la familia. No olvides seguirnos en las redes sociales para estar informado de las últimas noticias y novedades.</p>
 			                                <!-- footer-social -->
 			                                <ul class="list-inline footer-social">
@@ -292,7 +303,7 @@
 			                                    </div>
 			                                    <div class="txt">
 			                                        <p><a href="#">Día contra la violencia machista.</a></p>
-			                                        <time datetime="2015-02-02">25 NOV 2016</time>
+			                                        <time datetime="2015-02-02">25 MAY 2016</time>
 			                                    </div>
 			                                </div>
 			                                <!-- footer-news-box -->
@@ -305,8 +316,8 @@
 													<a href="#"><img src="{{$imagen}}" alt="image description"></a>
 			                                    </div>
 			                                    <div class="txt">
-			                                        <p><a href="#">Nuevo horario del mes de diciembre ya disponible.</a></p>
-			                                        <time datetime="2015-02-02">1 DIC 2016</time>
+			                                        <p><a href="#">Nuevo horario del mes de junio ya disponible.</a></p>
+			                                        <time datetime="2015-02-02">1 JUN 2016</time>
 			                                    </div>
 			                                </div>
 			                            </div>

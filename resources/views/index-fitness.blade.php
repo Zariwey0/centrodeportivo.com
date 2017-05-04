@@ -30,7 +30,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 								<!--
 								<img src="http://placehold.it/1920x610" alt="image description">
 								-->
-								<img src="images/oldies.jpg" alt="image description">
+								<img src="images/oldies.jpg" alt="image description" class="img-responsive">
 							</div>
 							<section class="container">
 								<div class="row">
@@ -39,7 +39,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 											<h1><span class="add-text">ALCANZA</span> TUS METAS</h1>
 											<p>Ponemos todo nuestro equipo a tu entera disposición para que cada día suponga un nuevo reto y estimulante.</p>
 											<div class="button-slider">
-												<a href="{{secure_url('auth/register')}}" class="btn btn-f-default">EMPIEZA HOY</a>
+												<a href="{{secure_url('/register')}}" class="btn btn-f-default">EMPIEZA HOY</a>
 											</div>
 										</header>
 									</div>
@@ -52,7 +52,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 								<!--
 								<img src="http://placehold.it/1920x610" alt="image description">
 								-->
-								<img src="images/otras3.jpeg" alt="image description">
+								<img src="images/otras3.jpeg" alt="image description" class="img-responsive">
 							</div>
 							<section class="container">
 								<div class="row">
@@ -61,7 +61,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 											<h1><span class="add-text">DESAFÍA</span> TUS LÍMITES</h1>
 											<p>Tu cuerpo está hecho para hacer grandes cosas. Entrena con nosotros y déjanos sacar lo mejor que hay en ti.</p>
 											<div class="button-slider">
-												<a href="{{secure_url('auth/register')}}" class="btn btn-f-default">EMPIEZA HOY</a>
+												<a href="{{secure_url('/register')}}" class="btn btn-f-default">EMPIEZA HOY</a>
 											</div>
 										</header>
 									</div>
@@ -139,7 +139,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 											<div class="frame">
 												<div class="box">
 													<h2><span class="txt">DATE AHORA <br>DE ALTA Y</span> APROVECHA <br>NUESTRAS OFERTAS</h2>
-													<a href="{{secure_url('auth/register')}}" class="btn-shop add">SUSCRÍBETE <i class="fa fa-angle-right"></i></a>
+													<a href="{{secure_url('/register')}}" class="btn-shop add">SUSCRÍBETE <i class="fa fa-angle-right"></i></a>
 												</div>
 											</div>
 										</div>
@@ -511,7 +511,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 								</ul>
 								<span class="price">20.99<sup>€</sup></span>
 								<span class="month margin-bottom-30">Cada mes</span>
-								<a href="{{secure_url('auth/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
+								<a href="{{secure_url('/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-3">
@@ -527,7 +527,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 								</ul>
 								<span class="price">52.99<sup>€</sup></span>
 								<span class="month margin-bottom-30">Cada tres meses</span>
-								<a href="{{secure_url('auth/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
+								<a href="{{secure_url('/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-3 clearfix-sm">
@@ -543,7 +543,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 								</ul>
 								<span class="price">109.99<sup>€</sup></span>
 								<span class="month margin-bottom-30">Cada tres meses</span>
-								<a href="{{secure_url('auth/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
+								<a href="{{secure_url('/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-3">
@@ -559,7 +559,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 								</ul>
 								<span class="price">161.99<sup>€</sup></span>
 								<span class="month margin-bottom-30">Cada año</span>
-								<a href="{{secure_url('auth/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
+								<a href="{{secure_url('/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
 							</div>
 						</div>
 					</div>
@@ -588,9 +588,9 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 										<!-- beans-slide -->
 										<div class="beans-slide">
 											<blockquote>
-												<q>La verdades que esta gente es la crema, sabeloquétedigo? Hacen las cosas de puta madre y se nota. Además cuando llegué aquí estaba más fondón que mi pelo y ahora estoy más cuadrado que una caja de zapatos. Gracias LaIsletaFIT, me secaste.</q>
+												<q>Soy usuaria del centro desde hace ya dos años y la verdad es que no podría estar más contenta. Llegué con una forma física nefasta y sintiéndome incómoda con mi cuerpo y ahora soy una mujer nueva. Lo recomiendo 100%.</q>
 												<cite>
-													<span class="name">Fulanita de Tal</span>
+													<span class="name">Dolores Pérez</span>
 													<span class="comp-name"><a href="#">Usuaria de nuestro centro</a></span>
 												</cite>
 											</blockquote>
@@ -598,7 +598,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 										<!-- beans-slide -->
 										<div class="beans-slide">
 											<blockquote>
-												<q>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus Nam libero tempore, cum soluta nobis est eligendi optio.</q>
+												<q>El Centro Deportivo La Isleta FIT es, seguramente, el mejor centro de la isla de Gran Canaria. Un lugar donde toda la familia puede disfrutar haciendo deporte. Unas instalaciones envidiables y un equipo siempre dispuesto a ayudarte en lo que necesites.</q>
 												<cite>
 													<span class="name">Canarias 7</span>
 													<span class="comp-name"><a href="#">Periódico insular</a></span>
@@ -608,10 +608,10 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 										<!-- beans-slide -->
 										<div class="beans-slide">
 											<blockquote>
-												<q>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus Nam libero tempore, cum soluta nobis est eligendi optio.</q>
+												<q>Muchos de mis familiares y amigos me habían hablado maravillas de este centro deportivo y, después de probarlo gracias a su día de prueba, no puedo estar más de acuerdo. Sin lugar a dudas un gran lugar donde invertir tu tiempo.</q>
 												<cite>
-													<span class="name">Ciclanito el Escritor</span>
-													<span class="comp-name"><a href="#">Redactor Jefe - El deporte mola</a></span>
+													<span class="name">Jorge García</span>
+													<span class="comp-name"><a href="#">Redactor Jefe - El deporte en Canarias</a></span>
 												</cite>
 											</blockquote>
 										</div>

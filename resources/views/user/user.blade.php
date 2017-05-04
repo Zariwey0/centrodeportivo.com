@@ -1,6 +1,8 @@
 @extends('layouts.home')
 
 @section('content')
+ <div class="container padding-top-100 padding-bottom-50">
+
 <h1>Bienvenid@ {{Auth::user()->name}} a su Panel de Control</h1>
 <hr />
 @if (Session::has('status'))
@@ -129,9 +131,10 @@
         <?php endforeach ?>
 @else
 	<hr />
-	<p class="bg-info" style="padding: 20px;">Para poder publicar comentarios tienes que <a href="{{url('auth/login')}}">iniciar sesión</a></div>
+	<p class="bg-info" style="padding: 20px;">Para poder publicar comentarios tienes que <a href="{{url('/login')}}">iniciar sesión</a></div>
 	<hr />
 @endif
+</div>
 
 @stop
 

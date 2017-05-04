@@ -49,38 +49,23 @@
 	@endif
 
 	<div class="container">
-		<ul class="nav nav-tabs responsive" id="myTab">
-		  	<li class="active"><a data-toggle="tab" href="#home">Inicio</a></li>
+		<ul class="nav nav-tabs responsive" id="myTab" role="tablist">
+		  	<li class="active"><a data-toggle="tab" role="tab" href="#home">Inicio</a></li>
 		  	<li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Usuarios y Actividades<span class="caret"></span></a>
-			    <ul class="dropdown-menu">
-			    	<li><a data-toggle="tab" href="#crearMonitor">Crear nuevo monitor</a></li>
-			      	<li><a data-toggle="tab" href="#crearEditor">Crear nuevo editor</a></li>
-			      	<li><a data-toggle="tab" href="#crearActividad">Crear nueva actividad</a></li> 
-			      	<li><a data-toggle="tab" href="#crearTipo">Crear nuevo tipo de actividad</a></li>
+				<a class="dropdown-toggle" data-toggle="dropdown" id="myTabDrop1" href="#">Usuarios y Actividades<span class="caret"></span></a>
+			    <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+			    	<li><a data-toggle="tab" role="tab" tabindex="-1" href="#crearMonitor">Crear nuevo monitor</a></li>
+			      	<li><a data-toggle="tab" role="tab" tabindex="-1" href="#crearEditor">Crear nuevo editor</a></li>
+			      	<li><a data-toggle="tab" role="tab" tabindex="-1" href="#crearActividad">Crear nueva actividad</a></li> 
+			      	<li><a data-toggle="tab" role="tab" tabindex="-1" href="#crearTipo">Crear nuevo tipo de actividad</a></li>
 			    </ul>
 			</li>
-			<!--
-		  	<li><a data-toggle="tab" href="#profile">Usuarios y Actividades</a></li>
-		  	-->
 		  	<li><a data-toggle="tab" href="#configHorario">Configurar Horario</a></li>
-		  	<!--
 		  	<li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Horario<span class="caret"></span></a>
-			    <ul class="dropdown-menu">
-			    	<li><a data-toggle="tab" href="#configHorario">Configurar horario</a></li>
-			      	<li><a data-toggle="tab" href="#verHorario">Ver horario</a></li>
-			    </ul>
-			</li>
-			-->
-			<!--
-		  	<li><a data-toggle="tab" href="#messages">Horario</a></li>
-		  	-->
-		  	<li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Perfil<span class="caret"></span></a>
-			    <ul class="dropdown-menu">
-			    	<li><a data-toggle="tab" href="#cambiarImagen">Cambiar imagen de perfil</a></li>
-			      	<li><a data-toggle="tab" href="#cambiarPassword">Cambiar password</a></li>
+				<a class="dropdown-toggle" data-toggle="dropdown" id="myTabDrop2" href="#">Perfil<span class="caret"></span></a>
+			    <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop2">
+			    	<li><a data-toggle="tab" role="tab" tabindex="-1" href="#cambiarImagen">Cambiar imagen de perfil</a></li>
+			      	<li><a data-toggle="tab" role="tab" tabindex="-1" href="#cambiarPassword">Cambiar password</a></li>
 			    </ul>
 			</li>
 		</ul>
@@ -543,8 +528,8 @@
 			            	<td><a href="#" class="schedule" id="address3" data-type="address" data-pk="1"></a></td>
 			            	<td><a href="#" class="schedule" id="address4" data-type="address" data-pk="1"></a></td>
 			            	<td><a href="#" class="schedule" id="address5" data-type="address" data-pk="1"></a></td>
-			            	<td><a href="#" class="schedule" id="address6" data-type="address" data-pk="1"></a></td>
-			            	<td><a href="#" class="schedule" id="address7" data-type="address" data-pk="1"></a></td>
+			            	<td><a href="#" class="schedule" id="address6" data-type="address" data-placement="left" data-pk="1"></a></td>
+			            	<td><a href="#" class="schedule" id="address7" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 2</i></b></td>
@@ -553,8 +538,8 @@
 			            	<td><a href="#" class="schedule" id="address10" data-type="address" data-pk="1"></a></td>
 			            	<td><a href="#" class="schedule" id="address11" data-type="address" data-pk="1"></a></td>
 			            	<td><a href="#" class="schedule" id="address12" data-type="address" data-pk="1"></a></td>
-			            	<td><a href="#" class="schedule" id="address13" data-type="address" data-pk="1"></a></td>
-			            	<td><a href="#" class="schedule" id="address14" data-type="address" data-pk="1"></a></td>
+			            	<td><a href="#" class="schedule" id="address13" data-type="address" data-placement="left" data-pk="1"></a></td>
+			            	<td><a href="#" class="schedule" id="address14" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 3</i></b></td>
@@ -563,8 +548,8 @@
 				            <td><a href="#" class="schedule" id="address17" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address18" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address19" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address20" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address21" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address20" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address21" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr class="lastrow">
 				        	<td><b><i>Piscina</i></b></td>
@@ -573,8 +558,8 @@
 				            <td><a href="#" class="schedule" id="address24" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address25" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address26" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address27" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address28" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address27" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address28" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <!-- 10:00 -->
 				        <tr>
@@ -585,8 +570,8 @@
 				            <td><a href="#" class="schedule" id="address31" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address32" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address33" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address34" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address35" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address34" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address35" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 2</i></b></td>
@@ -595,8 +580,8 @@
 				            <td><a href="#" class="schedule" id="address38" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address39" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address40" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address41" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address42" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address41" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address42" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 3</i></b></td>
@@ -605,8 +590,8 @@
 				            <td><a href="#" class="schedule" id="address45" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address46" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address47" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address48" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address49" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address48" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address49" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr class="lastrow">
 				        	<td><b><i>Piscina</i></b></td>
@@ -615,8 +600,8 @@
 				            <td><a href="#" class="schedule" id="address52" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address53" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address54" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address55" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address56" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address55" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address56" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <!-- 11:00 -->
 				        <tr>
@@ -627,8 +612,8 @@
 				            <td><a href="#" class="schedule" id="address59" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address60" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address61" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address62" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address63" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address62" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address63" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 2</i></b></td>
@@ -637,8 +622,8 @@
 				            <td><a href="#" class="schedule" id="address66" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address67" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address68" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address69" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address70" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address69" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address70" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 3</i></b></td>
@@ -647,8 +632,8 @@
 				            <td><a href="#" class="schedule" id="address73" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address74" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address75" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address76" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address77" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address76" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address77" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr class="lastrow">
 				        	<td><b><i>Piscina</i></b></td>
@@ -657,8 +642,8 @@
 				            <td><a href="#" class="schedule" id="address80" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address81" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address82" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address83" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address84" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address83" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address84" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <!-- 12:00 -->
 				        <tr>
@@ -669,8 +654,8 @@
 				            <td><a href="#" class="schedule" id="address87" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address88" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address89" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address90" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address91" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address90" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address91" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 2</i></b></td>
@@ -679,8 +664,8 @@
 				            <td><a href="#" class="schedule" id="address94" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address95" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address96" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address97" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address98" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address97" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address98" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 3</i></b></td>
@@ -689,8 +674,8 @@
 				            <td><a href="#" class="schedule" id="address101" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address102" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address103" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address104" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address105" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address104" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address105" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr class="lastrow">
 				        	<td><b><i>Piscina</i></b></td>
@@ -699,8 +684,8 @@
 				            <td><a href="#" class="schedule" id="address108" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address109" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address110" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address111" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address112" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address111" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address112" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <!-- 13:00 -->
 				        <tr>
@@ -711,8 +696,8 @@
 				            <td><a href="#" class="schedule" id="address115" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address116" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address117" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address118" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address119" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address118" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address119" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 2</i></b></td>
@@ -721,8 +706,8 @@
 				            <td><a href="#" class="schedule" id="address122" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address123" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address124" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address125" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address126" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address125" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address126" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 3</i></b></td>
@@ -731,8 +716,8 @@
 				            <td><a href="#" class="schedule" id="address129" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address130" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address131" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address132" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address133" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address132" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address133" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr class="lastrow">
 				        	<td><b><i>Piscina</i></b></td>
@@ -741,8 +726,8 @@
 				            <td><a href="#" class="schedule" id="address136" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address137" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address138" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address139" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address140" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address139" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address140" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <!-- 14:00 -->
 				        <tr>
@@ -753,8 +738,8 @@
 				            <td><a href="#" class="schedule" id="address143" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address144" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address145" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address146" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address147" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address146" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address147" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 2</i></b></td>
@@ -763,8 +748,8 @@
 				            <td><a href="#" class="schedule" id="address150" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address151" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address152" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address153" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address154" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address153" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address154" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 3</i></b></td>
@@ -773,8 +758,8 @@
 				            <td><a href="#" class="schedule" id="address157" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address158" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address159" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address160" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address161" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address160" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address161" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr class="lastrow">
 				        	<td><b><i>Piscina</i></b></td>
@@ -783,8 +768,8 @@
 				            <td><a href="#" class="schedule" id="address164" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address165" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address166" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address167" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address168" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address167" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address168" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <!-- 15:00 -->
 				        <tr>
@@ -795,8 +780,8 @@
 				            <td><a href="#" class="schedule" id="address171" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address172" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address173" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address174" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address175" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address174" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address175" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 2</i></b></td>
@@ -805,8 +790,8 @@
 				            <td><a href="#" class="schedule" id="address178" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address179" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address180" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address181" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address182" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address181" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address182" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 3</i></b></td>
@@ -815,8 +800,8 @@
 				            <td><a href="#" class="schedule" id="address185" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address186" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address187" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address188" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address189" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address188" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address189" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr class="lastrow">
 				        	<td><b><i>Piscina</i></b></td>
@@ -825,8 +810,8 @@
 				            <td><a href="#" class="schedule" id="address192" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address193" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address194" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address195" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address196" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address195" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address196" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <!-- 16:00 -->
 				        <tr>
@@ -837,8 +822,8 @@
 				            <td><a href="#" class="schedule" id="address199" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address200" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address201" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address202" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address203" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address202" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address203" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 2</i></b></td>
@@ -847,8 +832,8 @@
 				            <td><a href="#" class="schedule" id="address206" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address207" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address208" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address209" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address210" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address209" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address210" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 3</i></b></td>
@@ -857,8 +842,8 @@
 				            <td><a href="#" class="schedule" id="address213" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address214" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address215" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address216" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address217" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address216" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address217" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr class="lastrow">
 				        	<td><b><i>Piscina</i></b></td>
@@ -867,8 +852,8 @@
 				            <td><a href="#" class="schedule" id="address220" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address221" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address222" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address223" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address224" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address223" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address224" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <!-- 17:00 -->
 				        <tr>
@@ -879,8 +864,8 @@
 				            <td><a href="#" class="schedule" id="address227" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address228" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address229" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address230" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address231" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address230" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address231" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 2</i></b></td>
@@ -889,8 +874,8 @@
 				            <td><a href="#" class="schedule" id="address234" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address235" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address236" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address237" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address238" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address237" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address238" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 3</i></b></td>
@@ -899,8 +884,8 @@
 				            <td><a href="#" class="schedule" id="address241" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address242" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address243" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address244" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address245" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address244" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address245" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr class="lastrow">
 				        	<td><b><i>Piscina</i></b></td>
@@ -909,8 +894,8 @@
 				            <td><a href="#" class="schedule" id="address248" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address249" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address250" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address251" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address252" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address251" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address252" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <!-- 18:00 -->
 				        <tr>
@@ -921,8 +906,8 @@
 				            <td><a href="#" class="schedule" id="address255" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address256" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address257" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address258" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address259" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address258" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address259" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 2</i></b></td>
@@ -931,8 +916,8 @@
 				            <td><a href="#" class="schedule" id="address262" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address263" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address264" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address265" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address266" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address265" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address266" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 3</i></b></td>
@@ -941,8 +926,8 @@
 				            <td><a href="#" class="schedule" id="address269" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address270" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address271" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address272" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address273" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address272" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address273" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr class="lastrow">
 				        	<td><b><i>Piscina</i></b></td>
@@ -951,8 +936,8 @@
 				            <td><a href="#" class="schedule" id="address276" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address277" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address278" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address279" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address280" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address279" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address280" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <!-- 19:00 -->
 				        <tr>
@@ -963,8 +948,8 @@
 				            <td><a href="#" class="schedule" id="address283" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address284" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address285" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address286" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address287" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address286" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address287" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 2</i></b></td>
@@ -973,8 +958,8 @@
 				            <td><a href="#" class="schedule" id="address290" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address291" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address292" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address293" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address294" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address293" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address294" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 3</i></b></td>
@@ -983,8 +968,8 @@
 				            <td><a href="#" class="schedule" id="address297" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address298" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address299" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address300" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address301" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address300" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address301" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr class="lastrow">
 				        	<td><b><i>Piscina</i></b></td>
@@ -993,8 +978,8 @@
 				            <td><a href="#" class="schedule" id="address304" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address305" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address306" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address307" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address308" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address307" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address308" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <!-- 20:00 -->
 				        <tr>
@@ -1005,8 +990,8 @@
 				            <td><a href="#" class="schedule" id="address311" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address312" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address313" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address314" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address315" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address314" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address315" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 2</i></b></td>
@@ -1015,8 +1000,8 @@
 				            <td><a href="#" class="schedule" id="address318" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address319" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address320" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address321" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address322" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address321" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address322" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 3</i></b></td>
@@ -1025,8 +1010,8 @@
 				            <td><a href="#" class="schedule" id="address325" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address326" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address327" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address328" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address329" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address328" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address329" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr class="lastrow">
 				        	<td><b><i>Piscina</i></b></td>
@@ -1035,8 +1020,8 @@
 				            <td><a href="#" class="schedule" id="address332" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address333" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address334" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address335" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address336" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address335" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address336" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <!-- 21:00 -->
 				        <tr>
@@ -1047,8 +1032,8 @@
 				            <td><a href="#" class="schedule" id="address339" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address340" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address341" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address342" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address343" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address342" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address343" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 2</i></b></td>
@@ -1057,8 +1042,8 @@
 				            <td><a href="#" class="schedule" id="address346" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address347" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address348" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address349" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address350" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address349" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address350" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Sala 3</i></b></td>
@@ -1067,8 +1052,8 @@
 				            <td><a href="#" class="schedule" id="address353" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address354" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address355" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address356" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address357" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address356" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address357" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>
 				        <tr>
 				        	<td><b><i>Piscina</i></b></td>
@@ -1077,8 +1062,8 @@
 				            <td><a href="#" class="schedule" id="address360" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address361" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address362" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address363" data-type="address" data-pk="1"></a></td>
-				            <td><a href="#" class="schedule" id="address364" data-type="address" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address363" data-type="address" data-placement="left" data-pk="1"></a></td>
+				            <td><a href="#" class="schedule" id="address364" data-type="address" data-placement="left" data-pk="1"></a></td>
 				        </tr>        
 				    </tbody>
 				</table>
@@ -1240,8 +1225,11 @@ $(function(){
 	}
 });
 
-//Aquí es donde guardamos los valores de cada casilla del horario en la base de datos.
+
 $(document).ready(function() {
+	//Esto es para que el dropdown de las pestañas funcione.
+	$('.dropdown-toggle').dropdown();
+	//Aquí es donde guardamos los valores de cada casilla del horario en la base de datos.
   	$("td").on("click", "button.btn.editable-submit", function(){
 
 		var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
