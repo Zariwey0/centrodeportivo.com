@@ -12,6 +12,7 @@ include('scripts/funciones.php');
 $types = DB::table('activities_type')->pluck('name','id');
 $activities = DB::table('activities')->select('id','name')->orderBy('name')->get();
 $act = DB::table('activities')->pluck('name', 'id_type');
+$monitors = DB::table('users')->where('user','=','2')->pluck('id','name');
 
 //Aquí buscamos las actividades para enlazar directamente con la anterior y la siguiente de la lista
 /*
@@ -38,6 +39,12 @@ for($i = 0; $i < count($activities); $i++){
 
 $schedule = DB::table('schedule')->get();
 
+//Útil cuando se redirige al buscador desde otra página con el nombre del monitor
+$monitor = '';
+if(isset($_GET['monitor'])){
+	$monitor = $_GET['monitor'];
+}
+
 ?>
 
 <div class="padding-top-100">
@@ -55,9 +62,11 @@ $schedule = DB::table('schedule')->get();
                             </header>
                        </div>
                     </div>
+
                     <div class="container">
                         <div class="row">
                         <input class="buscadorTabla" type="text" id="myInput" onkeyup="searchInSchedule()" placeholder="¿Qué quieres buscar?">
+                        	<div id="content">
 						    <table data-toggle="table"
 						    	id="table3"
 								data-toolbar="#toolbar"
@@ -89,9 +98,11 @@ $schedule = DB::table('schedule')->get();
 							    <!-- TERCER VALOR: DÍA    -->
 							    <!-------------------------->
 							    <tbody>
-							    	<!-- 9:00 -->
-							        <tr>
-							            <td rowspan="4">9:00</td>
+							    	<!-- 9:00 -->							    	
+							    	<tr class="anHour">
+							    		<td class="hora" rowspan="5">9:00</td>
+							    	</tr>
+							        <tr class="place">							            
 							            <td><b><i>Sala 1</i></b></td>
 							            <td class="schedule" id="address1"></td>
 						            	<td class="schedule" id="address2"></td>
@@ -101,7 +112,7 @@ $schedule = DB::table('schedule')->get();
 						            	<td class="schedule" id="address6"></td>
 						            	<td class="schedule" id="address7"></td>
 							        </tr>
-							        <tr>
+							        <tr class="place">
 							        	<td><b><i>Sala 2</i></b></td>
 							            <td class="schedule" id="address8"></td>
 						            	<td class="schedule" id="address9"></td>
@@ -111,7 +122,7 @@ $schedule = DB::table('schedule')->get();
 						            	<td class="schedule" id="address13"></td>
 						            	<td class="schedule" id="address14"></td>
 							        </tr>
-							        <tr>
+							        <tr class="place">
 							        	<td><b><i>Sala 3</i></b></td>
 							            <td class="schedule" id="address15"></td>
 							            <td class="schedule" id="address16"></td>
@@ -121,7 +132,7 @@ $schedule = DB::table('schedule')->get();
 							            <td class="schedule" id="address20"></td>
 							            <td class="schedule" id="address21"></td>
 							        </tr>
-							        <tr class="lastrow">
+							        <tr class="place lastrow">
 							        	<td><b><i>Piscina</i></b></td>
 							            <td class="schedule" id="address22"></td>
 							            <td class="schedule" id="address23"></td>
@@ -130,10 +141,12 @@ $schedule = DB::table('schedule')->get();
 							            <td class="schedule" id="address26"></td>
 							            <td class="schedule" id="address27"></td>
 							            <td class="schedule" id="address28"></td>
-							        </tr>
+							        </tr>							        
 							        <!-- 10:00 -->
 							        <tr>
-							            <td rowspan="4">10:00</td>
+							    		<td class="hora" rowspan="5">10:00</td>
+							    	</tr>
+							        <tr>							            
 							            <td><b><i>Sala 1</i></b></td>
 							            <td class="schedule" id="address29"></td>
 							            <td class="schedule" id="address30"></td>
@@ -175,7 +188,9 @@ $schedule = DB::table('schedule')->get();
 							        </tr>
 							        <!-- 11:00 -->
 							        <tr>
-							            <td rowspan="4">11:00</td>
+							    		<td class="hora" rowspan="5">11:00</td>
+							    	</tr>
+							        <tr>
 							            <td><b><i>Sala 1</i></b></td>
 							            <td class="schedule" id="address57"></td>
 							            <td class="schedule" id="address58"></td>
@@ -217,7 +232,9 @@ $schedule = DB::table('schedule')->get();
 							        </tr>
 							        <!-- 12:00 -->
 							        <tr>
-							            <td rowspan="4">12:00</td>
+							    		<td class="hora" rowspan="5">12:00</td>
+							    	</tr>
+							        <tr>
 							            <td><b><i>Sala 1</i></b></td>
 							            <td class="schedule" id="address85"></td>
 							            <td class="schedule" id="address86"></td>
@@ -259,7 +276,9 @@ $schedule = DB::table('schedule')->get();
 							        </tr>
 							        <!-- 13:00 -->
 							        <tr>
-							            <td rowspan="4">13:00</td>
+							    		<td class="hora" rowspan="5">13:00</td>
+							    	</tr>
+							        <tr>
 							            <td><b><i>Sala 1</i></b></td>
 							            <td class="schedule" id="address113"></td>
 							            <td class="schedule" id="address114"></td>
@@ -301,7 +320,9 @@ $schedule = DB::table('schedule')->get();
 							        </tr>
 							        <!-- 14:00 -->
 							        <tr>
-							            <td rowspan="4">14:00</td>
+							    		<td class="hora" rowspan="5">14:00</td>
+							    	</tr>
+							        <tr>
 							            <td><b><i>Sala 1</i></b></td>
 							            <td class="schedule" id="address141"></td>
 							            <td class="schedule" id="address142"></td>
@@ -343,7 +364,9 @@ $schedule = DB::table('schedule')->get();
 							        </tr>
 							        <!-- 15:00 -->
 							        <tr>
-							            <td rowspan="4">15:00</td>
+							    		<td class="hora" rowspan="5">15:00</td>
+							    	</tr>
+							        <tr>
 							            <td><b><i>Sala 1</i></b></td>
 							            <td class="schedule" id="address169"></td>
 							            <td class="schedule" id="address170"></td>
@@ -385,7 +408,9 @@ $schedule = DB::table('schedule')->get();
 							        </tr>
 							        <!-- 16:00 -->
 							        <tr>
-							            <td rowspan="4">16:00</td>
+							    		<td class="hora" rowspan="5">16:00</td>
+							    	</tr>
+							        <tr>
 							            <td><b><i>Sala 1</i></b></td>
 							            <td class="schedule" id="address197"></td>
 							            <td class="schedule" id="address198"></td>
@@ -427,7 +452,9 @@ $schedule = DB::table('schedule')->get();
 							        </tr>
 							        <!-- 17:00 -->
 							        <tr>
-							            <td rowspan="4">17:00</td>
+							    		<td class="hora" rowspan="5">17:00</td>
+							    	</tr>
+							        <tr>
 							            <td><b><i>Sala 1</i></b></td>
 							            <td class="schedule" id="address225"></td>
 							            <td class="schedule" id="address226"></td>
@@ -469,7 +496,9 @@ $schedule = DB::table('schedule')->get();
 							        </tr>
 							        <!-- 18:00 -->
 							        <tr>
-							            <td rowspan="4">18:00</td>
+							    		<td class="hora" rowspan="5">18:00</td>
+							    	</tr>
+							        <tr>
 							            <td><b><i>Sala 1</i></b></td>
 							            <td class="schedule" id="address253"></td>
 							            <td class="schedule" id="address254"></td>
@@ -511,7 +540,9 @@ $schedule = DB::table('schedule')->get();
 							        </tr>
 							        <!-- 19:00 -->
 							        <tr>
-							            <td rowspan="4">19:00</td>
+							    		<td class="hora" rowspan="5">19:00</td>
+							    	</tr>
+							        <tr>
 							            <td><b><i>Sala 1</i></b></td>
 							            <td class="schedule" id="address281"></td>
 							            <td class="schedule" id="address282"></td>
@@ -553,7 +584,9 @@ $schedule = DB::table('schedule')->get();
 							        </tr>
 							        <!-- 20:00 -->
 							        <tr>
-							            <td rowspan="4">20:00</td>
+							    		<td class="hora" rowspan="5">20:00</td>
+							    	</tr>
+							        <tr>
 							            <td><b><i>Sala 1</i></b></td>
 							            <td class="schedule" id="address309"></td>
 							            <td class="schedule" id="address310"></td>
@@ -595,7 +628,9 @@ $schedule = DB::table('schedule')->get();
 							        </tr>
 							        <!-- 21:00 -->
 							        <tr>
-							            <td rowspan="4">21:00</td>
+							    		<td class="hora" rowspan="5">21:00</td>
+							    	</tr>
+							        <tr>
 							            <td><b><i>Sala 1</i></b></td>
 							            <td class="schedule" id="address337"></td>
 							            <td class="schedule" id="address338"></td>
@@ -637,7 +672,15 @@ $schedule = DB::table('schedule')->get();
 							        </tr>        
 							    </tbody>
 							</table>
+							</div>
+							</br>
 
+							<button class="btn btn-default" id="imagenHorario">Descargar horario en imagen</button>
+							<button class="btn btn-default" id="pdfHorario">Descargar horario en pdf</button>
+
+							</br>
+							</br>
+							<p style="color:black;" align="left">*Todas las actividades empiezan a las horas en punto y su duración varía entre 20 y 45 minutos.</p>
                         </div>
                     </div>
 				</section>
@@ -649,14 +692,29 @@ $schedule = DB::table('schedule')->get();
 @section('scripts')
 
 
+
+//Monitor del buscador
+var monitorB = <?php echo json_encode($monitor); ?>;
+var inp = document.getElementById("myInput");
+inp.value = monitorB;
+
 var schedule = <?php echo json_encode($schedule); ?>;
+
+var monitors = <?php echo json_encode($monitors); ?>;
+
+//var enlaceraro = '<select class="enhorario" name="forma" onchange="location = this.value;"><option value="">Home</option><option value="/">Inicio</option><option value="/activities">Actividades</option></select>';
+
+
+
+
 
 var i, leng, iddd;
 var text = '';
 var idd = "address";
 for (i=0, leng = schedule.length; i<leng; ++i){
 	iddd = idd + schedule[i].id;
-	text = "<a href='http://www.google.es'><b class='type" + schedule[i].activity_type + "'>" + schedule[i].activity + "</b></a></br><a style='color:black' href='http://www.marca.com'>" + schedule[i].monitor + "</a>"; 
+	text = "<a href='/activity/" + schedule[i].activity.replace(/ /g,'%20') + "'><b class='type" + schedule[i].activity_type + "'>" + schedule[i].activity + "</b></a></br><a style='color:black' href='/user/" + monitors[schedule[i].monitor] + "'>" + schedule[i].monitor + "</a>"; 
+	//text = "<a href='/activity/" + schedule[i].activity.replace(/ /g,'%20') + "'><b class='type" + schedule[i].activity_type + "'>" + schedule[i].activity + "</b></a></br>" + enlaceraro;
 	document.getElementById(iddd).innerHTML = text;
 }
 
@@ -915,38 +973,91 @@ for (i=0, leng = schedule.length; i<leng; ++i){
 		  	table = document.getElementById("table3");
 		  	tr = table.getElementsByTagName("tr");
 		  	// Loop through all table rows, and hide those who don't match the search query
-		  	for (i = 1; i < tr.length; i++) {
-		  		//Controlamos el desfase de la primera fila de cada hora de la tabla
-		  		if (i%4 == 1){
-			  		for (j = 2; j < 9; j++) {
-				    	td = tr[i].getElementsByTagName("td")[j];
-				    	if (td) {
-				      		if (td.innerHTML.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").indexOf(filter) > -1 && filter.length > 1) {
-				        		//tr[i].style.display = "";
-				        		td.style.backgroundColor = "#eef02f";
-				      		} else {
-					    	    //tr[i].style.display = "none";
-					    	    td.style.backgroundColor = "white";
-					    	}
-				    	} 
-				    }
-				} else {
-					for (j = 1; j < 8; j++) {
-				    	td = tr[i].getElementsByTagName("td")[j];
-				    	if (td) {
-				      		if (td.innerHTML.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").indexOf(filter) > -1 && filter.length > 1) {
-				        		//tr[i].style.display = "";
-				        		td.style.backgroundColor = "#eef02f";
-				      		} else {
-					    	    //tr[i].style.display = "none";
-					    	    td.style.backgroundColor = "white";
-					    	}
-				    	} 
-				    }
-
-				}
+		  	// Omitimos la dos primeras filas porque son la cabecera y la hora
+		  	for (i = 2; i < tr.length; i++) {
+		  		// Omitimos la primera columna porque es la sala
+				for (j = 1; j < 8; j++) {
+			    	td = tr[i].getElementsByTagName("td")[j];
+			    	if (td) {
+			      		if (td.innerHTML.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").indexOf(filter) > -1 && filter.length > 1) {
+			        		td.classList.add('searched');
+			      		} else {
+				    	    td.classList.remove('searched');
+				    	}
+			    	} 
+			    }
 		  	}
 		}
 
+		//Activa el horario si algún monitor ha sido enviado por url
+		window.onload=function(){
+			searchInSchedule();
+		}
 
+		var dataUrl;
+
+		function descargarImagenHorario(){ 
+			document.getElementById('table3').parentNode.style.overflow = 'visible'; //might need to do this to grandparent nodes as well, possibly.
+		    html2canvas( [ document.getElementById('table3') ], {
+		        onrendered: function(canvas) {
+		            document.getElementById('table3').parentNode.style.overflow = 'hidden';
+		            dataUrl = canvas.toDataURL("image/jpeg");
+		            var a = document.createElement('a');
+		            a.href = dataUrl.replace("image/jpeg", "image/octet-stream");
+			        a.download = 'horario.jpg';
+			        a.click();
+		        },
+		        background: "#fff"
+		     });
+		}
+
+		function descargarPdfHorario(){ 
+			document.getElementById('table3').parentNode.style.overflow = 'visible'; //might need to do this to grandparent nodes as well, possibly.
+		    html2canvas( [ document.getElementById('table3') ], {
+		        onrendered: function(canvas) {
+		            document.getElementById('table3').parentNode.style.overflow = 'hidden';
+		            dataUrl = canvas.toDataURL("image/jpeg");
+
+		            var doc = new jsPDF();
+				    var imgWidth = 210;
+				    var pageHeight = 295;
+				    var imgHeight = canvas.height * imgWidth/canvas.width;
+				    var heightLeft = imgHeight;
+		            var position = 0;
+		            doc.addImage(dataUrl, 'JPEG', 0, position, imgWidth, imgHeight);
+		            heightLeft -= pageHeight;
+				    while (heightLeft >= 0){
+				    	position = heightLeft - imgHeight;
+				    	doc.addPage();
+				    	doc.addImage(dataUrl, 'JPEG', 0, position, imgWidth, imgHeight);
+				    	heightLeft -= pageHeight;
+				    }
+				    doc.save('horario.pdf');
+				    
+		        },
+		        background: "#fff"
+		     });
+		}
+
+		//click event para descargar la imagen y el pdf del horario
+		var dImgBtn = document.getElementById("imagenHorario");
+		dImgBtn.addEventListener('click', descargarImagenHorario);
+
+		var dPdfBtn = document.getElementById("pdfHorario");
+		dPdfBtn.addEventListener('click', descargarPdfHorario);
+	
+		Array.prototype.forEach.call(
+			document.querySelectorAll(".place"),
+		  	function(place) {
+		    	place.addEventListener("mouseenter", handlePlaceMouseEnter);
+		    	place.addEventListener("mouseleave", handlePlaceMouseLeave);
+		  	}
+		);
+
+		function handlePlaceMouseEnter() {
+			this.parentNode.querySelector(".anHour").classList.add("yeah");
+		}
+		function handlePlaceMouseLeave() {
+		  	this.parentNode.querySelector(".anHour").classList.remove("yeah");
+		}
 @stop

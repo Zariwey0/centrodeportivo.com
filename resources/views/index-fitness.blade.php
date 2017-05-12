@@ -14,9 +14,14 @@ $dw = date( "w" );
 $hs = date( "H" )-8;
 $activities = DB::table('activities')->select('id','name')->orderBy('name')->get();
 
+//Para la sección nuestros monitores
 $monitors = DB::table('users')->where('user','=','2')->latest()->take(4)->get();
 
+//Para el horario
+$monitorsS = DB::table('users')->where('user','=','2')->pluck('id','name');
+
 $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('id%7 = '.$dw)->whereRaw('ceil(id/28) >'.$hs)->get();
+
 
 ?>
 
@@ -100,6 +105,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 						</table>
 					</div>
 					<p align="left">Pulsa <a target="_blank" href="{{secure_url('seeschedule')}}">aquí</a> para ver el horario semanal al completo.</p>
+					<p align="left">*Todas las actividades empiezan a las horas en punto y su duración varía entre 20 y 45 minutos.</p>
 					
 				</div>
 				<div class="stretch">
@@ -630,7 +636,10 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 
 @section('scripts')
 
+
 var schedule = <?php echo json_encode($schedule); ?>;
+
+var monitorsS = <?php echo json_encode($monitorsS); ?>;
 
 var weekdays = {0: "Domingo", 1: "Lunes", 2: "Martes", 3: "Miércoles", 4: "Jueves", 5: "Viernes", 6: "Sábado"};
 
@@ -642,20 +651,24 @@ var rooms = {1: "Sala 1", 2: "Sala 2", 3: "Sala 3", 4: "Piscina"};
 //name: hours[Math.ceil(29/28)],
 //price: weekdays[16%7]
 
+
+
 var i, leng;
 var text = '';
 var aux = [];
-var web1 = '<a class=\\"index\\" href=\\"//www.marca.com\\">';
-var web2 = '</a>';
+var web1; //= '<a class=\\"index\\" href=\\"//www.marca.com\\">';
+var web2; //= '</a>';
 
 for (i=0, leng = schedule.length; i<leng; ++i){
+	web1 = '<select class=\\"enhorario index\\" name=\\"forma\\" onchange=\\"location = this.value;\\"><option value=\\"\\">' + schedule[i].monitor + '</option><option value=\\"/user/' + monitorsS[schedule[i].monitor] + '\\">Ver su perfil</option><option value=\\"/seeschedule/?monitor=' + schedule[i].monitor + '\\">Ver todas sus clases</option></select>';
+	web2 = '<a class=\\"index\\" href=\\"/activity/' + schedule[i].activity.replace(/ /g,"%20") +  '\\">' + schedule[i].activity + '</a>';
 	text = '[{"hour":';
 	text += '"' + hours[Math.ceil(schedule[i].id/28)] + '"';
 	text += ',"activity":';
-	text += '"' + schedule[i].activity + '"';
+	text += '"' + web2 + '"';
 	text += ',"room":';
 	text += '"' + rooms[Math.ceil((schedule[i].id%28)/7)] + '","monitor":';
-	text += '"' + web1 + schedule[i].monitor + web2 + '"';
+	text += '"' + web1 + '"';
 	text += '}]';
 	aux = aux.concat(JSON.parse(text));
 }

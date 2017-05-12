@@ -129,9 +129,12 @@
 								<div class="holder">
 									<!-- icon list -->
 									<ul class="list-unstyled icon-list">
+									<!--
 										<li>
 											<a href="#" class="search-opener opener-icons"><i class="fa fa-search"></i></a>
 										</li>
+
+									-->
 										<!-- ESTO ES EL PRINCIPIO DE LA PRUEBA DEL LOGIN -->
 																		<!-- cart box -->	
 																		
@@ -143,7 +146,7 @@
 											@endif
 											<li><a href="{{secure_url('logout')}}" class="opener-icons"><i class="fa fa-sign-out"></i> Salir</a></li>
 										@else
-											<li><a href="#" class="user-opener opener-icons"><i class="fa fa-lock"></i><small> ÁREA PRIVADA</small></a></li>
+											<li><a href="#" class="user-opener opener-icons"><i class="fa fa-lock"></i><small> LOGIN</small></a></li>
 										@endif	
 										
 										

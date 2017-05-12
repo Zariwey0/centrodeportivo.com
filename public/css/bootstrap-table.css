@@ -312,3 +312,61 @@ a.index {
 a.index:hover{
     color:white;
 }
+
+select.index{
+    color:white;
+}
+
+select.index:hover{
+    /*color:white;*/
+}
+
+.searched{
+    background-color: #e3ff00;
+}
+
+.enhorario{
+    background:none!important;
+    color:black;
+    border:none; 
+    /*Repercute directamente en el alto de cada fila del horario*/
+    padding:5px!important;
+    font: inherit;
+    /*border is optional*/
+    border-bottom:0px; 
+    cursor: pointer;
+    /*-webkit-appearance: none;*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    text-align: center;
+    text-align-last:center;
+}
+.enhorario:hover{
+    text-decoration: underline;
+}
+
+.enhorario option {
+    background-color: #f04b2d;
+    color: white;
+}
+
+.hora {
+    border-right: 1px solid #ddd !important;
+}
+
+
+.anHour:hover, .anHour.yeah:hover {
+    background-color: #d8c9a6;
+}
+.anHour:hover ~ .place, .place:hover {
+    background-color: #d8c9a6;
+}
+/*
+.anHour.hover {
+    background-color: red;
+}
+.anHour:hover ~ tr {
+    background-color: blue;
+}*/

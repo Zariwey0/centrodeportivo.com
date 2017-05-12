@@ -125,9 +125,11 @@
 								<div class="holder">
 									<!-- icon list -->
 									<ul class="list-unstyled icon-list">
+									<!--
 										<li>
 											<a href="#" class="search-opener opener-icons"><i class="fa fa-search"></i></a>
 										</li>
+									-->
 										<!-- ESTO ES EL PRINCIPIO DE LA PRUEBA DEL LOGIN -->
 																		<!-- cart box -->	
 																		
@@ -517,7 +519,11 @@
 				<!-- FIN DE LO NUEVO -->
 		</div>
 		<!-- include jQuery library -->
+		<!--
 		<script type="text/javascript" src="{{ secure_asset('js/jquery-1.11.3.min.js') }}"></script>
+		-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 		<!-- include custom JavaScript -->
 		<script type="text/javascript" src="{{ secure_asset('js/jquery.main.js') }}"></script>
 		<!-- include Bootstrap JavaScript -->
@@ -535,6 +541,9 @@
 		<!-- include Bootstrap table editable address type JavaScript -->
 		<script type="text/javascript" src="{{ secure_asset('js/address.js') }}"></script>
 
+		<!-- HTML TO CANVAS... A VER SI ESTO ME AYUDA A IMPRIMIR EL PUTO HORARIO... -->
+		<script type="text/javascript" src="{{ secure_asset('js/html2canvas.js') }}"></script>
+
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
 
@@ -544,6 +553,11 @@
 
 		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeMi4diOknZ126AdCH4ubY7qj6pIwdDDQ"
   type="text/javascript"></script>
+
+  		<!-- jsPDF -->
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
+  		<!-- jsPDF AutoTable -->
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.0/jspdf.plugin.autotable.js"></script>
 
 		<script type="text/javascript">
 	        @yield ('scripts')

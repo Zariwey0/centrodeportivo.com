@@ -11,7 +11,7 @@ use Intervention\Image\ImageManager;
 include('scripts/funciones.php');
 $types = DB::table('activities_type')->pluck('name','id');
 $activities = DB::table('activities')->select('id','name')->orderBy('name')->get();
-
+$monitors = DB::table('users')->where('user','=','2')->pluck('id','name');
 //Aquí buscamos las actividades para enlazar directamente con la anterior y la siguiente de la lista
 for($i = 0; $i < count($activities); $i++){
 	if ($activities[$i]->name == $activity->name){
@@ -234,12 +234,13 @@ $schedule = DB::table('schedule')->select('id','monitor')->where('activity','=',
 @section('scripts')
 
 
-
 var weekdays = {0: "Domingo", 1: "Lunes", 2: "Martes", 3: "Miércoles", 4: "Jueves", 5: "Viernes", 6: "Sábado"};
 
 var hours = {1: "9:00", 2: "10:00", 3: "11:00", 4: "12:00", 5: "13:00", 6: "14:00", 7: "15:00", 8: "16:00", 9: "17:00", 10: "18:00", 11: "19:00", 12: "20:00", 13: "21:00"};
 
 var schedule = <?php echo json_encode($schedule); ?>;
+
+var monitors = <?php echo json_encode($monitors); ?>;
 
 //var yeah = [{day: 'Lunes', hour: '9:00', monitor: '<a href="www.marca.com">Eustaquio</a>'}, {day: 'Viernes', hour: '11:00', monitor: 'dsfasd'}];
 //name: hours[Math.ceil(29/28)],
@@ -248,15 +249,16 @@ var schedule = <?php echo json_encode($schedule); ?>;
 var i, leng;
 var text = '';
 var aux = [];
-var web1 = '<a href=\\"http://www.marca.com\\">';
-var web2 = '</a>';
+var web1;
+//var web2 = '</a>';
 
 for (i=0, leng = schedule.length; i<leng; ++i){
+	web1 = '<select class=\\"enhorario\\" name=\\"forma\\" onchange=\\"location = this.value;\\"><option value=\\"\\">' + schedule[i].monitor + '</option><option value=\\"/user/' + monitors[schedule[i].monitor] + '\\">Ver su perfil</option><option value=\\"/seeschedule/?monitor=' + schedule[i].monitor + '\\">Ver todas sus clases</option></select>';
 	text = '[{"day":';
 	text += '"' + weekdays[schedule[i].id%7] + '"';
 	text += ',"hour":';
 	text += '"' + hours[Math.ceil(schedule[i].id/28)] + '","monitor":';
-	text += '"' + web1 + schedule[i].monitor + web2 + '"';
+	text += '"' + web1 + '"';
 	text += '}]';
 	aux = aux.concat(JSON.parse(text));
 }

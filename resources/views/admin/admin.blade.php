@@ -520,8 +520,10 @@
 
 				    <tbody>
 				    	<!-- 9:00 -->
+				    	<tr>
+							<td class="hora" rowspan="5">9:00</td>
+						</tr>
 				        <tr>
-				            <td rowspan="4">9:00</td>
 				            <td><b><i>Sala 1</i></b></td>
 				            <td><a href="#" class="schedule" id="address1" data-type="address" data-pk="1"></a></td>
 			            	<td><a href="#" class="schedule" id="address2" data-type="address" data-pk="1"></a></td>
@@ -563,7 +565,9 @@
 				        </tr>
 				        <!-- 10:00 -->
 				        <tr>
-				            <td rowspan="4">10:00</td>
+							<td class="hora" rowspan="5">10:00</td>
+						</tr>
+				        <tr>
 				            <td><b><i>Sala 1</i></b></td>
 				            <td><a href="#" class="schedule" id="address29" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address30" data-type="address" data-pk="1"></a></td>
@@ -605,7 +609,9 @@
 				        </tr>
 				        <!-- 11:00 -->
 				        <tr>
-				            <td rowspan="4">11:00</td>
+							<td class="hora" rowspan="5">11:00</td>
+						</tr>
+				        <tr>
 				            <td><b><i>Sala 1</i></b></td>
 				            <td><a href="#" class="schedule" id="address57" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address58" data-type="address" data-pk="1"></a></td>
@@ -647,7 +653,9 @@
 				        </tr>
 				        <!-- 12:00 -->
 				        <tr>
-				            <td rowspan="4">12:00</td>
+							<td class="hora" rowspan="5">12:00</td>
+						</tr>
+				        <tr>
 				            <td><b><i>Sala 1</i></b></td>
 				            <td><a href="#" class="schedule" id="address85" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address86" data-type="address" data-pk="1"></a></td>
@@ -689,7 +697,9 @@
 				        </tr>
 				        <!-- 13:00 -->
 				        <tr>
-				            <td rowspan="4">13:00</td>
+							<td class="hora" rowspan="5">13:00</td>
+						</tr>
+				        <tr>
 				            <td><b><i>Sala 1</i></b></td>
 				            <td><a href="#" class="schedule" id="address113" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address114" data-type="address" data-pk="1"></a></td>
@@ -731,7 +741,9 @@
 				        </tr>
 				        <!-- 14:00 -->
 				        <tr>
-				            <td rowspan="4">14:00</td>
+							<td class="hora" rowspan="5">14:00</td>
+						</tr>
+				        <tr>
 				            <td><b><i>Sala 1</i></b></td>
 				            <td><a href="#" class="schedule" id="address141" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address142" data-type="address" data-pk="1"></a></td>
@@ -773,7 +785,9 @@
 				        </tr>
 				        <!-- 15:00 -->
 				        <tr>
-				            <td rowspan="4">15:00</td>
+							<td class="hora" rowspan="5">15:00</td>
+						</tr>
+				        <tr>
 				            <td><b><i>Sala 1</i></b></td>
 				            <td><a href="#" class="schedule" id="address169" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address170" data-type="address" data-pk="1"></a></td>
@@ -815,7 +829,9 @@
 				        </tr>
 				        <!-- 16:00 -->
 				        <tr>
-				            <td rowspan="4">16:00</td>
+							<td class="hora" rowspan="5">16:00</td>
+						</tr>
+				        <tr>
 				            <td><b><i>Sala 1</i></b></td>
 				            <td><a href="#" class="schedule" id="address197" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address198" data-type="address" data-pk="1"></a></td>
@@ -857,7 +873,9 @@
 				        </tr>
 				        <!-- 17:00 -->
 				        <tr>
-				            <td rowspan="4">17:00</td>
+							<td class="hora" rowspan="5">17:00</td>
+						</tr>
+				        <tr>
 				            <td><b><i>Sala 1</i></b></td>
 				            <td><a href="#" class="schedule" id="address225" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address226" data-type="address" data-pk="1"></a></td>
@@ -899,7 +917,9 @@
 				        </tr>
 				        <!-- 18:00 -->
 				        <tr>
-				            <td rowspan="4">18:00</td>
+							<td class="hora" rowspan="5">18:00</td>
+						</tr>
+				        <tr>
 				            <td><b><i>Sala 1</i></b></td>
 				            <td><a href="#" class="schedule" id="address253" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address254" data-type="address" data-pk="1"></a></td>
@@ -941,7 +961,9 @@
 				        </tr>
 				        <!-- 19:00 -->
 				        <tr>
-				            <td rowspan="4">19:00</td>
+							<td class="hora" rowspan="5">19:00</td>
+						</tr>
+				        <tr>
 				            <td><b><i>Sala 1</i></b></td>
 				            <td><a href="#" class="schedule" id="address281" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address282" data-type="address" data-pk="1"></a></td>
@@ -983,7 +1005,9 @@
 				        </tr>
 				        <!-- 20:00 -->
 				        <tr>
-				            <td rowspan="4">20:00</td>
+							<td class="hora" rowspan="5">20:00</td>
+						</tr>
+				        <tr>
 				            <td><b><i>Sala 1</i></b></td>
 				            <td><a href="#" class="schedule" id="address309" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address310" data-type="address" data-pk="1"></a></td>
@@ -1025,7 +1049,9 @@
 				        </tr>
 				        <!-- 21:00 -->
 				        <tr>
-				            <td rowspan="4">21:00</td>
+							<td class="hora" rowspan="5">21:00</td>
+						</tr>
+				        <tr>
 				            <td><b><i>Sala 1</i></b></td>
 				            <td><a href="#" class="schedule" id="address337" data-type="address" data-pk="1"></a></td>
 				            <td><a href="#" class="schedule" id="address338" data-type="address" data-pk="1"></a></td>
@@ -1256,36 +1282,17 @@ $(document).ready(function() {
 		  	table = document.getElementById("table3");
 		  	tr = table.getElementsByTagName("tr");
 		  	// Loop through all table rows, and hide those who don't match the search query
-		  	for (i = 1; i < tr.length; i++) {
-		  		//Controlamos el desfase de la primera fila de cada hora de la tabla
-		  		if (i%4 == 1){
-			  		for (j = 2; j < 9; j++) {
-				    	td = tr[i].getElementsByTagName("td")[j];
-				    	if (td) {
-				      		if (td.innerHTML.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").indexOf(filter) > -1 && filter.length > 1) {
-				        		//tr[i].style.display = "";
-				        		td.style.backgroundColor = "#eef02f";
-				      		} else {
-					    	    //tr[i].style.display = "none";
-					    	    td.style.backgroundColor = "white";
-					    	}
-				    	} 
-				    }
-				} else {
-					for (j = 1; j < 8; j++) {
-				    	td = tr[i].getElementsByTagName("td")[j];
-				    	if (td) {
-				      		if (td.innerHTML.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").indexOf(filter) > -1 && filter.length > 1) {
-				        		//tr[i].style.display = "";
-				        		td.style.backgroundColor = "#eef02f";
-				      		} else {
-					    	    //tr[i].style.display = "none";
-					    	    td.style.backgroundColor = "white";
-					    	}
-				    	} 
-				    }
-
-				}
+		  	for (i = 2; i < tr.length; i++) {
+				for (j = 1; j < 8; j++) {
+			    	td = tr[i].getElementsByTagName("td")[j];
+			    	if (td) {
+			      		if (td.innerHTML.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").indexOf(filter) > -1 && filter.length > 1) {
+			        		td.classList.add('searched');
+			      		} else {
+				    	    td.classList.remove('searched');
+				    	}
+			    	} 
+			    }
 		  	}
 		}
 
