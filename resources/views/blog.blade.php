@@ -1,5 +1,5 @@
 @extends('layouts.home')
-@section('title', 'Centro Deportivo Lisleta - Home')
+@section('title', 'Centro Deportivo Lisleta - Blog')
 @section('description', 'pruebita buena jodio')
 @section('keywords', 'palabras clave y tal')
 
@@ -45,40 +45,49 @@
 			<div class="col-xs-12 col-sm-8 col-md-9 col-sm-push-4 col-md-push-3">
 				<!-- blog-post-v1 -->
 				<article class="blog-post-v1">
+					<!--
 					<div class="img-box">
-						<!-- beans-slider -->
+						
 						<div class="beans-slider" data-rotate="true">
 							<div class="beans-mask">
 								<div class="beans-slideset">
-									<!-- beans-slide -->
+									
 									<div class="beans-slide">
 										<a href="#"><img src="https://placehold.it/870x400" alt="image description" class="img-responsive"></a>
 									</div>
-									<!-- beans-slide -->
+									
 									<div class="beans-slide">
 										<a href="#"><img src="https://placehold.it/870x400" alt="image description" class="img-responsive"></a>
 									</div>
-									<!-- beans-slide -->
+									
 									<div class="beans-slide">
 										<a href="#"><img src="https://placehold.it/870x400" alt="image description" class="img-responsive"></a>
 									</div>
 								</div>
 							</div>
 							<div class="beans-pagination">
-								<!-- pagination generated here -->
+								
 							</div>
 						</div>
+					</div>-->
+					<div class="img-box">
+						<?php
+                			$ruta = "images/music.png";
+							$imagen = Image::make($ruta)->fit(870,400)->encode("data-url");
+						?>
+						
+						<a href="#"><img src="{{$imagen}}" alt="image description" class="img-responsive"></a>
 					</div>
 					<div class="blog-txt">
-						<h2><a href="#">Why Does Music Feel So Good?</a></h2>
+						<h2><a href="#">¿Por qué nos gusta tanto la música?</a></h2>
 						<ul class="meta list-inline">
 							<li>
 								<i class="fa fa-user"></i>
-								By <a href="#">Admin name</a>
+								Por <a href="#">Admin</a>
 							</li>
 							<li>
 								<i class="fa fa-tags"></i>
-								<a href="#">Music</a>, <a href="#">Technologies</a>, <a href="#">People</a> 
+								<a href="#">Música</a>, <a href="#">Tecnología</a>, <a href="#">Gente</a> 
 							</li>
 							<li>
 								<i class="fa fa-heart"></i>
@@ -86,15 +95,15 @@
 							</li>
 							<li>
 								<i class="fa fa-comments"></i>
-								<a href="#">320</a>
+								<a href="#">32</a>
 							</li>
 						</ul>
-						<p>In a professional context it often happens that private or corporate clients corder a publication to be made and presented with the actual content still not being ready. Think of a news blog that's filled with content hourly on the day of going live. However, reviewers tend to be distracted by comprehensible content, say, a random text copied  newspaper or the internet. The are likely to focus on the text, disregarding the layout and its elements. Besides, random text risks to be unintendedly humorous or offensive, an unacceptable risk in corporate environments.</p>
-						<a href="#" class="more">[ CONTINUE READING ]</a>
+						<p>Si pensamos en los gustos musicales de las personas que conocemos, podremos observar varias cosas: que las preferencias por autores, épocas, géneros, intérpretes… son muy diferentes; que, mientras unos están escuchando música a todas horas, otros prefieren hacerlo en momentos puntuales; que para algunos la música es un entretenimiento más, para otros una pasión, algo imprescindible, para unos pocos una profesión, una vocación…</p>
+						<a href="#" class="more">[ LEER MÁS ]</a>
 						<div class="box-holder">
 							<span class="icon"><i class="fa fa-picture-o"></i></span>
-							<time datetime="2015-02-18">
-								<span class="add">18</span>jan
+							<time datetime="2017-06-18">
+								<span class="add">18</span>jun
 							</time>
 						</div>
 					</div>
@@ -102,34 +111,39 @@
 				<!-- blog-post-v1 -->
 				<article class="blog-post-v1">
 					<div class="img-box">
-						<a href="#"><img src="https://placehold.it/870x400" alt="image description" class="img-responsive"></a>
+						<?php
+                			$ruta = "images/dietadelapina.jpg";
+							$imagen = Image::make($ruta)->fit(870,400)->encode("data-url");
+						?>
+						
+						<a href="#"><img src="{{$imagen}}" alt="image description" class="img-responsive"></a>
 					</div>
 					<div class="blog-txt">
-						<h2><a href="#">Intelegent transitions in ux design</a></h2>
+						<h2><a href="#">La dieta de la piña</a></h2>
 						<ul class="meta list-inline">
 							<li>
 								<i class="fa fa-user"></i>
-								By <a href="#">Admin name</a>
+								Por <a href="#">Admin</a>
 							</li>
 							<li>
 								<i class="fa fa-tags"></i>
-								<a href="#">Music</a>, <a href="#">Technologies</a>, <a href="#">People</a> 
+								<a href="#">Dieta</a>, <a href="#">Salud</a>, <a href="#">Gente</a> 
 							</li>
 							<li>
 								<i class="fa fa-heart"></i>
-								<a href="#">14</a>
+								<a href="#">6</a>
 							</li>
 							<li>
 								<i class="fa fa-comments"></i>
-								<a href="#">320</a>
+								<a href="#">22</a>
 							</li>
 						</ul>
-						<p>In a professional context it often happens that private or corporate clients corder a publication to be made and presented with the actual content still not being ready. Think of a news blog that's filled with content hourly on the day of going live. However, reviewers tend to be distracted by comprehensible content, say, a random text copied  newspaper or the internet. The are likely to focus on the text, disregarding the layout and its elements. Besides, random text risks to be unintendedly humorous or offensive, an unacceptable risk in corporate environments.</p>
-						<a href="#" class="more">[ CONTINUE READING ]</a>
+						<p>Como es bien sabido, las calorías engordan al ser éstas escasas en frutas y verduras, pero pueden ser enormemente ricas en vitaminas y minerales y pueden constituir muy bien la base de una dieta sana, en especial si se complementa con la piña. De todas las maneras, estas dietas para adelgazar suelen ser breves y su duración sólo raras veces supera una semana, puesto que para más tiempo la fruta y las verduras como único alimento no proporcionan los hidratos de carbono y las proteínas suficientes.</p>
+						<a href="#" class="more">[ LEER MÁS ]</a>
 						<div class="box-holder">
 							<span class="icon"><i class="fa fa-picture-o"></i></span>
-							<time datetime="2015-02-18">
-								<span class="add">18</span>jan
+							<time datetime="2017-06-15">
+								<span class="add">15</span>jun
 							</time>
 						</div>
 					</div>
@@ -138,41 +152,57 @@
 				<article class="blog-post-v1">
 					<div class="img-box">
 						<div class="box">
-							<a href="#"><img src="https://placehold.it/275x275" alt="image description" class="img-responsive"></a>
+							<?php
+	                			$ruta = "images/ejerc1.png";
+								$imagen = Image::make($ruta)->fit(275,275)->encode("data-url");
+							?>
+							
+							<a href="#"><img src="{{$imagen}}" alt="image description" class="img-responsive"></a>
+							
 						</div>
 						<div class="box">
-							<a href="#"><img src="https://placehold.it/275x275" alt="image description" class="img-responsive"></a>
+							<?php
+	                			$ruta = "images/ejerc2.jpg";
+								$imagen = Image::make($ruta)->fit(275,275)->encode("data-url");
+							?>
+							
+							<a href="#"><img src="{{$imagen}}" alt="image description" class="img-responsive"></a>
 						</div>
 						<div class="box">
-							<a href="#"><img src="https://placehold.it/275x275" alt="image description" class="img-responsive"></a>
+							<?php
+	                			$ruta = "images/ejerc3.jpg";
+								$imagen = Image::make($ruta)->fit(275,275)->encode("data-url");
+							?>
+							
+							<a href="#"><img src="{{$imagen}}" alt="image description" class="img-responsive"></a>
 						</div>
 					</div>
 					<div class="blog-txt">
-						<h2><a href="#">This is multi images post</a></h2>
+						<h2><a href="#">El plan definitivo para perder grasa</a></h2>
 						<ul class="meta list-inline">
 							<li>
 								<i class="fa fa-user"></i>
-								By <a href="#">Admin name</a>
+								Por <a href="#">Admin</a>
 							</li>
 							<li>
 								<i class="fa fa-tags"></i>
-								<a href="#">Music</a>, <a href="#">Technologies</a>, <a href="#">People</a> 
+								<a href="#">Salud</a>, <a href="#">Ejercicio</a>, <a href="#">Gente</a> 
 							</li>
 							<li>
 								<i class="fa fa-heart"></i>
-								<a href="#">14</a>
+								<a href="#">24</a>
 							</li>
 							<li>
 								<i class="fa fa-comments"></i>
-								<a href="#">320</a>
+								<a href="#">39</a>
 							</li>
 						</ul>
-						<p>In a professional context it often happens that private or corporate clients corder a publication to be made and presented with the actual content still not being ready. Think of a news blog that's filled with content hourly on the day of going live. However, reviewers tend to be distracted by comprehensible content, say, a random text copied  newspaper or the internet. The are likely to focus on the text, disregarding the layout and its elements. Besides, random text risks to be unintendedly humorous or offensive, an unacceptable risk in corporate environments.</p>
-						<a href="#" class="more">[ CONTINUE READING ]</a>
+						<p>Si eres una de tantas personas que hacen ejercicio a diario o practican algún deporte regularmente y, a pesar de ello, no consiguen eliminar esa capa de grasa que se acumula en la zona abdominal, te damos las claves para eliminar definitivamente y en sólo un mes esos molestos michelines.</p>
+						<a href="#" class="more">[ LEER MÁS ]</a>
 						<div class="box-holder">
 							<span class="icon"><i class="fa fa-picture-o"></i></span>
-							<time datetime="2015-02-18">
-								<span class="add">18</span>jan
+							<time datetime="2017-06-14">
+								<span class="add">14</span>jun
 							</time>
 						</div>
 					</div>
@@ -180,110 +210,43 @@
 				<!-- blog-post-v1 -->
 				<article class="blog-post-v1">
 					<div class="img-box video-area">
-						<iframe src="https://player.vimeo.com/video/78907778" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						<iframe width="500" height="281" src="https://www.youtube.com/embed/cZnsLVArIt8" frameborder="0" allowfullscreen></iframe>
 					</div>
 					<div class="blog-txt">
-						<h2><a href="#">Video post</a></h2>
+						<h2><a href="#">Rutina 20 minutos HIIT en casa</a></h2>
 						<ul class="meta list-inline">
 							<li>
 								<i class="fa fa-user"></i>
-								By <a href="#">Admin name</a>
+								Por <a href="#">Admin</a>
 							</li>
 							<li>
 								<i class="fa fa-tags"></i>
-								<a href="#">Music</a>, <a href="#">Technologies</a>, <a href="#">People</a> 
+								<a href="#">Rutina</a>, <a href="#">Ejercicio</a>, <a href="#">Salud</a> 
 							</li>
 							<li>
 								<i class="fa fa-heart"></i>
-								<a href="#">14</a>
+								<a href="#">3</a>
 							</li>
 							<li>
 								<i class="fa fa-comments"></i>
-								<a href="#">320</a>
+								<a href="#">20</a>
 							</li>
 						</ul>
-						<p>In a professional context it often happens that private or corporate clients corder a publication to be made and presented with the actual content still not being ready. Think of a news blog that's filled with content hourly on the day of going live. However, reviewers tend to be distracted by comprehensible content, say, a random text copied  newspaper or the internet. The are likely to focus on the text, disregarding the layout and its elements. Besides, random text risks to be unintendedly humorous or offensive, an unacceptable risk in corporate environments.</p>
-						<a href="#" class="more">[ CONTINUE READING ]</a>
+						<p>Los entrenamientos por intervalos de alta intensidad, especialmente utilizados para perder grasa, se han puesto de moda en estos últimos años, convirtiéndose en una verdadera fiebre en el mundo del Fitness. Debes saber que es una pieza más que nos sirve para armar nuestro protocolo quema-grasas semanal, pero no la única.</p>
+						<a href="#" class="more">[ LEER MÁS ]</a>
 						<div class="box-holder">
 							<span class="icon"><i class="fa fa-video-camera"></i></span>
-							<time datetime="2015-02-18">
-								<span class="add">18</span>jan
+							<time datetime="2017-06-10">
+								<span class="add">10</span>jun
 							</time>
 						</div>
 					</div>
 				</article>
-				<!-- blog-post-v1 -->
-				<article class="blog-post-v1">
-					<div class="img-box video-area">
-						<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/207659137&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-					</div>
-					<div class="blog-txt">
-						<h2><a href="#">soundcloud post</a></h2>
-						<ul class="meta list-inline">
-							<li>
-								<i class="fa fa-user"></i>
-								By <a href="#">Admin name</a>
-							</li>
-							<li>
-								<i class="fa fa-tags"></i>
-								<a href="#">Music</a>, <a href="#">Technologies</a>, <a href="#">People</a> 
-							</li>
-							<li>
-								<i class="fa fa-heart"></i>
-								<a href="#">14</a>
-							</li>
-							<li>
-								<i class="fa fa-comments"></i>
-								<a href="#">320</a>
-							</li>
-						</ul>
-						<p>In a professional context it often happens that private or corporate clients corder a publication to be made and presented with the actual content still not being ready. Think of a news blog that's filled with content hourly on the day of going live. However, reviewers tend to be distracted by comprehensible content, say, a random text copied  newspaper or the internet. The are likely to focus on the text, disregarding the layout and its elements. Besides, random text risks to be unintendedly humorous or offensive, an unacceptable risk in corporate environments.</p>
-						<a href="#" class="more">[ CONTINUE READING ]</a>
-						<div class="box-holder">
-							<span class="icon"><i class="fa fa-volume-down"></i></span>
-							<time datetime="2015-02-18">
-								<span class="add">18</span>jan
-							</time>
-						</div>
-					</div>
-				</article>
-				<!-- blog-post-v1 -->
-				<article class="blog-post-v1">
-					<div class="blog-txt">
-						<h2><a href="#">Intelegent transitions in ux design</a></h2>
-						<ul class="meta list-inline">
-							<li>
-								<i class="fa fa-user"></i>
-								By <a href="#">Admin name</a>
-							</li>
-							<li>
-								<i class="fa fa-tags"></i>
-								<a href="#">Music</a>, <a href="#">Technologies</a>, <a href="#">People</a> 
-							</li>
-							<li>
-								<i class="fa fa-heart"></i>
-								<a href="#">14</a>
-							</li>
-							<li>
-								<i class="fa fa-comments"></i>
-								<a href="#">320</a>
-							</li>
-						</ul>
-						<p>In a professional context it often happens that private or corporate clients corder a publication to be made and presented with the actual content still not being ready. Think of a news blog that's filled with content hourly on the day of going live. However, reviewers tend to be distracted by comprehensible content, say, a random text copied  newspaper or the internet. The are likely to focus on the text, disregarding the layout and its elements. Besides, random text risks to be unintendedly humorous or offensive, an unacceptable risk in corporate environments.</p>
-						<a href="#" class="more">[ CONTINUE READING ]</a>
-						<div class="box-holder">
-							<span class="icon"><i class="fa fa-pencil"></i></span>
-							<time datetime="2015-02-18">
-								<span class="add">18</span>jan
-							</time>
-						</div>
-					</div>
-				</article>
-				<!-- blog-footer -->
+				
 				<nav class="blog-footer">
 					<div class="btn-box">
-						<a href="#" class="btn">PREVIOUS</a>
-						<a href="#" class="btn">NEXT</a>
+						<a href="#" class="btn">ANTERIOR</a>
+						<a href="#" class="btn">SIGUIENTE</a>
 					</div>
 					<ul class="b-pagination list-unstyled">
 						<li><a href="#">1</a></li>
@@ -296,23 +259,23 @@
 			<aside class="col-xs-12 col-sm-4 col-md-3 col-sm-pull-8 col-md-pull-9">
 				<!-- widget -->
 				<section class="widget cate-widget">
-					<h2>Pages</h2>
+					<h2>Busca por etiqueta</h2>
 					<ul class="list-unstyled">
-						<li><a href="#"><i class="fa fa-caret-right"></i> Branding (16)</a></li>
-						<li><a href="#"><i class="fa fa-caret-right"></i> Typography (4)</a></li>
-						<li><a href="#"><i class="fa fa-caret-right"></i> UI Design (5)</a></li>
-						<li><a href="#"><i class="fa fa-caret-right"></i> Art Director (254)</a></li>
-						<li><a href="#"><i class="fa fa-caret-right"></i> Magazine (25)</a></li>
-						<li><a href="#"><i class="fa fa-caret-right"></i> Creative (23)</a></li>
-						<li><a href="#"><i class="fa fa-caret-right"></i> Winter(2)</a></li>
+						<li><a href="#"><i class="fa fa-caret-right"></i> Gente (16)</a></li>
+						<li><a href="#"><i class="fa fa-caret-right"></i> Tecnología (4)</a></li>
+						<li><a href="#"><i class="fa fa-caret-right"></i> Música (5)</a></li>
+						<li><a href="#"><i class="fa fa-caret-right"></i> Ejercicio (24)</a></li>
+						<li><a href="#"><i class="fa fa-caret-right"></i> Dieta (25)</a></li>
+						<li><a href="#"><i class="fa fa-caret-right"></i> Salud (23)</a></li>
+						<li><a href="#"><i class="fa fa-caret-right"></i> Rutina (2)</a></li>
 					</ul>
 				</section>
 				<!-- widget -->
 				<section class="widget toppost-widget">
-					<h2>Top Post</h2>
+					<h2>Los post más populares</h2>
 					<ul class="list-inline tabset">
-						<li class="active"><a href="#tab1">POPULAR</a></li>
-						<li><a href="#tab2">COMMENTS</a></li>
+						<li class="active"><a href="#tab1">Posts</a></li>
+						<li><a href="#tab2">Comentarios</a></li>
 					</ul>
 					<div class="tab-content">
 						<div id="tab1">
@@ -362,15 +325,7 @@
 							</article>
 						</div>
 					</div>
-				</section>
-				<!-- widget -->
-				<section class="widget video-widget">
-					<!-- f insta photo -->
-					<div class="f-insta-photo">
-						<h2>Instgram Photos</h2>
-						<div class="insta-box instagram-photos" data-count="8" data-user="b9e559ec7c284375bf41e9a9fb72ae01"></div>
-					</div>
-				</section>
+				</section>				
 			</aside>
 		</div>
 	</div>

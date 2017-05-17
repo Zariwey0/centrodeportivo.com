@@ -370,3 +370,7 @@ select.index:hover{
 .anHour:hover ~ tr {
     background-color: blue;
 }*/
+
+.title {
+    text-transform: initial !important;
+}

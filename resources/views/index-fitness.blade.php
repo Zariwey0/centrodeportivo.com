@@ -606,7 +606,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 											<blockquote>
 												<q>El Centro Deportivo La Isleta FIT es, seguramente, el mejor centro de la isla de Gran Canaria. Un lugar donde toda la familia puede disfrutar haciendo deporte. Unas instalaciones envidiables y un equipo siempre dispuesto a ayudarte en lo que necesites.</q>
 												<cite>
-													<span class="name">Canarias 7</span>
+													<span class="name">Canarias 8</span>
 													<span class="comp-name"><a href="#">Periódico insular</a></span>
 												</cite>
 											</blockquote>

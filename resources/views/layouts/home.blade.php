@@ -293,22 +293,8 @@
 			                                <!-- footer-news-box -->
 			                                <div class="footer-news-box">
 			                                    <div class="img-box">
-			                                        <?php
-														$ruta = "images/violenciamachista.jpg";
-														$imagen = Image::make($ruta)->fit(70,70)->encode("data-url");
-													?>
-													<a href="#"><img src="{{$imagen}}" alt="image description"></a>
-			                                    </div>
-			                                    <div class="txt">
-			                                        <p><a href="#">Día contra la violencia machista.</a></p>
-			                                        <time datetime="2015-02-02">25 MAY 2017</time>
-			                                    </div>
-			                                </div>
-			                                <!-- footer-news-box -->
-			                                <div class="footer-news-box">
-			                                    <div class="img-box">
 			                                     	<?php
-														$ruta = "images/horariodiciembre.jpg";
+														$ruta = "images/sunny-clock.png";
 														$imagen = Image::make($ruta)->fit(70,70)->encode("data-url");
 													?>
 													<a href="#"><img src="{{$imagen}}" alt="image description"></a>
@@ -318,6 +304,20 @@
 			                                        <time datetime="2015-02-02">1 JUN 2017</time>
 			                                    </div>
 			                                </div>
+			                                <!-- footer-news-box -->
+			                                <div class="footer-news-box">
+			                                    <div class="img-box">
+			                                        <?php
+														$ruta = "images/vestuario.jpg";
+														$imagen = Image::make($ruta)->fit(70,70)->encode("data-url");
+													?>
+													<a href="#"><img src="{{$imagen}}" alt="image description"></a>
+			                                    </div>
+			                                    <div class="txt">
+			                                        <p><a href="#">Terminadas las obras de los nuevos vestuarios de la planta baja.</a></p>
+			                                        <time datetime="2015-02-02">25 MAY 2017</time>
+			                                    </div>
+			                                </div>			                                
 			                            </div>
 			                        </div>
 			                        <div class="col-xs-12 col-sm-6 col-md-3 column4">

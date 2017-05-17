@@ -24,7 +24,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<div class="holder">
-						<h1 class="heading text-capitalize">Nuestro equipo</h1>
+						<h1 class="heading">Nuestro equipo</h1>
 						<p>Siempre a tu disposición</p>
 					</div>
 				</div>
