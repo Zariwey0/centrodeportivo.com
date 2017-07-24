@@ -115,12 +115,7 @@ class AuthController extends Controller
             $data['email'] = $user->email = $request->email;
             $user->password = bcrypt($request->password);
             $user->remember_token = str_random(100);
-            $data['confirm_token'] = $user->confirm_token = str_random(100);
-
-
-            
-
-            
+            $data['confirm_token'] = $user->confirm_token = str_random(100);         
 
 
             //dd(Input::all());
@@ -196,5 +191,9 @@ class AuthController extends Controller
             ->with('message', 'Error al iniciar sesión');
         }
 
+    }
+
+    public function specRegister($plan){
+        return View('auth.register')->with('plan', $plan);
     }
 }

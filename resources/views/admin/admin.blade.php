@@ -1,6 +1,6 @@
 @extends('layouts.private')
 
-@section('title', 'Centro Deportivo Lisleta - Zona privada - Editor')
+@section('title', 'Centro Deportivo La Isleta FIT - Zona privada - Editor')
 @section('description', 'pruebita buena jodio')
 @section('keywords', 'palabras clave y tal')
 
@@ -48,6 +48,8 @@
 	 	<hr />
 	@endif
 
+
+
 	<div class="container">
 		<ul class="nav nav-tabs responsive" id="myTab" role="tablist">
 		  	<li class="active"><a data-toggle="tab" role="tab" href="#home">Inicio</a></li>
@@ -71,6 +73,7 @@
 		</ul>
 
 		<div class="tab-content responsive">
+
 		  	<div class="tab-pane active" id="home">
 
 		  		<h1 class="">Bienvenido al tablón de anuncios!</h1>		  				
@@ -83,11 +86,16 @@
 			        foreach($comments as $comment):
 			            $user = App\User::select()->where('id', '=', $comment->id_user)->first();
 			        ?>
+
+
+
 			        <div class="row">
 			            <div class="col-md-1">
 			                <img src='{{secure_url($user->profile)}}' class='img-responsive' style='max-width: 60px' />
 			                <strong><a href="{{secure_url('user/'.$user->id)}}">{{$user->name}}</a></strong>        
 			            </div>
+
+
 			            <div class='col-md-6'>
 			            	{{$comment->comment}} 
 			               	<br />
@@ -102,26 +110,27 @@
 			                </button>
 
 			                <!-- Ventana modal para eliminar -->
-			                <div class="modal fade" id="deleteComment{{$modal}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-			                  <div class="modal-dialog" role="document">
-			                    <div class="modal-content">
-			                      <div class="modal-header">
-			                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-			                        <h4 class="modal-title" id="myModalLabel">¿Realmente quieres eliminar este comentario?</h4>
-			                      </div>
-			                      <div class="modal-body">
-			                        <form method="post" action="{{secure_url('user/deletecomment')}}">
-			                            {{csrf_field()}}
-			                            <input type="hidden" name="id_comment" value="{{$comment->id}}" />
-			                            <button type="submit" class="btn btn-danger">Eliminar</button>
-			                        </form>
-			                      </div>
-			                      <div class="modal-footer">
-			                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-			                      </div>
-			                    </div>
-			                  </div>
-			                </div>
+						    <div class="modal fade" id="deleteComment{{$modal}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						      <div class="modal-dialog" role="document">
+						        <div class="modal-content">
+						          <div class="modal-header">
+						            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+						            <h4 class="modal-title" id="myModalLabel">¿Realmente quieres eliminar este comentario?</h4>
+						          </div>
+						          <div class="modal-body">
+						            <form method="post" action="{{secure_url('user/deletecomment')}}">
+						                {{csrf_field()}}
+						                <input type="hidden" name="id_comment" value="{{$comment->id}}" />
+						                <button type="submit" class="btn btn-danger">Eliminar</button>
+						            </form>
+						          </div>
+						          <div class="modal-footer">
+						            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+						          </div>
+						        </div>
+						      </div>
+						    </div>
+				            
 
 			                <!-- Botón para abrir la ventana modal de editar -->
 			                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editComment{{$modal}}">
@@ -153,6 +162,8 @@
 			                  </div>
 			                </div>
 			                <?php $modal++ ?>
+
+			                
 			               @endif
 			            </div>
 			        </div>
@@ -191,7 +202,7 @@
 						<img src='{{url(Auth::user()->profile)}}' class='img-responsive' style='max-width: 150px' />
 					</section>
 					<!-- widget -->
-
+					<!--
 				<section class="widget cate-widget">
 					<h2>Opciones</h2>
 					<ul class="list-unstyled">
@@ -205,91 +216,8 @@
     					<li><a href="{{secure_url('seeschedule')}}"><i class="fa fa-caret-right"></i>Ver horario</a></li>
 					</ul>
 				</section>
-					<!-- widget -->
-	<!--
-					<section class="widget toppost-widget">
-						<h2>Top Post</h2>
-						<ul class="list-inline tabset">
-							<li class="active"><a href="#tab1">POPULAR</a></li>
-							<li><a href="#tab2">COMMENTS</a></li>
-						</ul>
-						<!-- tab-content -->
-						<!--
-						<div class="tab-content">
-							<!-- tab1 -->
-							<!--
-							<div id="tab1">
-								<!-- box -->
-								<!--
-								<article class="box">
-									<div class="img-box">
-										<img src="http://placehold.it/64x64" alt="image description">
-									</div>
-									<div class="holder">
-										<time datetime="2015-01-01">13 MAY 2015</time>
-										<h3>Cicero famously orated against </h3>
-									</div>
-								</article>
-								<!-- box -->
-								<!--
-								<article class="box">
-									<div class="img-box">
-										<img src="http://placehold.it/64x64" alt="image description">
-									</div>
-									<div class="holder">
-										<time datetime="2015-01-01">13 MAY 2015</time>
-										<h3>Cicero famously orated </h3>
-									</div>
-								</article>
-								<!-- box -->
-								<!--
-								<article class="box">
-									<div class="img-box">
-										<img src="http://placehold.it/64x64" alt="image description">
-									</div>
-									<div class="holder">
-										<time datetime="2015-01-01">13 MAY 2015</time>
-										<h3>Cicero famously orated against </h3>
-									</div>
-								</article>
-							</div>
-							<!-- tab2 -->
-							<!--
-							<div id="tab2">
-								<!-- box -->
-								<!--
-								<article class="box">
-									<time datetime="2015-01-01">13 MAY 2015</time>
-									<h3>Cicero famously orated against </h3>
-									<a href="#">Alfaredo hilco</a>
-								</article>
-								<!-- box -->
-								<!--
-								<article class="box">
-									<time datetime="2015-01-01">13 MAY 2015</time>
-									<h3>Cicero famously orated </h3>
-									<a href="#">akram fatah</a>
-								</article>
-								<!-- box -->
-								<!--
-								<article class="box">
-									<time datetime="2015-01-01">13 MAY 2015</time>
-									<h3>Cicero famously orated against </h3>
-									<a href="#">Arfa Fatah</a>
-								</article>
-							</div>
-						</div>
-					</section>
-					<!-- widget -->
-					<!--
-					<section class="widget video-widget">
-						<h2>Video Channel</h2>
-						<div class="video-area">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/1sfuxvwHBnY" frameborder="0" allowfullscreen></iframe>
-						</div>
-					</section>
-				</aside>
 				-->
+				
 			
 			</div>
 

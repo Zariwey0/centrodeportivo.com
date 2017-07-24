@@ -1,5 +1,5 @@
 @extends('layouts.home')
-@section('title', 'Centro Deportivo Lisleta - Home')
+@section('title', 'Centro Deportivo La Isleta FIT - Las actividades')
 @section('description', 'pruebita buena jodio')
 @section('keywords', 'palabras clave y tal')
 

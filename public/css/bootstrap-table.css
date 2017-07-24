@@ -371,6 +371,12 @@ select.index:hover{
     background-color: blue;
 }*/
 
-.title {
+.title, .search {
     text-transform: initial !important;
+}
+ 
+.login {
+    margin-top: 20px !important;
+    margin-left: 20px !important;
+    color: white !important;
 }

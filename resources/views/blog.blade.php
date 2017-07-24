@@ -1,5 +1,5 @@
 @extends('layouts.home')
-@section('title', 'Centro Deportivo Lisleta - Blog')
+@section('title', 'Centro Deportivo La Isleta FIT - Blog')
 @section('description', 'pruebita buena jodio')
 @section('keywords', 'palabras clave y tal')
 
@@ -76,10 +76,10 @@
 							$imagen = Image::make($ruta)->fit(870,400)->encode("data-url");
 						?>
 						
-						<a href="#"><img src="{{$imagen}}" alt="image description" class="img-responsive"></a>
+						<a href="{{ secure_url('/blog/por-que-nos-gusta-tanto-la-musica') }}"><img src="{{$imagen}}" alt="image description" class="img-responsive"></a>
 					</div>
 					<div class="blog-txt">
-						<h2><a href="#">¿Por qué nos gusta tanto la música?</a></h2>
+						<h2><a href="{{ secure_url('/blog/por-que-nos-gusta-tanto-la-musica') }}">¿Por qué nos gusta tanto la música?</a></h2>
 						<ul class="meta list-inline">
 							<li>
 								<i class="fa fa-user"></i>
@@ -99,7 +99,7 @@
 							</li>
 						</ul>
 						<p>Si pensamos en los gustos musicales de las personas que conocemos, podremos observar varias cosas: que las preferencias por autores, épocas, géneros, intérpretes… son muy diferentes; que, mientras unos están escuchando música a todas horas, otros prefieren hacerlo en momentos puntuales; que para algunos la música es un entretenimiento más, para otros una pasión, algo imprescindible, para unos pocos una profesión, una vocación…</p>
-						<a href="#" class="more">[ LEER MÁS ]</a>
+						<a href="{{ secure_url('/blog/por-que-nos-gusta-tanto-la-musica') }}" class="more">[ LEER MÁS ]</a>
 						<div class="box-holder">
 							<span class="icon"><i class="fa fa-picture-o"></i></span>
 							<time datetime="2017-06-18">
@@ -272,7 +272,7 @@
 				</section>
 				<!-- widget -->
 				<section class="widget toppost-widget">
-					<h2>Los post más populares</h2>
+					<h2>Los posts más populares</h2>
 					<ul class="list-inline tabset">
 						<li class="active"><a href="#tab1">Posts</a></li>
 						<li><a href="#tab2">Comentarios</a></li>
@@ -281,47 +281,59 @@
 						<div id="tab1">
 							<article class="box">
 								<div class="img-box">
-									<img src="https://placehold.it/64x64" alt="image description">
+									<?php
+			                			$ruta = "images/dietadelapina.jpg";
+										$imagen = Image::make($ruta)->fit(64,64)->encode("data-url");
+									?>									
+									<img src="{{$imagen}}" alt="image description">
 								</div>
 								<div class="holder">
-									<time datetime="2015-01-01">13 MAY 2015</time>
-									<h3>Cicero famously orated against </h3>
+									<time datetime="2017-06-15">15 JUN 2017</time>
+									<h3>la dieta de la piña </h3>
 								</div>
 							</article>
 							<article class="box">
 								<div class="img-box">
-									<img src="https://placehold.it/64x64" alt="image description">
+									<?php
+			                			$ruta = "images/vistapreviavideoblog.jpg";
+										$imagen = Image::make($ruta)->fit(64,64)->encode("data-url");
+									?>									
+									<img src="{{$imagen}}" alt="image description">
 								</div>
 								<div class="holder">
-									<time datetime="2015-01-01">13 MAY 2015</time>
-									<h3>Cicero famously orated </h3>
+									<time datetime="2017-06-10">10 JUN 2017</time>
+									<h3>rutina 20 minutos hiit en casa </h3>
 								</div>
 							</article>
 							<article class="box">
 								<div class="img-box">
-									<img src="https://placehold.it/64x64" alt="image description">
+									<?php
+			                			$ruta = "images/music.png";
+										$imagen = Image::make($ruta)->fit(64,64)->encode("data-url");
+									?>									
+									<img src="{{$imagen}}" alt="image description">
 								</div>
 								<div class="holder">
-									<time datetime="2015-01-01">13 MAY 2015</time>
-									<h3>Cicero famously orated against </h3>
+									<time datetime="2017-06-18">18 JUN 2017</time>
+									<h3>¿por qué nos gusta tanto la música? </h3>
 								</div>
 							</article>
 						</div>
 						<div id="tab2">
 							<article class="box">
-								<time datetime="2015-01-01">13 MAY 2015</time>
-								<h3>Cicero famously orated against </h3>
-								<a href="#">Alfaredo hilco</a>
+								<time datetime="2017-06-14">14 JUN 2017</time>
+								<h3>El plan definitivo para perder grasa </h3>
+								<a href="#">Pepe López</a>
 							</article>
 							<article class="box">
-								<time datetime="2015-01-01">13 MAY 2015</time>
-								<h3>Cicero famously orated </h3>
-								<a href="#">akram fatah</a>
+								<time datetime="2017-06-15">15 JUN 2017</time>
+								<h3>La dieta de la piña </h3>
+								<a href="#">Carmen Brito</a>
 							</article>
 							<article class="box">
-								<time datetime="2015-01-01">13 MAY 2015</time>
-								<h3>Cicero famously orated against </h3>
-								<a href="#">Arfa Fatah</a>
+								<time datetime="2017-06-10">10 JUN 2017</time>
+								<h3>rutina 20 minutos hiit en casa </h3>
+								<a href="#">Victoria Peña</a>
 							</article>
 						</div>
 					</div>

@@ -35,7 +35,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 								<!--
 								<img src="http://placehold.it/1920x610" alt="image description">
 								-->
-								<img src="images/oldies.jpg" alt="image description" class="img-responsive">
+								<img src="{{ secure_asset('images/oldies.jpg') }}" alt="image description" class="img-responsive">
 							</div>
 							<section class="container">
 								<div class="row">
@@ -57,7 +57,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 								<!--
 								<img src="http://placehold.it/1920x610" alt="image description">
 								-->
-								<img src="images/otras3.jpeg" alt="image description" class="img-responsive">
+								<img src="{{ secure_asset('images/otras3.jpeg') }}" alt="image description" class="img-responsive">
 							</div>
 							<section class="container">
 								<div class="row">
@@ -175,7 +175,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 									<div class="frame">
 										<div class="box">
 											<h2><span class="txt">TENEMOS TODO LO NECESARIO</span> PARA MANTENERTE EN FORMA</h2>
-											<a href="team-single.html" class="btn-shop add">NUESTRAS INSTALACIONES <i class="fa fa-angle-right"></i></a>
+											<a href="{{secure_url('facilities')}}" class="btn-shop add">NUESTRAS INSTALACIONES <i class="fa fa-angle-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -371,6 +371,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 
                     <?php
                     $cont = 1;
+                    $c = 1;
                     $pos = "";
                     foreach($monitors as $monitor){
                     	if ($cont == 1){
@@ -388,12 +389,18 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 
 									<img src="'.Image::make($monitor->profile)->resize(270,270)->encode("data-url").'" alt="image description" class="img-responsive">
 									<span class="over"></span>
-									<a href="#popup2" class="plus lightbox">+</a>
+									<a href="#popup'.$c.'" class="plus lightbox">+</a>
 								</div>
 								<div class="block">
 									<h3 class="heading">'.$monitor->name.'</h3>
-									<strong class="subtitle">MALE FITNESS COACH</strong>
-									<div class="padding-bottom-30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta.</div>
+									<strong class="subtitle">';
+									if ($c < 3){
+										echo 'Monitora';
+									}else{
+										echo 'Monitor';
+									}
+									echo '</strong>
+									<div class="padding-bottom-30">Me considero una persona polivalente que saca lo mejor de las personas. En mis clases te lo pasarás bomba.</div>
 									<ul class="social-network list-inline">
 										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -404,6 +411,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 							</div>
 						</div>';
 						if ($cont == 1) echo '</div>';
+						$c = $c + 1;
                     }
 
                     ?>
@@ -517,7 +525,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 								</ul>
 								<span class="price">20.99<sup>€</sup></span>
 								<span class="month margin-bottom-30">Cada mes</span>
-								<a href="{{secure_url('/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
+								<a href="{{secure_url('/register/mensual')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-3">
@@ -533,7 +541,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 								</ul>
 								<span class="price">52.99<sup>€</sup></span>
 								<span class="month margin-bottom-30">Cada tres meses</span>
-								<a href="{{secure_url('/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
+								<a href="{{secure_url('/register/trimestral')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-3 clearfix-sm">
@@ -549,7 +557,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 								</ul>
 								<span class="price">109.99<sup>€</sup></span>
 								<span class="month margin-bottom-30">Cada tres meses</span>
-								<a href="{{secure_url('/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
+								<a href="{{secure_url('/register/familiatri')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-3">
@@ -565,7 +573,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
 								</ul>
 								<span class="price">161.99<sup>€</sup></span>
 								<span class="month margin-bottom-30">Cada año</span>
-								<a href="{{secure_url('/register')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
+								<a href="{{secure_url('/register/anual')}}" class="btn btn-purchase margin-bottom-30">Únete ahora</a>
 							</div>
 						</div>
 					</div>
@@ -583,7 +591,7 @@ $schedule = DB::table('schedule')->select('id','monitor','activity')->whereRaw('
                     <!-- page heading -->
                     <header class="page-heading margin-bottom-60">
                         <h2 class="lime text-capitalize font-medium margin-bottom-10">TESTIMONIOS </h2>
-                        <p class="heading7 title text-uppercase">nuestros usuarios opinan</p>
+                        <p class="heading7 title text-uppercase">Nuestros usuarios opinan</p>
                     </header>
 					<div class="row">
 						<div class="col-xs-12">
@@ -660,7 +668,7 @@ var web1; //= '<a class=\\"index\\" href=\\"//www.marca.com\\">';
 var web2; //= '</a>';
 
 for (i=0, leng = schedule.length; i<leng; ++i){
-	web1 = '<select class=\\"enhorario index\\" name=\\"forma\\" onchange=\\"location = this.value;\\"><option value=\\"\\">' + schedule[i].monitor + '</option><option value=\\"/user/' + monitorsS[schedule[i].monitor] + '\\">Ver su perfil</option><option value=\\"/seeschedule/?monitor=' + schedule[i].monitor + '\\">Ver todas sus clases</option></select>';
+	web1 = '<select class=\\"enhorario index\\" name=\\"forma\\" onchange=\\"location = this.value;\\"><option value=\\"\\">' + schedule[i].monitor + '</option><option value=\\"/user/' + monitorsS[schedule[i].monitor] + '\\">Ver su perfil</option><option value=\\"/seeschedule/' + schedule[i].monitor + '\\">Ver todas sus clases</option></select>';
 	web2 = '<a class=\\"index\\" href=\\"/activity/' + schedule[i].activity.replace(/ /g,"%20") +  '\\">' + schedule[i].activity + '</a>';
 	text = '[{"hour":';
 	text += '"' + hours[Math.ceil(schedule[i].id/28)] + '"';

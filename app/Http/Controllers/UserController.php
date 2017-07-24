@@ -14,7 +14,7 @@ class UserController extends Controller{
 	
 	public function __construct(){
 		//$this->middleware('auth');
-		$this->middleware('auth', ['except' => ['seeSchedule','activities','team','blog','privacy','news','facilities','contact','jobs','public_profile','activity']]);
+		$this->middleware('auth', ['except' => ['seeSchedule','monitorSchedule','activities','team','blog','privacy','news','facilities','contact','jobs','public_profile','activity', 'por_que_nos_gusta_tanto_la_musica']]);
 	}
 	
 	public function user(){
@@ -29,8 +29,16 @@ class UserController extends Controller{
 		return View('schedule');
 	}
 
+	public function por_que_nos_gusta_tanto_la_musica(){
+		return View('blog-single-image');
+	}
+
 	public function seeSchedule(){
 		return View('seeschedule');
+	}
+
+	public function monitorSchedule($monitor){
+		return View('seeschedule')->with('monitor',$monitor);
 	}
 
 	public function activities(){

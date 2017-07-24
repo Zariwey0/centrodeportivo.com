@@ -80,6 +80,7 @@ Route::group(['middleware' => ['web']], function () {
 	Route::post('login', 'Auth\AuthController@postLogin');
 	Route::get('logout', 'Auth\AuthController@logout');
 	Route::get('register', 'Auth\AuthController@getRegister');
+	Route::get('register/{plan}', 'Auth\AuthController@specRegister');
 	Route::post('register', 'Auth\AuthController@postRegister');
 	/*Route::post('auth/register', function(){
 		//dd(Input::all());
@@ -125,6 +126,7 @@ Route::group(['middleware' => ['web']], function () {
     //
     Route::get('schedule', 'UserController@schedule');
     Route::get('seeschedule', 'UserController@seeSchedule');
+    Route::get('seeschedule/{monitor}', 'UserController@monitorSchedule');
     Route::get('activities', 'UserController@activities');
     //Route::get('activity/{id}', 'UserController@activity')->where(['id' => '[0-9]+']);
     Route::get('activity/{id}', 'UserController@activity');
@@ -136,6 +138,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('facilities', 'UserController@facilities');
     Route::get('jobs', 'UserController@jobs');
     Route::get('privacy', 'UserController@privacy');
+    Route::get('blog/por-que-nos-gusta-tanto-la-musica', 'UserController@por_que_nos_gusta_tanto_la_musica');
     ////////////////////////////////////////////////
     Route::get('thumb/{path}', 'AdminController@crop');
     // usage inside a laravel route

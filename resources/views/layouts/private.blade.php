@@ -27,7 +27,10 @@
 		<!-- include Google fonts  -->
 		<link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic%7CPlayfair+Display:400,400italic,700,700italic,900,900italic%7CRoboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900%7CRaleway:400,100,200,300,500,600,700,800,900%7CGreat+Vibes%7CPoppins:400,300,500,600,700' rel='stylesheet' type='text/css'>
 		<!-- Links pasados a formato LARAVEL 5 -->
+		
 		<link rel="stylesheet" href="{{ secure_asset('css/font-awesome.min.css') }}" />
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="{{ secure_asset('css/page-assets.css') }}" />
 		<link rel="stylesheet" href="{{ secure_asset('css/helper-elements.css') }}" />
 		<link rel="stylesheet" href="{{ secure_asset('css/style.css') }}" />
@@ -106,11 +109,13 @@
 				<header id="header" class="style21">
 					<div class="container">
 						
+
 						<!-- header top -->
+						<!--
 						<div class="col-xs-12 header-top">
 
 						</div>
-						
+						-->
 						<div class="row">
 							<div class="col-xs-12">
 								<!-- page logo -->
@@ -284,7 +289,7 @@
 			                                    <span class="mail-box"><i class="fa fa-clock-o"></i> Abierto todos los días de 7:00 a 23:00</span>
 			                                </div>
 			                                <div class="tel-holder">
-			                                    <span class="tel-box"><i class="fa fa-phone"></i> <a class="tel" href="tel:928987654">928 98 76 54</a></span>
+			                                    <span class="tel-box"><i class="fa fa-phone"></i> <a class="tel" href="tel:000000000">000 00 00 00</a></span>
 			                                </div>
 			                                <div class="mail-box2">
 			                                    <span class="mail-box"><i class="fa fa-envelope-o"></i> <a class="email" href="mailto:info@cdlaisleta.com" target="_top"> info@cdlaisleta.com</a></span>
@@ -306,7 +311,7 @@
 			                                    </div>
 			                                    <div class="txt">
 			                                        <p><a href="#">Nuevo horario del mes de junio ya disponible.</a></p>
-			                                        <time datetime="2015-02-02">1 JUN 2016</time>
+			                                        <time datetime="2017-06-01">1 JUN 2017</time>
 			                                    </div>
 			                                </div>
 			                                <!-- footer-news-box -->
@@ -320,7 +325,7 @@
 			                                    </div>
 			                                    <div class="txt">
 			                                        <p><a href="#">Terminadas las obras de los nuevos vestuarios de la planta baja.</a></p>
-			                                        <time datetime="2015-02-02">25 MAY 2016</time>
+			                                        <time datetime="2017-05-25">25 MAY 2017</time>
 			                                    </div>
 			                                </div>			                                
 			                            </div>
@@ -431,9 +436,9 @@
 			                                    <!--<li><a href="#">| Sobre nosotros</a></li>-->
 			                                    <!--<li><a href="#">PROJECTS</a></li>-->
 			                                    <li><a href="{{ secure_url('/contact') }}">| Contacto</a></li>
-			                                   	<li><a href="{{ secure_url('/jobs') }}">| Trabaja con nosotros</a></li>
+			                                   	<li><a href="{{ secure_url('#') }}">| Trabaja con nosotros</a></li>
 			                                    <!--<li><a href="#">PRIVACY POLICY</a></li>-->
-			                                    <li><a href="{{ secure_url('/privacy') }}">| Política de privacidad</a></li>
+			                                    <li><a href="{{ secure_url('#') }}">| Política de privacidad</a></li>
 			                                </ul>
 			                                <span class="copyright">&copy; 2017 <a href="{{ secure_url('/') }}">Centro Deportivo La Isleta FIT</a></span>
 			                            </div>
@@ -524,15 +529,24 @@
 				<!-- FIN DE LO NUEVO -->
 		</div>
 
+		
 		<!-- include jQuery library -->
+		<!--
 		<script type="text/javascript" src="{{ secure_asset('js/jquery-1.11.3.min.js') }}"></script>
+		-->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+	
 		<!-- include custom JavaScript -->
 		<script type="text/javascript" src="{{ secure_asset('js/jquery.main.js') }}"></script>
+
 		<!-- include plugins JavaScript -->
+		<!--
 		<script type="text/javascript" src="{{ secure_asset('js/plugins.js') }}"></script>
+		-->
 		<!-- Latest compiled and minified JavaScript -->
 		<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>-->
-		<script type="text/javascript" src="{{ secure_asset('js/bootstrap.min.js')}}"></script>
+		
 		<!-- include Bootstrap tabs JavaScript -->
 		<script type="text/javascript" src="{{ secure_asset('js/responsive-tabs.js') }}"></script>
 		<!-- include Bootstrap table JavaScript -->
@@ -545,7 +559,7 @@
 		<!-- include Bootstrap table editable address type JavaScript -->
 		<script type="text/javascript" src="{{ secure_asset('js/address.js') }}"></script>
 
-
+		
 
 		<script type="text/javascript">
 	        @yield ('scripts')

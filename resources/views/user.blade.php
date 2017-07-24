@@ -1,11 +1,22 @@
 @extends('layouts.home')
+
+<?php
+
+$title = 'Centro Deportivo La Isleta FIT - Perfil Público - '.$user->name;
+
+?>
+
+@section('title', $title)
+@section('description', 'pruebita buena jodio')
+@section('keywords', 'palabras clave y tal')
+
 @section('content')
 <div class="padding-top-100" style="position: relative;">
   <header class="page-banner padding-bottom-30"></header>
   <div class="container padding-top-100 padding-bottom-50">
 
-    <h1>Perfil público de <a href="{{url('user/'.$user->id)}}">{{$user->name}}</a></h1>
-    <img src="{{url($user->profile)}}" class="img-responsive" style="max-width: 150px" />
+    <h1>Perfil público de <a href="{{secure_url('user/'.$user->id)}}">{{$user->name}}</a></h1>
+    <img src="{{secure_url($user->profile)}}" class="img-responsive" style="max-width: 150px" />
     <hr />
     @if(Session::has('status'))
       <div class="bg-info" style="padding: 20px">{{Session::get('status')}}</div>
@@ -15,17 +26,23 @@
       <div class="bg-danger" style="padding: 20px">{{Session::get('error')}}</div>
       <hr />
     @endif
+    <section class="widget cate-widget">
+      <h2>Opciones</h2>
+      <ul class="list-unstyled">
+        <li><a href="{{secure_url('seeschedule/'.$user->name)}}"><i class="fa fa-caret-right"></i>Ver su horario al completo</a></li>
+      </ul>
+    </section>
     <!-- Si el usuario está autenticado -->
     @if (Auth::check())
       <!-- Y este es su id de perfil posibilitar la creación de comentarios -->
       @if($user->id == Auth::user()->id)
-        <form method="post" action="{{url('user/createcomment')}}">
+        <form method="post" action="{{secure_url('user/createcomment')}}">
           {{csrf_field()}}
           <div class="form-group">
             <div class="row">
               <div class="col-md-1">
-                <img src="{{url(Auth::user()->profile)}}" class='img-responsive' style='max-width: 60px' />
-                <strong><a href="{{url('user/'.Auth::user()->id)}}">{{Auth::user()->name}}</a></strong>
+                <img src="{{secure_url(Auth::user()->profile)}}" class='img-responsive' style='max-width: 60px' />
+                <strong><a href="{{secure_url('user/'.Auth::user()->id)}}">{{Auth::user()->name}}</a></strong>
               </div>
               <div class="col-md-6">
                 <textarea name="comment" class="form-control"></textarea>
@@ -46,8 +63,8 @@
     ?>
     <div class="row">
       <div class="col-md-1">
-          <img src='{{url($user->profile)}}' class='img-responsive' style='max-width: 60px' />
-          <strong><a href="{{url('user/'.$user->id)}}">{{$user->name}}</a></strong>
+          <img src='{{secure_url($user->profile)}}' class='img-responsive' style='max-width: 60px' />
+          <strong><a href="{{secure_url('user/'.$user->id)}}">{{$user->name}}</a></strong>
       </div>
       <div class='col-md-6'>
         {{$comment->comment}} 
@@ -70,7 +87,7 @@
                     <h4 class="modal-title" id="myModalLabel">¿Realmente quieres eliminar este comentario?</h4>
                   </div>
                   <div class="modal-body">
-                    <form method="post" action="{{url('user/deletecomment')}}">
+                    <form method="post" action="{{secure_url('user/deletecomment')}}">
                       {{csrf_field()}}
                       <input type="hidden" name="id_comment" value="{{$comment->id}}" />
                       <button type="submit" class="btn btn-danger">Eliminar</button>
@@ -93,7 +110,7 @@
                     <h4 class="modal-title" id="myModalLabel">Editar comentario</h4>
                   </div>
                   <div class="modal-body">
-                    <form method="post" action="{{url('user/editcomment')}}">
+                    <form method="post" action="{{secure_url('user/editcomment')}}">
                       {{csrf_field()}}
                       <div class="form-group">
                         <textarea name="comment" rows="10" class="form-control">{{$comment->comment}}</textarea>

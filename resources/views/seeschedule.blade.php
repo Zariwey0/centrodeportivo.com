@@ -1,5 +1,5 @@
 @extends('layouts.home')
-@section('title', 'Centro Deportivo Lisleta - Home')
+@section('title', 'Centro Deportivo La Isleta FIT - Horario')
 @section('description', 'pruebita buena jodio')
 @section('keywords', 'palabras clave y tal')
 
@@ -40,9 +40,9 @@ for($i = 0; $i < count($activities); $i++){
 $schedule = DB::table('schedule')->get();
 
 //Útil cuando se redirige al buscador desde otra página con el nombre del monitor
-$monitor = '';
-if(isset($_GET['monitor'])){
-	$monitor = $_GET['monitor'];
+$moni = '';
+if(isset($monitor)){
+	$moni = $monitor;
 }
 
 ?>
@@ -59,6 +59,7 @@ if(isset($_GET['monitor'])){
                             <!-- page heading small -->
                             <header class="page-heading left-align col-xs-12 col-md-12">
                                 <h2 class="lime text-capitalize font-light">Horario</h2>
+                                <p>*Válido desde el 1 al 31 de junio, ambos inclusive.</p>
                             </header>
                        </div>
                     </div>
@@ -694,7 +695,7 @@ if(isset($_GET['monitor'])){
 
 
 //Monitor del buscador
-var monitorB = <?php echo json_encode($monitor); ?>;
+var monitorB = <?php echo json_encode($moni); ?>;
 var inp = document.getElementById("myInput");
 inp.value = monitorB;
 

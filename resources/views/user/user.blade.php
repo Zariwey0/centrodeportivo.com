@@ -1,5 +1,9 @@
 @extends('layouts.home')
 
+@section('title', 'Centro Deportivo La Isleta FIT - Zona privada - Usuario')
+@section('description', 'pruebita buena jodio')
+@section('keywords', 'palabras clave y tal')
+
 @section('content')
  <div class="container padding-top-100 padding-bottom-50">
 

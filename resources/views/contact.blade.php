@@ -1,4 +1,7 @@
 @extends('layouts.home')
+@section('title', 'Centro Deportivo La Isleta FIT - Contacto')
+@section('description', 'pruebita buena jodio')
+@section('keywords', 'palabras clave y tal')
 
 @section('content')
 
@@ -6,19 +9,21 @@
 			<main id="main" role="main">
                 <!-- page banner -->
 				<header class="page-banner small">
+				<!--
 					<div class="stretch">
 						<img alt="image description" src="https://placehold.it/1920x400">
 					</div>
+					-->
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-12">
 								<div class="holder">
-									<h1 class="heading text-capitalize">Contact Us</h1>
-									<p>We connect every where</p>
+									<h1 class="heading text-capitalize">Ponte en contacto con nosotros</h1>
+									<p>Existen muchas maneras</p>
 								</div>
 								<ul class="breadcrumbs list-inline">
-									<li><a href="#">HOME</a></li>
-									<li class="active"><a href="#">contact us</a></li>
+									<li><a href="#">INICIO</a></li>
+									<li class="active"><a href="#">Ponte en contacto con nosotros</a></li>
 								</ul>
 							</div>
 						</div>
@@ -32,7 +37,7 @@
 							<!--<div class="map" data-lat="31.5497" data-lng="74.3436" data-zoom="8">-->
 							<div class="map" data-lat="28.1578" data-lng="-15.4335" data-zoom="17">
 								<div class="map-info">
-									<h2>Centro Deportivo LaIsletaFIT</h2>
+									<h2>Centro Deportivo La Isleta FIT</h2>
 									<p>Cargando mapa...</p>
 								</div>
 							</div>
@@ -62,6 +67,7 @@
 									<input class="btn-more btn" type="submit" value="enviar">
 								</fieldset>
 							</form>
+							</br>
 						</div>
 						<div class="col-sm-6 col-xs-12">
 							<h2>Contacta con nosotros</h2>
@@ -81,7 +87,7 @@
 									<h3><i class="fa fa-phone"></i>Número de teléfono</h3>
 									<div class="tel-box">
 										<span class="tel">
-											<a href="tel:02214521421" class="tel">928 98 76 54</a>
+											<a href="tel:02214521421" class="tel">000 00 00 00</a>
 										</span>
 									</div>
 									<h3><i class="fa fa-envelope"></i>E-mail</h3>

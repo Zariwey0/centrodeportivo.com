@@ -27,7 +27,10 @@
 		<!-- include Google fonts  -->
 		<link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic%7CPlayfair+Display:400,400italic,700,700italic,900,900italic%7CRoboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900%7CRaleway:400,100,200,300,500,600,700,800,900%7CGreat+Vibes%7CPoppins:400,300,500,600,700' rel='stylesheet' type='text/css'>
 		<!-- Links pasados a formato LARAVEL 5 -->		
+		<!-- ICONOS Y FUENTES QUE VENÍAN POR DEFECTO EN LA PLANTILLA DESPUÉS DE ELIMINAR FONT-AWESOME -->
 		<link rel="stylesheet" href="{{ secure_asset('css/font-awesome.min.css') }}" />
+		<!-- FONT-AWESOME ACTUALIZADO -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="{{ secure_asset('css/page-assets.css') }}" />
 		<link rel="stylesheet" href="{{ secure_asset('css/helper-elements.css') }}" />
 		<link rel="stylesheet" href="{{ secure_asset('css/style.css') }}" />
@@ -92,7 +95,7 @@
 							<div class="col-xs-12 header-top">
 								<ul class="list-inline info-list">
 									<li><i class="fa fa-clock-o"></i>  ABIERTO DE 7:00 A 23:00  </li>
-									<li><a class="tel" href="tel:01008431112"><i class="fa fa-phone"></i> LLÁMANOS AL 928 98 76 54</a></li>
+									<li><a class="tel" href="tel:01008431112"><i class="fa fa-phone"></i> LLÁMANOS AL 000 00 00 00</a></li>
 									<li><a href="mailto:info@cdlaisletafit.com" target="_top"><i class="fa fa-envelope"></i> info@cdlaisletafit.com</a></li>
 								</ul>
 								<!-- top nav style2 -->
@@ -227,12 +230,30 @@
 									<form class="user-form" method="post" action="{{secure_url('/login')}}">
 		                                {!! csrf_field() !!}
 		                                <fieldset>
-			                                <input type="email" name="email" id="email" placeholder="Introduce tu email" />
-			                                <input type="password" name="password" id="password" placeholder="Introduce tu contraseña" />
+			                                <input class="search" type="email" name="email" id="email" placeholder="Introduce tu email" />
+			                                <input class="search" type="password" name="password" id="password" placeholder="Introduce tu contraseña" />
+<!--
+			                                
+									        <span class="input-group-addon">
+									          <label class="search" for="remember2">My Label</label>
+									        </span>
+									        <span class="input-group-addon">
+									          <input class="search" name="remember2" type="checkbox">
+									        </span>
 
-			                                <label for="remember">No cerrar sesión:</label>
-		   									<input type="checkbox" name="remember" />
-			                              
+									        -->
+<!--
+			                                <label class="search" for="remember"><input name="remember" class="search" type="checkbox" /> ¿Mantener la sesión iniciada?</label>
+
+-->
+	</br>
+											<span> </span>
+</br>
+											<span> </span>
+											</br>
+			                                <label class="login" for="remember">¿Mantener la sesión iniciada?</label>
+			                                <input class="" type="checkbox" id="remember" name="remember" />
+			                             
 			                                <button type="submit" class="submit"><i class="fa fa-user"></i>Acceder</button>
 			                            </fieldset>
 		                        	</form>
@@ -279,7 +300,7 @@
 			                                    <span class="mail-box"><i class="fa fa-clock-o"></i> Abierto todos los días de 7:00 a 23:00</span>
 			                                </div>
 			                                <div class="tel-holder">
-			                                    <span class="tel-box"><i class="fa fa-phone"></i> <a class="tel" href="tel:928987654">928 98 76 54</a></span>
+			                                    <span class="tel-box"><i class="fa fa-phone"></i> <a class="tel" href="tel:000000000">000 00 00 00</a></span>
 			                                </div>
 			                                <div class="mail-box2">
 			                                    <span class="mail-box"><i class="fa fa-envelope-o"></i> <a class="email" href="mailto:info@cdlaisletafit.com" target="_top"> info@cdlaisletafit.com</a></span>
@@ -426,9 +447,9 @@
 			                                    <!--<li><a href="#">| Sobre nosotros</a></li>-->
 			                                    <!--<li><a href="#">PROJECTS</a></li>-->
 			                                    <li><a href="{{ secure_url('/contact') }}">| Contacto</a></li>
-			                                   	<li><a href="{{ secure_url('/jobs') }}">| Trabaja con nosotros</a></li>
+			                                   	<li><a href="{{ secure_url('#') }}">| Trabaja con nosotros</a></li>
 			                                    <!--<li><a href="#">PRIVACY POLICY</a></li>-->
-			                                    <li><a href="{{ secure_url('/privacy') }}">| Política de privacidad</a></li>
+			                                    <li><a href="{{ secure_url('#') }}">| Política de privacidad</a></li>
 			                                </ul>
 			                                <span class="copyright">&copy; 2017 <a href="{{ secure_url('/') }}">Centro Deportivo La Isleta FIT</a></span>
 			                            </div>
@@ -448,68 +469,86 @@
 					<!-- popup1 -->
 					<div id="popup1" class="lightbox team-lightbox">
 						<div class="img-box">
-							<img src="//placehold.it/250x320" alt="image description"/>
+						
+							<?php
+								$ruta = "profiles/aSgyuaQBK7toqsbIVDcyjdJzYO8cQI-profile-pics-007.jpg";
+								$imagen = Image::make($ruta)->fit(250,320)->encode("data-url");
+							?>
+							<img src="{{$imagen}}" alt="image description"/>
+							
 						</div>
 						<div class="holder">
-							<strong class="title">Mohammed Arafa</strong>
-							<strong class="subtitle">FOUNDER AND CEO</strong>
-							<p>Ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam Ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam Ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
+							<strong class="title">Pantomima</strong>
+							<strong class="subtitle">Monitora</strong>
+							<p>Tengo el Grado en Ciencias de la Actividad Física y del Deporte por la ULPGC y un Máster en Entrenamiento Deportivo, Actividad Física y Salud por la Universidad Ramon Llull. Tengo varios años de experiencia trabajando en centros deportivos y tratando todo lo relacionado con la educación física y la salud con diferentes tipos de usuarios. Me preocupo por las personas y quiero sacar lo mejor de ellos. Déjame ayudarte a ser la mejor versión de ti mismo.</p>
 							<ul class="list-unstyled socialnetworks">
 								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
 								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-								<li><a href="#"><i class="fa fa-behance"></i></a></li>
 							</ul>
 						</div>
 					</div>
 					<!-- popup2 -->
 					<div id="popup2" class="lightbox team-lightbox">
 						<div class="img-box">
-							<img src="//placehold.it/250x320" alt="image description"/>
+							<?php
+								$ruta = "profiles/BFz2chJAkPLy6SOBe8F5uVqSrrjiOV-Headshot-square.jpg";
+								$imagen = Image::make($ruta)->fit(250,320)->encode("data-url");
+							?>
+							<img src="{{$imagen}}" alt="image description"/>
 						</div>
 						<div class="holder">
-							<strong class="title">Fatma Mahmoud</strong>
-							<strong class="subtitle">PROJECT MANAGEMENT</strong>
-							<p>Ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam Ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam Ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
+							<strong class="title">Carmensa</strong>
+							<strong class="subtitle">Monitora</strong>
+							<p>Tengo el Grado en Ciencias de la Actividad Física y del Deporte por la ULPGC y un Máster en Entrenamiento Deportivo, Actividad Física y Salud por la Universidad Ramon Llull. Tengo varios años de experiencia trabajando en centros deportivos y tratando todo lo relacionado con la educación física y la salud con diferentes tipos de usuarios. Me preocupo por las personas y quiero sacar lo mejor de ellos. Déjame ayudarte a ser la mejor versión de ti mismo.</p>
 							<ul class="list-unstyled socialnetworks">
 								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-								<li><a href="#"><i class="fa fa-behance"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>								
 							</ul>
 						</div>
 					</div>
 					<!-- popup3 -->
 					<div id="popup3" class="lightbox team-lightbox">
 						<div class="img-box">
-							<img src="//placehold.it/250x320" alt="image description"/>
+							<?php
+								$ruta = "profiles/Yyhxet9x0xA47Lio4HixqSuFIbGPo1-37394322-profile-pictures.png";
+								$imagen = Image::make($ruta)->fit(250,320)->encode("data-url");
+							?>
+							<img src="{{$imagen}}" alt="image description"/>
 						</div>
 						<div class="holder">
-							<strong class="title">Hossam Eldin Mostafa</strong>
-							<strong class="subtitle">IT LEADER</strong>
-							<p>Ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam Ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam Ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
+							<strong class="title">Heriberto</strong>
+							<strong class="subtitle">Monitor</strong>
+							<p>Tengo el Grado en Ciencias de la Actividad Física y del Deporte por la ULPGC y un Máster en Entrenamiento Deportivo, Actividad Física y Salud por la Universidad Ramon Llull. Tengo varios años de experiencia trabajando en centros deportivos y tratando todo lo relacionado con la educación física y la salud con diferentes tipos de usuarios. Me preocupo por las personas y quiero sacar lo mejor de ellos. Déjame ayudarte a ser la mejor versión de ti mismo.</p>
 							<ul class="list-unstyled socialnetworks">
 								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
 								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-								<li><a href="#"><i class="fa fa-behance"></i></a></li>
 							</ul>
 						</div>
 					</div>
 					<!-- popup4 -->
 					<div id="popup4" class="lightbox team-lightbox">
 						<div class="img-box">
-							<img src="//placehold.it/250x320" alt="image description"/>
+							<?php
+								$ruta = "profiles/3KnOniZeHGwHI2I9LGvR9Ad29gtuLG-63722.jpg";
+								$imagen = Image::make($ruta)->fit(250,320)->encode("data-url");
+							?>
+							<img src="{{$imagen}}" alt="image description"/>
 						</div>
 						<div class="holder">
-							<strong class="title">Amanay Abdel Fattah</strong>
-							<strong class="subtitle">VISUAL DESIGNER</strong>
-							<p>Ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam Ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam Ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
+							<strong class="title">Faustino</strong>
+							<strong class="subtitle">Monitor</strong>
+							<p>Tengo el Grado en Ciencias de la Actividad Física y del Deporte por la ULPGC y un Máster en Entrenamiento Deportivo, Actividad Física y Salud por la Universidad Ramon Llull. Tengo varios años de experiencia trabajando en centros deportivos y tratando todo lo relacionado con la educación física y la salud con diferentes tipos de usuarios. Me preocupo por las personas y quiero sacar lo mejor de ellos. Déjame ayudarte a ser la mejor versión de ti mismo.</p>
 							<ul class="list-unstyled socialnetworks">
 								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
 								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-								<li><a href="#"><i class="fa fa-behance"></i></a></li>
 							</ul>
 						</div>
 					</div>

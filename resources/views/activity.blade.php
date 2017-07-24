@@ -1,5 +1,12 @@
 @extends('layouts.home')
-@section('title', 'Centro Deportivo Lisleta - Home')
+
+<?php
+
+$title = 'Centro Deportivo La Isleta FIT - Actividades - '.$activity->name;
+
+?>
+
+@section('title', $title)
 @section('description', 'pruebita buena jodio')
 @section('keywords', 'palabras clave y tal')
 
@@ -72,7 +79,7 @@ $schedule = DB::table('schedule')->select('id','monitor')->where('activity','=',
 									<ul class="breadcrumbs list-inline">
 										<li><a href="{{url('/')}}">INICIO</a></li>
 										<li><a class="" href="{{url('activities')}}">ACTIVIDADES</a></li>		
-										<li class="active"><a href="#">AQUAGYM</a></li>							
+										<li class="active"><a href="#">{{$activity->name}}</a></li>							
 									</ul>
 								</div>
 							</div>
@@ -253,7 +260,7 @@ var web1;
 //var web2 = '</a>';
 
 for (i=0, leng = schedule.length; i<leng; ++i){
-	web1 = '<select class=\\"enhorario\\" name=\\"forma\\" onchange=\\"location = this.value;\\"><option value=\\"\\">' + schedule[i].monitor + '</option><option value=\\"/user/' + monitors[schedule[i].monitor] + '\\">Ver su perfil</option><option value=\\"/seeschedule/?monitor=' + schedule[i].monitor + '\\">Ver todas sus clases</option></select>';
+	web1 = '<select class=\\"enhorario\\" name=\\"forma\\" onchange=\\"location = this.value;\\"><option value=\\"\\">' + schedule[i].monitor + '</option><option value=\\"/user/' + monitors[schedule[i].monitor] + '\\">Ver su perfil</option><option value=\\"/seeschedule/' + schedule[i].monitor + '\\">Ver todas sus clases</option></select>';
 	text = '[{"day":';
 	text += '"' + weekdays[schedule[i].id%7] + '"';
 	text += ',"hour":';

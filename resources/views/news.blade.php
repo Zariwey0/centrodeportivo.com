@@ -1,5 +1,5 @@
 @extends('layouts.home')
-@section('title', 'Centro Deportivo Lisleta - Home')
+@section('title', 'Centro Deportivo La Isleta FIT - Noticias')
 @section('description', 'pruebita buena jodio')
 @section('keywords', 'palabras clave y tal')
 
@@ -41,7 +41,7 @@
                                         <!-- box -->
                                         <div class="box">
                                             <div class="box-holder">
-                                                <a href="portfolio-single-image.html" class="over">
+                                                <a href="#" class="over">
                                                     <div class="holder">
                                                         <div class="frame">
                                                             <div class="over-frame">
@@ -67,7 +67,7 @@
                                         <!-- box -->
                                         <div class="box">
                                             <div class="box-holder">
-                                                <a href="portfolio-single-image.html" class="over">
+                                                <a href="#" class="over">
                                                     <div class="holder">
                                                         <div class="frame">
                                                             <div class="over-frame">
@@ -93,7 +93,7 @@
                                         <!-- box -->
                                         <div class="box">
                                             <div class="box-holder">
-                                                <a href="portfolio-single-image.html" class="over">
+                                                <a href="#" class="over">
                                                     <div class="holder">
                                                         <div class="frame">
                                                             <div class="over-frame">
@@ -119,7 +119,7 @@
                                         <!-- box -->
                                         <div class="box">
                                             <div class="box-holder">
-                                                <a href="portfolio-single-image.html" class="over">
+                                                <a href="#" class="over">
                                                     <div class="holder">
                                                         <div class="frame">
                                                             <div class="over-frame">
@@ -207,7 +207,7 @@
 	                                        			$ruta = "images/piramide.gif";
 														$imagen = Image::make($ruta)->fit(65,65)->encode("data-url");
 													?>
-												<img src="{{$imagen}}" alt="image description">
+													<img src="{{$imagen}}" alt="image description">
 												</div>
 												<div class="holder">
 													<time datetime="2015-01-01">13 MAY 2017</time>
